@@ -1,0 +1,5 @@
+/OT /OT.html 200
+/OT2 /OT2.html 200
+/OT3 /OT3.html 200
+/aquability /aquability 200
+/ /index.html 200
