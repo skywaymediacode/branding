@@ -1,4 +1,0 @@
-/SEO-audit /seo-audit.html 200
-/ /index.html 200
-
-/ll /ll.html 200
