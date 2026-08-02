@@ -1,3 +1,0 @@
-/OT /OT.html 200
-/SEO-audit /seo-audit.html 200
-/ /index.html 200
