@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Extended color palette recommendations for Pediatric Ear, Nose & Throat Specialists.">
+  <title>Pediatric ENT | Extended Color Palette</title>
+  <style>
+    :root {
+      --navy: #173A5E;
+      --blue: #0063CD;
+      --teal: #167C80;
+      --red: #EF3028;
+      --yellow: #FFE610;
+      --gray: #737373;
+      --steel: #81A0B4;
+      --charcoal: #3F454A;
+      --paper: #F7FAFC;
+      --white: #FFFFFF;
+      --line: #DDE5EB;
+      --shadow: 0 18px 45px rgba(23, 58, 94, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--charcoal);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 0 72px;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 86% 15%, rgba(22,124,128,.55), transparent 30%),
+        linear-gradient(135deg, #102E4C 0%, var(--navy) 58%, #0C5965 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -110px;
+      bottom: -180px;
+      width: 430px;
+      height: 430px;
+      border: 56px solid rgba(255,255,255,.055);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      gap: 64px;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: #A9E0DE;
+      font-size: .77rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      font-size: clamp(2.45rem, 6vw, 5rem);
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+
+    .hero-copy {
+      max-width: 690px;
+      margin: 24px 0 0;
+      color: #DCEAF2;
+      font-size: 1.08rem;
+    }
+
+    .logo-card {
+      display: grid;
+      min-height: 255px;
+      place-items: center;
+      padding: 42px;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 24px;
+      background: rgba(255,255,255,.97);
+      box-shadow: 0 26px 65px rgba(0,0,0,.20);
+    }
+
+    .logo-card img { width: 100%; max-width: 430px; height: auto; }
+
+    main { padding: 64px 0 80px; }
+
+    section + section { margin-top: 70px; }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(1.85rem, 3vw, 2.65rem);
+      letter-spacing: -.035em;
+      line-height: 1.08;
+    }
+
+    .section-intro {
+      max-width: 760px;
+      margin: 14px 0 30px;
+      color: #5D6871;
+      font-size: 1.02rem;
+    }
+
+    .recommendation {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: start;
+      margin-bottom: 34px;
+      padding: 22px 24px;
+      border: 1px solid #A7D7D4;
+      border-radius: 18px;
+      background: #EAF7F5;
+    }
+
+    .recommendation .badge {
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: white;
+      background: var(--teal);
+      font-size: .69rem;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .recommendation strong { display: block; margin-bottom: 3px; color: var(--navy); }
+    .recommendation p { margin: 0; color: #486269; }
+
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .swatch {
+      position: relative;
+      overflow: hidden;
+      min-height: 190px;
+      padding: 0;
+      border: 1px solid rgba(23,58,94,.11);
+      border-radius: 17px;
+      background: white;
+      box-shadow: 0 10px 30px rgba(23,58,94,.07);
+      text-align: left;
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+
+    button.swatch { width: 100%; color: inherit; font: inherit; cursor: pointer; }
+    button.swatch:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    button.swatch:focus-visible { outline: 4px solid rgba(0,99,205,.28); outline-offset: 3px; }
+
+    .color-field {
+      display: block;
+      min-height: 112px;
+      border-bottom: 1px solid rgba(23,58,94,.08);
+      background: var(--color);
+    }
+
+    .swatch-copy { display: block; padding: 15px 16px 17px; }
+    .color-name { display: block; color: var(--navy); font-size: .92rem; font-weight: 800; }
+    .hex { display: block; margin-top: 3px; color: #68747D; font: 700 .78rem/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .use { display: block; margin-top: 8px; color: #7B858D; font-size: .76rem; line-height: 1.35; }
+
+    .route {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .route + .route { margin-top: 26px; }
+
+    .route-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: start;
+      gap: 18px;
+      padding: 27px 30px 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .route-number {
+      margin: 0 0 5px;
+      color: var(--teal);
+      font-size: .7rem;
+      font-weight: 850;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .route h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 1.45rem;
+      letter-spacing: -.02em;
+    }
+
+    .route p { max-width: 720px; margin: 7px 0 0; color: #65717A; }
+
+    .preferred {
+      padding: 7px 10px;
+      border-radius: 999px;
+      color: #0D6063;
+      background: #DDF3F0;
+      font-size: .69rem;
+      font-weight: 850;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .route-swatches {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 0;
+    }
+
+    .route-swatches .swatch {
+      min-height: 210px;
+      border: 0;
+      border-right: 1px solid var(--line);
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .route-swatches .swatch:last-child { border-right: 0; }
+    .route-swatches .color-field { min-height: 124px; }
+    .route-swatches button.swatch:hover { z-index: 2; transform: translateY(-2px); box-shadow: 0 12px 24px rgba(23,58,94,.14); }
+
+    .usage-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 26px;
+    }
+
+    .panel {
+      padding: 30px;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      background: white;
+      box-shadow: 0 12px 36px rgba(23,58,94,.06);
+    }
+
+    .panel h3 { margin: 0 0 17px; color: var(--navy); font-size: 1.25rem; }
+    .ratio-bar {
+      display: grid;
+      grid-template-columns: 65fr 20fr 10fr 5fr;
+      overflow: hidden;
+      height: 78px;
+      border-radius: 14px;
+      box-shadow: inset 0 0 0 1px rgba(23,58,94,.08);
+    }
+
+    .ratio-bar span { display: grid; place-items: center; font-size: .73rem; font-weight: 850; }
+    .ratio-light { color: var(--navy); background: #EAF4FB; }
+    .ratio-dark { color: white; background: var(--navy); }
+    .ratio-blue { color: white; background: var(--teal); }
+    .ratio-bright { color: var(--navy); background: var(--yellow); }
+
+    .ratio-key { display: grid; gap: 9px; margin: 18px 0 0; padding: 0; list-style: none; }
+    .ratio-key li { display: grid; grid-template-columns: 46px 1fr; align-items: baseline; gap: 8px; color: #66727B; font-size: .9rem; }
+    .ratio-key strong { color: var(--navy); }
+
+    .rules { margin: 0; padding-left: 20px; color: #627079; }
+    .rules li + li { margin-top: 11px; }
+
+    .note {
+      margin-top: 26px;
+      padding: 18px 21px;
+      border-left: 5px solid var(--yellow);
+      border-radius: 0 12px 12px 0;
+      color: #4E5961;
+      background: #FFF9DD;
+    }
+
+    .source {
+      margin-top: 56px;
+      padding-top: 25px;
+      border-top: 1px solid var(--line);
+      color: #7A858D;
+      font-size: .82rem;
+    }
+
+    .source a { color: var(--blue); font-weight: 700; }
+
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 20;
+      padding: 12px 16px;
+      border-radius: 12px;
+      color: white;
+      background: var(--navy);
+      box-shadow: 0 14px 34px rgba(0,0,0,.22);
+      font-size: .85rem;
+      font-weight: 750;
+      opacity: 0;
+      transform: translateY(12px);
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .hero-grid, .usage-grid { grid-template-columns: 1fr; }
+      .logo-card { min-height: 210px; max-width: 580px; }
+      .palette-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .route-swatches { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .route-swatches .swatch:nth-child(3) { border-right: 0; }
+      .route-swatches .swatch:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
+    }
+
+    @media (max-width: 620px) {
+      .shell { width: min(100% - 24px, 1180px); }
+      .hero { padding: 42px 0 50px; }
+      .hero-grid { gap: 34px; }
+      .logo-card { padding: 26px; border-radius: 18px; }
+      main { padding: 42px 0 60px; }
+      section + section { margin-top: 52px; }
+      .palette-grid, .route-swatches { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .route-swatches .swatch { border-right: 1px solid var(--line) !important; border-bottom: 1px solid var(--line); }
+      .route-swatches .swatch:nth-child(even) { border-right: 0 !important; }
+      .route-swatches .swatch:nth-last-child(-n+2) { border-bottom: 0; }
+      .route-head { grid-template-columns: 1fr; padding: 23px 21px; }
+      .preferred { justify-self: start; }
+      .recommendation { grid-template-columns: 1fr; }
+      .ratio-bar { height: 64px; }
+    }
+
+    @media print {
+      body { background: white; }
+      .hero { padding: 34px 0; background: var(--navy) !important; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      .hero-grid { grid-template-columns: 1.2fr .8fr; gap: 28px; }
+      .logo-card { min-height: 160px; padding: 26px; }
+      main { padding: 34px 0; }
+      section + section { margin-top: 38px; }
+      .swatch, .route, .panel { break-inside: avoid; box-shadow: none; }
+      .color-field, .ratio-bar span { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+      button.swatch { cursor: default; }
+      .toast { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="shell hero-grid">
+      <div>
+        <p class="eyebrow">Brand palette expansion</p>
+        <h1>More range.<br>Same trusted identity.</h1>
+        <p class="hero-copy">A flexible supporting color system designed to preserve the established logo while creating a calmer, more modern and more useful visual language across web, social, print and patient materials.</p>
+      </div>
+      <div class="logo-card">
+        <img src="data:image/png;base64,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" alt="Pediatric Ear, Nose and Throat Specialists logo">
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section aria-labelledby="existing-title">
+      <p class="section-kicker">01 · Existing foundation</p>
+      <h2 id="existing-title">Current logo colors remain unchanged</h2>
+      <p class="section-intro">These working digital values were sampled from the raster logo, alongside the values the live site CSS actually uses (Brand Blue <strong>#005EB8</strong>, heading red <strong>#DC4534</strong>, CTA red <strong>#F20000</strong>). They anchor every direction below; new colors are for the surrounding brand system, never for the logo itself.</p>
+
+      <div class="palette-grid">
+        <button class="swatch" style="--color:#EF3028" data-hex="#EF3028" aria-label="Copy Scarlet Red hex EF3028">
+          <span class="color-field"></span><span class="swatch-copy"><span class="color-name">Scarlet Red</span><span class="hex">#EF3028</span><span class="use">Energy · small accents · site heading red #DC4534</span></span>
+        </button>
+        <button class="swatch" style="--color:#FFE610" data-hex="#FFE610" aria-label="Copy Sunshine Yellow hex FFE610">
+          <span class="color-field"></span><span class="swatch-copy"><span class="color-name">Sunshine Yellow</span><span class="hex">#FFE610</span><span class="use">Optimism · highlights · never for text</span></span>
+        </button>
+        <button class="swatch" style="--color:#005EB8" data-hex="#005EB8" aria-label="Copy Brand Blue hex 005EB8">
+          <span class="color-field"></span><span class="swatch-copy"><span class="color-name">Brand Blue</span><span class="hex">#005EB8</span><span class="use">Trust · primary actions · site CSS value (logo ≈ #0063CD)</span></span>
+        </button>
+        <button class="swatch" style="--color:#737373" data-hex="#737373" aria-label="Copy Core Gray hex 737373">
+          <span class="color-field"></span><span class="swatch-copy"><span class="color-name">Core Gray</span><span class="hex">#737373</span><span class="use">Neutral · supporting type</span></span>
+        </button>
+        <button class="swatch" style="--color:#81A0B4" data-hex="#81A0B4" aria-label="Copy Soft Steel Blue hex 81A0B4">
+          <span class="color-field"></span><span class="swatch-copy"><span class="color-name">Soft Steel Blue</span><span class="hex">#81A0B4</span><span class="use">Calm · secondary detail</span></span>
+        </button>
+      </div>
+    </section>
+
+    <section aria-labelledby="directions-title">
+      <p class="section-kicker">02 · Palette directions</p>
+      <h2 id="directions-title">Four ways to expand the system</h2>
+      <p class="section-intro">The brand sits between two aesthetic families: a <em>clinical, trustworthy</em> backbone (cool blues, clean structure, medical credibility) and <em>playful, energetic</em> accents (the mascots, the brights). Each direction below extends one side of that blend — every value was contrast-checked against WCAG&nbsp;2.1. Click any swatch to copy its hex.</p>
+
+      <div class="recommendation">
+        <span class="badge">Recommendation</span>
+        <p><strong>Direction 1 as the backbone, Direction 3 as the accent layer.</strong> The blue range gives the site a calmer, more credible foundation without introducing a single new hue, while the teal-and-green accents formalize colors the mascot icons already use. Directions 2 and 4 layer in as needed for children's materials and neutrals.</p>
+      </div>
+
+      <article class="route">
+        <div class="route-head">
+          <div>
+            <p class="route-number">Direction 01 · Clinical backbone</p>
+            <h3>Calm Confidence — The Blue Range</h3>
+            <p>A full light-to-dark tonal range of the existing Brand Blue. The pale tints replace flat white and gray section backgrounds; the dark ends give headlines and the footer more weight — all without adding any new hue.</p>
+          </div>
+          <span class="preferred">Preferred route</span>
+        </div>
+        <div class="route-swatches">
+          <button class="swatch" style="--color:#003057" data-hex="#003057"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Deep Navy</span><span class="hex">#003057</span><span class="use">Headlines · footer · AAA on white (13.5:1)</span></span></button>
+          <button class="swatch" style="--color:#004489" data-hex="#004489"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Deep Blue</span><span class="hex">#004489</span><span class="use">Link hover · gradients · AAA (9.6:1)</span></span></button>
+          <button class="swatch" style="--color:#005EB8" data-hex="#005EB8"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Brand Blue</span><span class="hex">#005EB8</span><span class="use">Primary CTAs · unchanged</span></span></button>
+          <button class="swatch" style="--color:#6CACE4" data-hex="#6CACE4"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Sky</span><span class="hex">#6CACE4</span><span class="use">Illustrations · waves · borders</span></span></button>
+          <button class="swatch" style="--color:#C6DFF5" data-hex="#C6DFF5"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Powder</span><span class="hex">#C6DFF5</span><span class="use">Cards · callouts · testimonials</span></span></button>
+          <button class="swatch" style="--color:#EDF5FC" data-hex="#EDF5FC"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Ice</span><span class="hex">#EDF5FC</span><span class="use">Section backgrounds</span></span></button>
+        </div>
+      </article>
+
+      <article class="route">
+        <div class="route-head">
+          <div>
+            <p class="route-number">Direction 02 · Playful warmth</p>
+            <h3>Warm &amp; Pediatric — Red &amp; Yellow Tones</h3>
+            <p>Softer, warmer versions of the logo's red and yellow so those colors can appear at large scale without feeling alarming — important in a medical setting for kids. Brick replaces the current harsh #790000 for red text.</p>
+          </div>
+        </div>
+        <div class="route-swatches">
+          <button class="swatch" style="--color:#A8352A" data-hex="#A8352A"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Brick</span><span class="hex">#A8352A</span><span class="use">Red text on light · AA (6.6:1)</span></span></button>
+          <button class="swatch" style="--color:#F0705A" data-hex="#F0705A"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Coral</span><span class="hex">#F0705A</span><span class="use">Friendly accents · illustration</span></span></button>
+          <button class="swatch" style="--color:#FADCD6" data-hex="#FADCD6"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Blush</span><span class="hex">#FADCD6</span><span class="use">"Don't Forget" / alert boxes</span></span></button>
+          <button class="swatch" style="--color:#F2A900" data-hex="#F2A900"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Golden</span><span class="hex">#F2A900</span><span class="use">Stars · badges · underlines</span></span></button>
+          <button class="swatch" style="--color:#FFB81C" data-hex="#FFB81C"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Amber</span><span class="hex">#FFB81C</span><span class="use">Buttons on dark blue</span></span></button>
+          <button class="swatch" style="--color:#FFF3C9" data-hex="#FFF3C9"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Cream</span><span class="hex">#FFF3C9</span><span class="use">Warm backgrounds · tips</span></span></button>
+        </div>
+      </article>
+
+      <article class="route">
+        <div class="route-head">
+          <div>
+            <p class="route-number">Direction 03 · Accent layer</p>
+            <h3>Fresh Accents — Teal, Green &amp; Orange</h3>
+            <p>The homepage mascots already use a teal nurse-bear and a green croc — this direction formalizes those hues and adds orange as a bridge between the logo's red and yellow. Each service area or mascot can own a color.</p>
+          </div>
+        </div>
+        <div class="route-swatches">
+          <button class="swatch" style="--color:#007680" data-hex="#007680"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Deep Teal</span><span class="hex">#007680</span><span class="use">Teal text on white · AA (5.4:1)</span></span></button>
+          <button class="swatch" style="--color:#00A5B5" data-hex="#00A5B5"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Teal</span><span class="hex">#00A5B5</span><span class="use">Mascot circles · icon fills</span></span></button>
+          <button class="swatch" style="--color:#B8E6DC" data-hex="#B8E6DC"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Mint</span><span class="hex">#B8E6DC</span><span class="use">Forms section · success states</span></span></button>
+          <button class="swatch" style="--color:#2E7D32" data-hex="#2E7D32"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Deep Green</span><span class="hex">#2E7D32</span><span class="use">Green text · confirmations · AA (5.1:1)</span></span></button>
+          <button class="swatch" style="--color:#43A047" data-hex="#43A047"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Grass Green</span><span class="hex">#43A047</span><span class="use">Careers · croc mascot · wellness</span></span></button>
+          <button class="swatch" style="--color:#F68D2E" data-hex="#F68D2E"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Orange</span><span class="hex">#F68D2E</span><span class="use">Kids' activities · energetic icons</span></span></button>
+        </div>
+      </article>
+
+      <article class="route">
+        <div class="route-head">
+          <div>
+            <p class="route-number">Direction 04 · Quiet support</p>
+            <h3>Calm Accents &amp; Refreshed Neutrals</h3>
+            <p>A calm purple family for the Learning Center, plus blue-cast neutrals that replace today's flat #999999 / #666666 grays so even the quiet colors feel like part of the brand.</p>
+          </div>
+        </div>
+        <div class="route-swatches">
+          <button class="swatch" style="--color:#5E50A1" data-hex="#5E50A1"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Purple</span><span class="hex">#5E50A1</span><span class="use">Learning Center · AA (6.7:1)</span></span></button>
+          <button class="swatch" style="--color:#E4E0F5" data-hex="#E4E0F5"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Lavender</span><span class="hex">#E4E0F5</span><span class="use">Refines current homepage background</span></span></button>
+          <button class="swatch" style="--color:#333F48" data-hex="#333F48"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Charcoal</span><span class="hex">#333F48</span><span class="use">Body text · AAA (10.8:1)</span></span></button>
+          <button class="swatch" style="--color:#5B6770" data-hex="#5B6770"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Slate</span><span class="hex">#5B6770</span><span class="use">Captions · replaces #666 · AA (5.8:1)</span></span></button>
+          <button class="swatch" style="--color:#E9EEF3" data-hex="#E9EEF3"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Fog</span><span class="hex">#E9EEF3</span><span class="use">Cool neutral background · dividers</span></span></button>
+          <button class="swatch" style="--color:#F9F7F2" data-hex="#F9F7F2"><span class="color-field"></span><span class="swatch-copy"><span class="color-name">Warm White</span><span class="hex">#F9F7F2</span><span class="use">Alternate to pure white sections</span></span></button>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="usage-title">
+      <p class="section-kicker">03 · Application guidance</p>
+      <h2 id="usage-title">Let the brighter logo colors work as accents</h2>
+      <p class="section-intro">A restrained distribution keeps the brand credible and easy to navigate while preserving its recognizable pediatric energy.</p>
+
+      <div class="usage-grid">
+        <div class="panel">
+          <h3>Recommended color distribution</h3>
+          <div class="ratio-bar" aria-label="65 percent light backgrounds, 20 percent dark structure, 10 percent blue or teal, 5 percent bright logo accents">
+            <span class="ratio-light">65%</span>
+            <span class="ratio-dark">20%</span>
+            <span class="ratio-blue">10%</span>
+            <span class="ratio-bright">5%</span>
+          </div>
+          <ul class="ratio-key">
+            <li><strong>65%</strong><span>White, Ice, Powder, Mint, Cream and Lavender backgrounds</span></li>
+            <li><strong>20%</strong><span>Deep Navy and Charcoal structural colors</span></li>
+            <li><strong>10%</strong><span>Brand Blue plus the Teal / Green / Purple accent layer</span></li>
+            <li><strong>5%</strong><span>Red, Coral, Orange and Yellow highlights</span></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Practical rules</h3>
+          <ul class="rules">
+            <li>Keep the existing logo artwork and its colors unchanged.</li>
+            <li>Use Deep Navy for major headings, navigation and footer areas.</li>
+            <li>Use Brand Blue for primary calls to action and Deep Teal for secondary actions.</li>
+            <li>Reserve red for urgency and small emphasis; use Brick #A8352A whenever red must be read as text.</li>
+            <li>Use yellow, coral and orange for highlights and graphic details — never for body copy.</li>
+            <li>Use the pale tints (Ice, Powder, Blush, Cream, Mint, Lavender, Fog) to separate sections; all support Navy or Charcoal text at AAA.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="note"><strong>Accessibility:</strong> Safe text-on-white colors are Deep Navy, Deep Blue, Brand Blue, Brick, Deep Teal, Deep Green, Purple, Charcoal and Slate (all ≥ 4.5:1). The current heading red #DC4534 and CTA red #F20000 only pass at large sizes (≥ 3:1); Sunshine Yellow, Sky, Coral, Orange, Teal and Grass Green are decorative — pair them with Navy or Charcoal type. Ratios computed per WCAG&nbsp;2.1.</div>
+    </section>
+
+    <p class="source">Prepared for Pediatric Ear, Nose &amp; Throat Specialists · St. Petersburg. Brand context reviewed at <a href="https://pediatric-ent.com/st-petersburg/" target="_blank" rel="noopener">pediatric-ent.com/st-petersburg</a>. Click any color swatch to copy its hex value.</p>
+  </main>
+
+  <div class="toast" role="status" aria-live="polite">Hex copied</div>
+
+  <script>
+    const toast = document.querySelector(".toast");
+    let toastTimer;
+    document.querySelectorAll("[data-hex]").forEach((swatch) => {
+      swatch.addEventListener("click", async () => {
+        const value = swatch.dataset.hex;
+        try {
+          await navigator.clipboard.writeText(value);
+          toast.textContent = value + " copied";
+        } catch {
+          toast.textContent = "Hex: " + value;
+        }
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove("show"), 1500);
+      });
+    });
+  </script>
+</body>
+</html>
