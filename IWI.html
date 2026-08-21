@@ -9,168 +9,188 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --linen:#F8F7F2; --cloud:#FFFFFF; --mist:#EDEBE2;
+    --linen:#F8F7F2; --cloud:#FFFFFF; --mist:#EDEBE2; --stone:#E4E0D2;
     --deep:#465A50; --sage:#7A8C80; --sagelt:#B5BDB9;
-    --gold:#C9A253; --ochre:#8A6D2F; --goldlt:#E8D4A8;
+    --gold:#C9A253; --ochre:#8A6D2F;
     --ink:#2E3B34; --ring:#B9B1AD;
-    --hair:#DDD9CC;
+    --hair:#D8D3C4;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
+  *{margin:0;padding:0;box-sizing:border-box;border-radius:0}
   html{scroll-behavior:smooth}
   body{background:var(--linen);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 36px}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 40px}
 
-  h1,h2,h3{font-family:'Cinzel',serif;font-weight:500;color:var(--deep)}
-  h2{font-size:30px;letter-spacing:.04em;margin-bottom:6px}
-  h3{font-size:16px;letter-spacing:.06em;margin:34px 0 10px;color:var(--ink)}
-  .kick{font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ochre);margin-bottom:14px}
-  p{max-width:72ch}
+  h2{font-family:'Cinzel',serif;font-weight:500;font-size:32px;letter-spacing:.04em;color:var(--deep)}
+  h3{font-family:'Jost',sans-serif;font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--ochre);margin:52px 0 14px}
+  p{max-width:70ch}
   p+p{margin-top:12px}
   .muted{color:#5F6E66}
-  strong{font-weight:600;color:var(--ink)}
+  strong{font-weight:600;color:inherit}
 
-  section{padding:76px 0;border-top:1px solid var(--hair)}
-  section:first-of-type{border-top:0}
+  section{padding:88px 0}
+  .snum{display:flex;align-items:baseline;gap:22px;border-bottom:1px solid var(--hair);padding-bottom:22px;margin-bottom:34px}
+  .snum .n{font-family:'Cinzel',serif;font-size:15px;letter-spacing:.1em;color:var(--ochre)}
+  .snum h2{flex:1}
+  .snum .r{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8A958E}
+
+  /* section backgrounds */
+  .bg-cloud{background:var(--cloud)}
+  .bg-linen{background:var(--linen)}
+  .bg-mist{background:var(--mist)}
+  .bg-stone{background:var(--stone)}
+  .bg-dark{background:var(--ink);color:#C6CFC9}
+  .bg-dark h2{color:var(--linen)}
+  .bg-dark h3{color:var(--gold)}
+  .bg-dark .snum{border-color:#44534B}
+  .bg-dark .snum .n{color:var(--gold)}
+  .bg-dark .snum .r{color:#7E8C84}
+  .bg-dark strong{color:var(--linen)}
 
   /* ---------- cover ---------- */
-  .cover{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 0 70px;border-top:0}
-  .cover svg{width:170px;margin-bottom:38px}
-  .cover .wordmark{font-family:'Cinzel',serif;font-weight:400;font-size:40px;letter-spacing:.10em;text-transform:uppercase;color:var(--deep);line-height:1.3}
+  .cover{min-height:86vh;display:flex;flex-direction:column;justify-content:center;padding:100px 0 60px}
+  .cover .top{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--ochre);font-weight:600;margin-bottom:52px}
+  .cover svg{width:150px;margin-bottom:34px}
+  .cover .wordmark{font-family:'Cinzel',serif;font-weight:400;font-size:44px;letter-spacing:.09em;text-transform:uppercase;color:var(--deep);line-height:1.28}
   .cover .wordmark span{display:block}
-  .cover .rule{width:56px;height:3px;background:var(--gold);margin:34px auto 26px;border-radius:2px}
-  .cover .sub{font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#5F6E66;font-weight:500}
-  .cover .ver{margin-top:60px;font-size:12.5px;color:#8A958E;letter-spacing:.06em}
+  .cover .meta{margin-top:56px;padding-top:22px;border-top:1px solid var(--hair);display:flex;gap:44px;flex-wrap:wrap;font-size:13px;color:#5F6E66;letter-spacing:.04em}
+  .cover .meta b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#8A958E;font-weight:600;margin-bottom:3px}
 
-  /* ---------- toc ---------- */
-  .toc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
-  @media(max-width:820px){.toc{grid-template-columns:repeat(2,1fr)}}
-  .toc a{display:block;background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:500}
-  .toc a b{display:block;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:4px}
-  .toc a:hover{border-color:var(--gold)}
+  .toc{border-top:1px solid var(--hair);padding:34px 0 78px}
+  .toc ol{list-style:none;column-count:2;column-gap:60px;max-width:760px}
+  @media(max-width:700px){.toc ol{column-count:1}}
+  .toc li{break-inside:avoid}
+  .toc a{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:12px 0;border-bottom:1px solid var(--hair);text-decoration:none;color:var(--ink);font-size:15px}
+  .toc a i{font-style:normal;font-family:'Cinzel',serif;font-size:12px;color:var(--ochre);letter-spacing:.08em}
+  .toc a:hover{color:var(--deep)}
 
   /* ---------- archetype ---------- */
-  .axes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  .axes{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:8px}
   @media(max-width:820px){.axes{grid-template-columns:1fr}}
-  .axis{background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:20px 22px}
-  .axis b{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.08em;color:var(--deep);display:block;margin-bottom:8px}
-  .axis .track{position:relative;height:4px;background:var(--mist);border-radius:2px;margin:14px 0 8px}
-  .axis .dot{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--gold);border:2px solid var(--cloud);box-shadow:0 0 0 1px var(--hair);transform:translate(-50%,-50%)}
-  .axis .ends{display:flex;justify-content:space-between;font-size:11.5px;color:#8A958E;letter-spacing:.03em}
-  .axis p{font-size:13.5px;margin-top:10px;color:#5F6E66}
+  .axis{padding:26px 0;border-bottom:1px solid var(--hair)}
+  .axis b{font-family:'Jost',sans-serif;font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--deep);display:block;margin-bottom:14px}
+  .axis .track{position:relative;height:2px;background:var(--hair);margin:16px 0 8px}
+  .axis .dot{position:absolute;top:50%;width:12px;height:12px;background:var(--gold);transform:translate(-50%,-50%)}
+  .axis .ends{display:flex;justify-content:space-between;font-size:11.5px;color:#8A958E;letter-spacing:.05em;text-transform:uppercase}
+  .axis p{font-size:14px;margin-top:12px;color:#5F6E66}
 
-  .flag{background:var(--mist);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 20px;margin-top:26px;font-size:14.5px}
+  .flag{margin-top:44px;padding:24px 0 0;border-top:2px solid var(--gold);font-size:14.5px;max-width:76ch}
   .flag b{font-weight:600}
 
   /* ---------- logo ---------- */
-  .logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+  .logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:8px;background:var(--hair);border:1px solid var(--hair)}
   @media(max-width:820px){.logo-grid{grid-template-columns:1fr}}
-  .plate{border:1px solid var(--hair);border-radius:14px;overflow:hidden;background:var(--cloud)}
-  .plate .st{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:230px;padding:36px 24px}
-  .plate .st svg{width:110px;margin-bottom:20px}
-  .plate .st .wm{font-family:'Cinzel',serif;font-size:19px;letter-spacing:.10em;text-transform:uppercase;text-align:center;line-height:1.32}
+  .plate{background:var(--linen)}
+  .plate .st{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:225px;padding:36px 24px}
+  .plate .st svg{width:105px;margin-bottom:20px}
+  .plate .st .wm{font-family:'Cinzel',serif;font-size:18px;letter-spacing:.10em;text-transform:uppercase;text-align:center;line-height:1.32}
   .plate .st .wm span{display:block}
-  .plate .cap{border-top:1px solid var(--hair);padding:13px 20px;font-size:13px}
-  .plate .cap b{font-weight:600}
-  .plate .cap .u{color:#5F6E66;display:block;font-size:12.5px;margin-top:2px}
+  .plate .cap{border-top:1px solid var(--hair);padding:14px 20px 18px;font-size:13px;background:var(--cloud)}
+  .plate .cap b{font-weight:600;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--deep)}
+  .plate .cap .u{color:#5F6E66;display:block;font-size:13px;margin-top:4px;line-height:1.5}
   .dark-st{background:var(--ink)}
-  .clearspace{position:relative;display:inline-block;padding:46px;border:1.5px dashed var(--sagelt);border-radius:10px;margin-top:20px}
-  .clearspace svg{width:110px;display:block}
-  .clearspace .xlab{position:absolute;font-size:11px;color:#8A958E;letter-spacing:.06em}
-  .dont{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
-  @media(max-width:820px){.dont{grid-template-columns:1fr}}
-  .dont .d{background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:16px 18px;font-size:13.5px}
-  .dont .d::before{content:"✕";color:#B0532F;font-weight:600;margin-right:8px}
+  .clearspace{position:relative;display:inline-block;padding:46px;border:1px dashed var(--sage);margin-top:20px}
+  .clearspace svg{width:105px;display:block}
+  .clearspace .xlab{position:absolute;font-size:11px;color:#8A958E;letter-spacing:.08em}
 
   /* ---------- color ---------- */
-  .pal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+  .pal{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:8px;background:var(--hair);border:1px solid var(--hair)}
   @media(max-width:820px){.pal{grid-template-columns:repeat(2,1fr)}}
-  .chip{border-radius:14px;overflow:hidden;border:1px solid var(--hair);background:var(--cloud)}
-  .chip i{display:block;height:92px}
-  .chip .m{padding:12px 15px}
+  .chip{background:var(--cloud)}
+  .chip i{display:block;height:110px}
+  .chip .m{padding:13px 16px 16px}
   .chip .m b{display:block;font-size:13.5px;font-weight:600}
   .chip .m s{display:block;text-decoration:none;font-size:12px;color:#5F6E66;font-variant-numeric:tabular-nums}
-  .chip .m u{display:block;text-decoration:none;font-size:12px;color:#8A958E;margin-top:4px}
-  table{width:100%;border-collapse:collapse;margin-top:20px;font-size:13.5px;background:var(--cloud);border:1px solid var(--hair);border-radius:12px;overflow:hidden}
-  th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--hair)}
-  th{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#5F6E66;font-weight:600;background:var(--mist)}
-  tr:last-child td{border-bottom:0}
+  .chip .m u{display:block;text-decoration:none;font-size:12.5px;color:#8A958E;margin-top:6px;line-height:1.5}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:14px}
+  th,td{text-align:left;padding:12px 4px;border-bottom:1px solid var(--hair)}
+  th{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#5F6E66;font-weight:600;border-bottom:2px solid var(--ink)}
   .pass{color:#3E6B4F;font-weight:600}
   .cond{color:#8A6D2F;font-weight:600}
   .fail{color:#B0532F;font-weight:600}
 
   /* ---------- type ---------- */
-  .spec{background:var(--cloud);border:1px solid var(--hair);border-radius:14px;padding:28px 30px;margin-top:22px}
-  .spec .big{font-family:'Cinzel',serif;font-size:44px;letter-spacing:.05em;color:var(--deep);line-height:1.15}
-  .spec .alpha{font-family:'Cinzel',serif;font-size:19px;letter-spacing:.08em;color:var(--ink);margin-top:14px;word-break:break-all}
+  .spec{border-top:1px solid var(--hair);padding:30px 0;margin-top:8px}
+  .spec:first-of-type{margin-top:22px}
+  .spec .big{font-family:'Cinzel',serif;font-size:46px;letter-spacing:.05em;color:var(--deep);line-height:1.15}
+  .spec .alpha{font-family:'Cinzel',serif;font-size:19px;letter-spacing:.08em;color:var(--ink);margin-top:16px;word-break:break-all}
   .spec .alpha2{font-family:'Jost',sans-serif;font-size:17px;color:var(--ink);margin-top:12px;word-break:break-all}
-  .spec .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ochre);font-weight:600;margin-bottom:10px}
-  .scale{margin-top:8px}
-  .scale div{display:flex;align-items:baseline;gap:18px;padding:10px 0;border-bottom:1px solid var(--mist)}
+  .spec .lbl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre);font-weight:600;margin-bottom:12px}
+  .scale div{display:flex;align-items:baseline;gap:22px;padding:13px 0;border-bottom:1px solid var(--hair)}
   .scale div:last-child{border-bottom:0}
-  .scale .tname{width:130px;flex:none;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#8A958E;font-weight:500}
+  .scale .tname{width:120px;flex:none;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8A958E;font-weight:500}
 
-  /* ---------- voice ---------- */
-  .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+  /* ---------- voice (dark) ---------- */
+  .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:8px}
   @media(max-width:820px){.vgrid{grid-template-columns:1fr}}
-  .vcard{background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:20px 22px;font-size:14.5px}
-  .vcard b{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.08em;color:var(--deep);display:block;margin-bottom:10px}
-  .vcard .q{font-style:normal;border-left:3px solid var(--gold);padding-left:14px;margin:10px 0;color:var(--ink)}
-  .words{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-  .words span{background:var(--mist);border-radius:999px;padding:5px 13px;font-size:13px}
-  .words.avoid span{background:#F1E4DC;color:#7A4A33}
+  .vcol{padding:26px 0;border-bottom:1px solid #44534B}
+  .vcol b{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:14px}
+  .vcol .q{border-left:2px solid var(--gold);padding-left:16px;margin:14px 0;color:var(--linen);font-size:15.5px}
+  .vcol .q.bad{border-color:#A6684A;color:#B9AFA5}
+  .words{display:flex;gap:8px 10px;flex-wrap:wrap;margin-top:8px}
+  .words span{border:1px solid #55645C;padding:5px 13px;font-size:13px;color:#C6CFC9}
+  .words.avoid span{border-color:#7A5A47;color:#C9A38C}
 
   /* ---------- applications ---------- */
-  .apps{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
-  @media(max-width:820px){.apps{grid-template-columns:1fr}}
-  .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:500;font-size:15px;letter-spacing:.02em;border-radius:999px;padding:13px 28px;text-decoration:none}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:500;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:15px 30px;text-decoration:none}
   .btn-p{background:var(--deep);color:var(--linen)}
-  .btn-s{background:transparent;color:var(--deep);border:1.5px solid var(--sagelt)}
+  .btn-s{background:transparent;color:var(--deep);border:1px solid var(--deep)}
   .btn-g{background:var(--gold);color:var(--ink)}
-  .democard{background:var(--cloud);border:1px solid var(--hair);border-radius:16px;padding:28px}
-  .democard .eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre);font-weight:600}
-  .democard h4{font-family:'Cinzel',serif;font-size:22px;letter-spacing:.03em;color:var(--deep);margin:10px 0 8px}
+  .apps{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:8px;background:var(--hair);border:1px solid var(--hair)}
+  @media(max-width:820px){.apps{grid-template-columns:1fr}}
+  .democard{background:var(--cloud);padding:34px}
+  .democard .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+  .democard h4{font-family:'Cinzel',serif;font-weight:500;font-size:23px;letter-spacing:.03em;color:var(--deep);margin:12px 0 10px}
   .democard p{font-size:14.5px;color:#5F6E66}
-  .democard .row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
-  .demodark{background:var(--ink);border-radius:16px;padding:28px}
+  .democard .row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+  .demodark{background:var(--ink);padding:34px}
   .demodark .eyebrow{color:var(--gold)}
   .demodark h4{color:var(--linen)}
-  .demodark p{color:#B9C4BE}
+  .demodark p{color:#AEBAB3}
 
-  footer{padding:44px 0 70px;font-size:13px;color:#8A958E;border-top:1px solid var(--hair)}
+  /* ---------- misuse ---------- */
+  .dont ol{list-style:none;counter-reset:d;columns:2;column-gap:64px;margin-top:8px;max-width:960px}
+  @media(max-width:820px){.dont ol{columns:1}}
+  .dont li{counter-increment:d;break-inside:avoid;padding:14px 0 14px 44px;border-bottom:1px solid #C9C4B2;position:relative;font-size:14.5px}
+  .dont li::before{content:counter(d,decimal-leading-zero);position:absolute;left:0;top:14px;font-family:'Cinzel',serif;font-size:13px;color:#B0532F;letter-spacing:.05em}
+
+  footer{background:var(--ink);color:#7E8C84;padding:40px 0;font-size:13px;letter-spacing:.03em}
 </style>
 </head>
 <body>
 
-<!-- ═══════════ COVER ═══════════ -->
-<div class="cover wrap">
+<!-- ═══════════ COVER · linen ═══════════ -->
+<div class="wrap cover">
+  <div class="top">Integrated Wellness Institute</div>
   <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" aria-label="IWI ring mark">
     <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/>
     <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/>
     <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/>
   </svg>
-  <div class="wordmark"><span>Integrated</span><span>Wellness Institute</span></div>
-  <div class="rule"></div>
-  <div class="sub">Brand Style Guide</div>
-  <div class="ver">Sage &amp; Gold · Cinzel · Version 1.0 · 2026</div>
-</div>
-
-<div class="wrap">
-  <div class="toc">
-    <a href="#found"><b>01</b>Foundation &amp; Archetype</a>
-    <a href="#logo"><b>02</b>Logo System</a>
-    <a href="#color"><b>03</b>Color</a>
-    <a href="#type"><b>04</b>Typography</a>
-    <a href="#voice"><b>05</b>Voice &amp; Tone</a>
-    <a href="#img"><b>06</b>Imagery</a>
-    <a href="#apps"><b>07</b>Applications</a>
-    <a href="#dont"><b>08</b>Misuse</a>
+  <div class="wordmark"><span>Brand Style</span><span>Guide</span></div>
+  <div class="meta">
+    <div><b>System</b>Sage &amp; Gold</div>
+    <div><b>Display</b>Cinzel</div>
+    <div><b>Text</b>Jost</div>
+    <div><b>Version</b>1.0 · 2026</div>
   </div>
 </div>
 
-<!-- ═══════════ 01 FOUNDATION ═══════════ -->
-<section id="found"><div class="wrap">
-  <div class="kick">01 · Foundation</div>
-  <h2>Brand Archetype</h2>
+<div class="wrap toc">
+  <ol>
+    <li><a href="#found">Foundation &amp; Archetype<i>01</i></a></li>
+    <li><a href="#logo">Logo System<i>02</i></a></li>
+    <li><a href="#color">Color<i>03</i></a></li>
+    <li><a href="#type">Typography<i>04</i></a></li>
+    <li><a href="#voice">Voice &amp; Tone<i>05</i></a></li>
+    <li><a href="#img">Imagery<i>06</i></a></li>
+    <li><a href="#apps">Applications<i>07</i></a></li>
+    <li><a href="#dont">Misuse<i>08</i></a></li>
+  </ol>
+</div>
+
+<!-- ═══════════ 01 FOUNDATION · white ═══════════ -->
+<section id="found" class="bg-cloud"><div class="wrap">
+  <div class="snum"><span class="n">01</span><h2>Brand Archetype</h2><span class="r">Foundation</span></div>
   <p>Integrated Wellness Institute occupies a <strong>composed archetype: Clinical Trustworthy, warmed</strong>. The clinical half is non-negotiable — doctorate-level course developers, NBCC ACEP approval, evidence-based curriculum — but the classic clinical aesthetic (cool blues, sterile sans-serifs, hospital register) would misrepresent a brand whose subject is human resilience. Sage &amp; Gold warms the archetype: sage carries the clinical calm, gold carries the human reward. Imagery follows a <strong>Documentary Honest</strong> direction throughout.</p>
 
   <div class="axes">
@@ -199,10 +219,9 @@
   <div class="flag"><b>Adaptation choices, flagged.</b> Three deliberate deviations from archetype defaults: (1) the Clinical Trustworthy palette is warmed from blue-grey to sage to accommodate the fixed warm-grey ring mark; (2) type is serif-led (Cinzel) rather than sans-led, honoring the inscriptional wordmark; (3) the audience axis holds at Authority despite the wellness vertical's usual drift toward Companion, because the primary buyer is institutional. The archetype to actively avoid is <b>Rugged Utilitarian</b> — no tactical black, OD green, coyote tan, or thin-line motifs, ever.</div>
 </div></section>
 
-<!-- ═══════════ 02 LOGO ═══════════ -->
-<section id="logo"><div class="wrap">
-  <div class="kick">02 · Logo System</div>
-  <h2>The Mark</h2>
+<!-- ═══════════ 02 LOGO · linen ═══════════ -->
+<section id="logo" class="bg-linen"><div class="wrap">
+  <div class="snum"><span class="n">02</span><h2>Logo System</h2><span class="r">The Mark</span></div>
   <p>The identity is a three-tier logo system built on one fixed geometry: three interlocking rings above the Cinzel wordmark. The rings' shape, stroke weight, and overlap never change — only their color, and only per the tiers below.</p>
 
   <div class="logo-grid">
@@ -211,7 +230,7 @@
         <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/></svg>
         <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
       </div>
-      <div class="cap"><b>Primary mark</b><span class="u">Heritage grey rings #B9B1AD · Deep Sage wordmark. Default everywhere: website header, documents, certificates, signage.</span></div>
+      <div class="cap"><b>Primary Mark</b><span class="u">Heritage grey rings #B9B1AD · Deep Sage wordmark. Default everywhere: website header, documents, certificates, signage.</span></div>
     </div>
 
     <div class="plate">
@@ -219,7 +238,7 @@
         <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/></svg>
         <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
       </div>
-      <div class="cap"><b>Tonal mark</b><span class="u">Sage-tint rings #B5BDB9. For fully sage-toned layouts where the heritage grey would read as a mismatch. Interchangeable with primary; never mix both in one piece.</span></div>
+      <div class="cap"><b>Tonal Mark</b><span class="u">Sage-tint rings #B5BDB9. For fully sage-toned layouts where the heritage grey would read as a mismatch. Interchangeable with primary; never mix both in one piece.</span></div>
     </div>
 
     <div class="plate">
@@ -227,7 +246,7 @@
         <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#465A50" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#7A8C80" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#C9A253" stroke-width="28"/></svg>
         <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
       </div>
-      <div class="cap"><b>Accent mark</b><span class="u">Tri-color rings: Deep Sage · Sage · Gold, left to right. Secondary use only — course badges, social avatars, certificates of completion, celebratory moments. Never the website header or formal documents.</span></div>
+      <div class="cap"><b>Accent Mark</b><span class="u">Tri-color rings: Deep Sage · Sage · Gold, left to right. Secondary use only — course badges, social avatars, certificates of completion, celebratory moments. Never the website header or formal documents.</span></div>
     </div>
 
     <div class="plate">
@@ -235,7 +254,7 @@
         <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/></svg>
         <div class="wm" style="color:#F8F7F2"><span>Integrated</span><span>Wellness Institute</span></div>
       </div>
-      <div class="cap"><b>Reversed mark</b><span class="u">On Evergreen or photography: sage-tint rings, Linen wordmark. Gold wordmark is permitted on Evergreen for celebratory pieces only.</span></div>
+      <div class="cap"><b>Reversed Mark</b><span class="u">On Evergreen or photography: sage-tint rings, Linen wordmark. Gold wordmark is permitted on Evergreen for celebratory pieces only.</span></div>
     </div>
   </div>
 
@@ -250,10 +269,9 @@
   </div>
 </div></section>
 
-<!-- ═══════════ 03 COLOR ═══════════ -->
-<section id="color"><div class="wrap">
-  <div class="kick">03 · Color</div>
-  <h2>Sage &amp; Gold</h2>
+<!-- ═══════════ 03 COLOR · mist ═══════════ -->
+<section id="color" class="bg-mist"><div class="wrap">
+  <div class="snum"><span class="n">03</span><h2>Sage &amp; Gold</h2><span class="r">Color</span></div>
   <p>Sage is the brand's clinical calm; gold is its human reward. The system is built so sage does the talking and gold does the pointing — <strong>gold appears once per composition</strong>, on the element that matters most.</p>
 
   <div class="pal">
@@ -281,10 +299,9 @@
   </table>
 </div></section>
 
-<!-- ═══════════ 04 TYPOGRAPHY ═══════════ -->
-<section id="type"><div class="wrap">
-  <div class="kick">04 · Typography</div>
-  <h2>Cinzel &amp; Jost</h2>
+<!-- ═══════════ 04 TYPOGRAPHY · white ═══════════ -->
+<section id="type" class="bg-cloud"><div class="wrap">
+  <div class="snum"><span class="n">04</span><h2>Cinzel &amp; Jost</h2><span class="r">Typography</span></div>
   <p><strong>Cinzel</strong> is the brand voice at display size — Roman inscriptional capitals that match the wordmark, reserved for the logo, page titles, and section headings. It is always set in <strong>caps with tracking of 0.04–0.10em</strong>, never in running text. <strong>Jost</strong> is the workhorse: body copy, UI, captions, tables, forms. Its geometric warmth keeps dense content approachable without competing with Cinzel's formality. Both are free Google Fonts.</p>
 
   <div class="spec">
@@ -299,7 +316,7 @@
   </div>
 
   <h3>Type Scale</h3>
-  <div class="spec scale">
+  <div class="scale">
     <div><span class="tname">Display · H1</span><span style="font-family:'Cinzel',serif;font-size:40px;letter-spacing:.04em;color:var(--deep)">Mastering Resilience</span></div>
     <div><span class="tname">H2</span><span style="font-family:'Cinzel',serif;font-size:28px;letter-spacing:.05em;color:var(--deep)">Program Overview</span></div>
     <div><span class="tname">H3</span><span style="font-family:'Cinzel',serif;font-size:18px;letter-spacing:.07em;color:var(--ink)">Key Features</span></div>
@@ -307,89 +324,86 @@
     <div><span class="tname">Body</span><span style="font-family:'Jost',sans-serif;font-size:16px;line-height:1.65">Five modules, thirty-five lessons, one shared language across your department.</span></div>
     <div><span class="tname">Caption</span><span style="font-family:'Jost',sans-serif;font-size:13px;color:#5F6E66">365-day access · Certificate of completion · NBCC ACEP No. 7535</span></div>
   </div>
-  <p class="muted" style="margin-top:16px;font-size:14px">Rules: Cinzel never below 16px and never lowercase. Jost body at 15–17px, line-height 1.6–1.7, max measure 72ch. Numerals in specs and pricing use Jost medium. Never letterspace Jost lowercase.</p>
+  <p class="muted" style="margin-top:18px;font-size:14px">Rules: Cinzel never below 16px and never lowercase. Jost body at 15–17px, line-height 1.6–1.7, max measure 72ch. Numerals in specs and pricing use Jost medium. Never letterspace Jost lowercase.</p>
 </div></section>
 
-<!-- ═══════════ 05 VOICE ═══════════ -->
-<section id="voice"><div class="wrap">
-  <div class="kick">05 · Voice &amp; Tone</div>
-  <h2>How IWI Speaks</h2>
+<!-- ═══════════ 05 VOICE · dark ═══════════ -->
+<section id="voice" class="bg-dark"><div class="wrap">
+  <div class="snum"><span class="n">05</span><h2>How IWI Speaks</h2><span class="r">Voice &amp; Tone</span></div>
   <p>The voice is <strong>declarative, numeric, and calm</strong> — an experienced clinician briefing professionals, never a wellness brand soothing consumers and never a tactical brand hyping operators. Claims are countable; urgency is absent; trauma is named clinically, not dramatized. This also keeps advertising inside Google's health-policy lines: <strong>advertise the credential, never the condition</strong>.</p>
 
   <div class="vgrid">
-    <div class="vcard"><b>Say It Like This</b>
+    <div class="vcol"><b>Say It Like This</b>
       <div class="q">Resilience is a capability, not a trait.</div>
       <div class="q">Built by doctorate-level clinicians. Approved by NBCC. Completed on shift or off.</div>
       <div class="q">Five modules. Thirty-five lessons. One shared language across your department.</div>
       <div class="q">If it is trained across roles and ranks, it becomes culture.</div>
     </div>
-    <div class="vcard"><b>Never Like This</b>
-      <div class="q" style="border-color:#C77B4F">Still carrying what you saw on that call?</div>
-      <div class="q" style="border-color:#C77B4F">Unlock your inner warrior. 🔥</div>
-      <div class="q" style="border-color:#C77B4F">Don't wait — spots are filling fast!</div>
-      <div class="q" style="border-color:#C77B4F">Your journey to zen starts here.</div>
+    <div class="vcol"><b>Never Like This</b>
+      <div class="q bad">Still carrying what you saw on that call?</div>
+      <div class="q bad">Unlock your inner warrior. 🔥</div>
+      <div class="q bad">Don't wait — spots are filling fast!</div>
+      <div class="q bad">Your journey to zen starts here.</div>
     </div>
-    <div class="vcard"><b>Words We Use</b>
+    <div class="vcol"><b>Words We Use</b>
       <div class="words"><span>capability</span><span>evidence-based</span><span>shared language</span><span>on shift</span><span>doctorate-level</span><span>turnkey</span><span>culture</span><span>certificate</span></div>
     </div>
-    <div class="vcard"><b>Words We Avoid</b>
+    <div class="vcol"><b>Words We Avoid</b>
       <div class="words avoid"><span>warrior</span><span>battle</span><span>tactical</span><span>zen</span><span>journey</span><span>unlock</span><span>hack</span><span>trauma-dumping hooks</span></div>
     </div>
   </div>
 </div></section>
 
-<!-- ═══════════ 06 IMAGERY ═══════════ -->
-<section id="img"><div class="wrap">
-  <div class="kick">06 · Imagery</div>
-  <h2>Documentary Honest</h2>
+<!-- ═══════════ 06 IMAGERY · linen ═══════════ -->
+<section id="img" class="bg-linen"><div class="wrap">
+  <div class="snum"><span class="n">06</span><h2>Documentary Honest</h2><span class="r">Imagery</span></div>
   <p>Photography shows <strong>real people doing real work in natural light</strong> — a dispatcher mid-shift, a firehouse kitchen conversation, a training room in use. Muted warm grade that sits on Linen without fighting sage or gold. No posed hero stances, no flag-and-eagle montages, no tactical costume, no stock-photo gloss, and no imagery that dramatizes crisis or trauma. When people appear, they are working or talking — never staring meaningfully into the middle distance.</p>
   <p class="muted">Treatment: warm highlights, soft green-grey shadows, gentle contrast. Duotone treatments, when needed for covers, use Evergreen shadows with Linen highlights — never gold duotones over faces.</p>
 </div></section>
 
-<!-- ═══════════ 07 APPLICATIONS ═══════════ -->
-<section id="apps"><div class="wrap">
-  <div class="kick">07 · Applications</div>
-  <h2>The System In Use</h2>
+<!-- ═══════════ 07 APPLICATIONS · stone ═══════════ -->
+<section id="apps" class="bg-stone"><div class="wrap">
+  <div class="snum"><span class="n">07</span><h2>The System In Use</h2><span class="r">Applications</span></div>
 
   <h3>Buttons</h3>
-  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:14px">
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:6px">
     <a class="btn btn-p" href="#">Schedule a Consultation</a>
     <a class="btn btn-s" href="#">View Programs</a>
     <a class="btn btn-g" href="#">Enroll — $149.99</a>
   </div>
-  <p class="muted" style="margin-top:14px;font-size:14px">Deep Sage filled is the default primary. Gold filled is reserved for the single money action on a page — enroll or purchase — and appears at most once per view. Outline secondary uses Sage Tint borders.</p>
+  <p class="muted" style="margin-top:16px;font-size:14px">Deep Sage filled is the default primary. Gold filled is reserved for the single money action on a page — enroll or purchase — and appears at most once per view. Outline secondary uses Deep Sage rules.</p>
 
+  <h3>Cards</h3>
   <div class="apps">
     <div class="democard">
       <div class="eyebrow">For First Responders</div>
       <h4>Mastering Resilience</h4>
       <p>Structured, self-paced training built around the PEACE Resilience Model. Five modules, thirty-five lessons, 365-day access, certificate of completion.</p>
-      <div class="row"><a class="btn btn-p" href="#" style="padding:11px 22px;font-size:14px">Learn More</a><a class="btn btn-s" href="#" style="padding:11px 22px;font-size:14px">Sample Course</a></div>
+      <div class="row"><a class="btn btn-p" href="#" style="padding:12px 24px;font-size:12px">Learn More</a><a class="btn btn-s" href="#" style="padding:12px 24px;font-size:12px">Sample Course</a></div>
     </div>
     <div class="demodark">
       <div class="eyebrow">For Agencies</div>
-      <h4 >Bring It To Your Organization</h4>
+      <h4>Bring It To Your Organization</h4>
       <p>3,500+ first responders trained. Self-paced, instructor-led, or hybrid deployment — fully turnkey, no curriculum development required.</p>
-      <div class="row"><a class="btn btn-g" href="#" style="padding:11px 22px;font-size:14px">Request a Quote</a></div>
+      <div class="row"><a class="btn btn-g" href="#" style="padding:12px 24px;font-size:12px">Request a Quote</a></div>
     </div>
   </div>
 </div></section>
 
-<!-- ═══════════ 08 MISUSE ═══════════ -->
-<section id="dont"><div class="wrap">
-  <div class="kick">08 · Misuse</div>
-  <h2>Never Do This</h2>
-  <div class="dont">
-    <div class="d">Alter ring geometry, stroke weight, spacing, or add a fourth ring</div>
-    <div class="d">Set the wordmark in any face other than Cinzel, or in lowercase</div>
-    <div class="d">Use gold for body text on light backgrounds (2.2:1 — fails)</div>
-    <div class="d">Mix heritage-grey and sage-tint rings in the same piece</div>
-    <div class="d">Use the tri-color accent mark on formal documents or the site header</div>
-    <div class="d">Place the mark over busy photography without a scrim</div>
-    <div class="d">Introduce tactical black / OD green / coyote tan or thin-line motifs</div>
-    <div class="d">Use more than one gold accent per composition</div>
-    <div class="d">Write trauma-forward hooks or urgency copy ("spots filling fast")</div>
-  </div>
+<!-- ═══════════ 08 MISUSE · mist ═══════════ -->
+<section id="dont" class="bg-mist"><div class="wrap dont">
+  <div class="snum"><span class="n">08</span><h2>Never Do This</h2><span class="r">Misuse</span></div>
+  <ol>
+    <li>Alter ring geometry, stroke weight, spacing, or add a fourth ring</li>
+    <li>Set the wordmark in any face other than Cinzel, or in lowercase</li>
+    <li>Use gold for body text on light backgrounds (2.2:1 — fails)</li>
+    <li>Mix heritage-grey and sage-tint rings in the same piece</li>
+    <li>Use the tri-color accent mark on formal documents or the site header</li>
+    <li>Place the mark over busy photography without a scrim</li>
+    <li>Introduce tactical black / OD green / coyote tan or thin-line motifs</li>
+    <li>Use more than one gold accent per composition</li>
+    <li>Write trauma-forward hooks or urgency copy ("spots filling fast")</li>
+  </ol>
 </div></section>
 
 <footer><div class="wrap">Integrated Wellness Institute · Brand Style Guide v1.0 · Sage &amp; Gold / Cinzel / Jost · All type via Google Fonts · Ring geometry traced from original artwork (473×223, stroke 28)</div></footer>
