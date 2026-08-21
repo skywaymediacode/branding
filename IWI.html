@@ -3,215 +3,396 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IWI · Tri-Color Rings × Palettes</title>
+<title>Integrated Wellness Institute · Brand Style Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Playfair+Display:wght@400&family=Forum&family=Prata&family=Italiana&family=Sorts+Mill+Goudy&family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Instrument+Serif&family=Cormorant+Garamond:wght@500;600&family=Cinzel:wght@400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  :root{--bone:#FBF8F2;--hairline:#E0D5C3;--ink:#221D19;--muted:#6E625A}
+  :root{
+    --linen:#F8F7F2; --cloud:#FFFFFF; --mist:#EDEBE2;
+    --deep:#465A50; --sage:#7A8C80; --sagelt:#B5BDB9;
+    --gold:#C9A253; --ochre:#8A6D2F; --goldlt:#E8D4A8;
+    --ink:#2E3B34; --ring:#B9B1AD;
+    --hair:#DDD9CC;
+  }
   *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bone);color:var(--ink);font-family:'Jost',sans-serif;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1160px;margin:0 auto;padding:0 32px}
+  html{scroll-behavior:smooth}
+  body{background:var(--linen);color:var(--ink);font-family:'Jost',sans-serif;font-weight:400;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 36px}
 
-  header{padding:56px 0 32px;border-bottom:1px solid var(--hairline)}
-  header h1{font-size:26px;font-weight:600;letter-spacing:-0.01em}
-  header p{color:var(--muted);font-size:15px;margin-top:10px;max-width:68ch;line-height:1.6}
-  header p strong{color:var(--ink);font-weight:500}
+  h1,h2,h3{font-family:'Cinzel',serif;font-weight:500;color:var(--deep)}
+  h2{font-size:30px;letter-spacing:.04em;margin-bottom:6px}
+  h3{font-size:16px;letter-spacing:.06em;margin:34px 0 10px;color:var(--ink)}
+  .kick{font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ochre);margin-bottom:14px}
+  p{max-width:72ch}
+  p+p{margin-top:12px}
+  .muted{color:#5F6E66}
+  strong{font-weight:600;color:var(--ink)}
 
-  .switch{position:sticky;top:0;background:var(--bone);z-index:5;padding:16px 0;border-bottom:1px solid var(--hairline);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  .switch .lbl{font-size:12px;font-weight:600;color:var(--muted);margin-right:6px;letter-spacing:.03em;text-transform:uppercase}
-  .pill{border:1px solid var(--hairline);background:#fff;border-radius:999px;padding:7px 14px;font-family:'Jost',sans-serif;font-size:12.5px;color:var(--ink);cursor:pointer}
-  .pill:hover{border-color:#c9bda9}
-  .pill:focus-visible{outline:2px solid #0F4F49;outline-offset:2px}
-  .pill.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  section{padding:76px 0;border-top:1px solid var(--hair)}
+  section:first-of-type{border-top:0}
 
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;padding:36px 0 72px}
-  @media(max-width:880px){.grid{grid-template-columns:1fr}}
+  /* ---------- cover ---------- */
+  .cover{min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:90px 0 70px;border-top:0}
+  .cover svg{width:170px;margin-bottom:38px}
+  .cover .wordmark{font-family:'Cinzel',serif;font-weight:400;font-size:40px;letter-spacing:.10em;text-transform:uppercase;color:var(--deep);line-height:1.3}
+  .cover .wordmark span{display:block}
+  .cover .rule{width:56px;height:3px;background:var(--gold);margin:34px auto 26px;border-radius:2px}
+  .cover .sub{font-size:14px;letter-spacing:.24em;text-transform:uppercase;color:#5F6E66;font-weight:500}
+  .cover .ver{margin-top:60px;font-size:12.5px;color:#8A958E;letter-spacing:.06em}
 
-  .card{background:#fff;border:1px solid var(--hairline);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-  .stage{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px 28px 40px;min-height:290px;position:relative}
-  .stage svg{width:118px;height:auto;display:block;margin-bottom:24px}
-  .wm{text-align:center;text-transform:uppercase;line-height:1.32}
-  .wm span{display:block}
-  .accentbar{position:absolute;left:0;right:0;bottom:0;height:5px}
+  /* ---------- toc ---------- */
+  .toc{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+  @media(max-width:820px){.toc{grid-template-columns:repeat(2,1fr)}}
+  .toc a{display:block;background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink);font-size:14px;font-weight:500}
+  .toc a b{display:block;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.12em;color:var(--ochre);margin-bottom:4px}
+  .toc a:hover{border-color:var(--gold)}
 
-  .head{padding:18px 24px 4px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
-  .head .name{font-size:14px;font-weight:600}
-  .head .tag{font-size:12px;color:var(--muted)}
-  .swatches{display:flex;padding:14px 24px 22px;gap:10px;flex-wrap:wrap}
-  .sw{flex:1;min-width:78px}
-  .sw i{display:block;height:40px;border-radius:8px;border:1px solid rgba(0,0,0,.07)}
-  .sw b{display:block;font-size:11px;font-weight:600;margin-top:6px}
-  .sw s{display:block;text-decoration:none;font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:1px}
+  /* ---------- archetype ---------- */
+  .axes{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
+  @media(max-width:820px){.axes{grid-template-columns:1fr}}
+  .axis{background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:20px 22px}
+  .axis b{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.08em;color:var(--deep);display:block;margin-bottom:8px}
+  .axis .track{position:relative;height:4px;background:var(--mist);border-radius:2px;margin:14px 0 8px}
+  .axis .dot{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--gold);border:2px solid var(--cloud);box-shadow:0 0 0 1px var(--hair);transform:translate(-50%,-50%)}
+  .axis .ends{display:flex;justify-content:space-between;font-size:11.5px;color:#8A958E;letter-spacing:.03em}
+  .axis p{font-size:13.5px;margin-top:10px;color:#5F6E66}
 
-  body[data-font="cinzel"] .wm{font-family:'Cinzel',serif;font-size:25px;letter-spacing:.10em}
-  body[data-font="cormorant"] .wm{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:29px;letter-spacing:.13em}
-  body[data-font="fraunces"] .wm{font-family:'Fraunces',serif;font-weight:300;font-size:27px;letter-spacing:.11em}
-  body[data-font="instrument"] .wm{font-family:'Instrument Serif',serif;font-size:28px;letter-spacing:.11em}
-  body[data-font="ebgaramond"] .wm{font-family:'EB Garamond',serif;font-weight:500;font-size:28px;letter-spacing:.13em}
-  body[data-font="playfair"] .wm{font-family:'Playfair Display',serif;font-size:26px;letter-spacing:.10em}
-  body[data-font="forum"] .wm{font-family:'Forum',serif;font-size:28px;letter-spacing:.10em}
-  body[data-font="prata"] .wm{font-family:'Prata',serif;font-size:24px;letter-spacing:.12em}
-  body[data-font="italiana"] .wm{font-family:'Italiana',serif;font-size:30px;letter-spacing:.11em}
-  body[data-font="goudy"] .wm{font-family:'Sorts Mill Goudy',serif;font-size:27px;letter-spacing:.12em}
+  .flag{background:var(--mist);border-left:3px solid var(--gold);border-radius:0 10px 10px 0;padding:16px 20px;margin-top:26px;font-size:14.5px}
+  .flag b{font-weight:600}
 
-  footer{padding:0 0 72px;color:var(--muted);font-size:13px;line-height:1.65;max-width:72ch}
-  footer strong{color:var(--ink);font-weight:500}
+  /* ---------- logo ---------- */
+  .logo-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+  @media(max-width:820px){.logo-grid{grid-template-columns:1fr}}
+  .plate{border:1px solid var(--hair);border-radius:14px;overflow:hidden;background:var(--cloud)}
+  .plate .st{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:230px;padding:36px 24px}
+  .plate .st svg{width:110px;margin-bottom:20px}
+  .plate .st .wm{font-family:'Cinzel',serif;font-size:19px;letter-spacing:.10em;text-transform:uppercase;text-align:center;line-height:1.32}
+  .plate .st .wm span{display:block}
+  .plate .cap{border-top:1px solid var(--hair);padding:13px 20px;font-size:13px}
+  .plate .cap b{font-weight:600}
+  .plate .cap .u{color:#5F6E66;display:block;font-size:12.5px;margin-top:2px}
+  .dark-st{background:var(--ink)}
+  .clearspace{position:relative;display:inline-block;padding:46px;border:1.5px dashed var(--sagelt);border-radius:10px;margin-top:20px}
+  .clearspace svg{width:110px;display:block}
+  .clearspace .xlab{position:absolute;font-size:11px;color:#8A958E;letter-spacing:.06em}
+  .dont{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+  @media(max-width:820px){.dont{grid-template-columns:1fr}}
+  .dont .d{background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:16px 18px;font-size:13.5px}
+  .dont .d::before{content:"✕";color:#B0532F;font-weight:600;margin-right:8px}
+
+  /* ---------- color ---------- */
+  .pal{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+  @media(max-width:820px){.pal{grid-template-columns:repeat(2,1fr)}}
+  .chip{border-radius:14px;overflow:hidden;border:1px solid var(--hair);background:var(--cloud)}
+  .chip i{display:block;height:92px}
+  .chip .m{padding:12px 15px}
+  .chip .m b{display:block;font-size:13.5px;font-weight:600}
+  .chip .m s{display:block;text-decoration:none;font-size:12px;color:#5F6E66;font-variant-numeric:tabular-nums}
+  .chip .m u{display:block;text-decoration:none;font-size:12px;color:#8A958E;margin-top:4px}
+  table{width:100%;border-collapse:collapse;margin-top:20px;font-size:13.5px;background:var(--cloud);border:1px solid var(--hair);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:11px 16px;border-bottom:1px solid var(--hair)}
+  th{font-family:'Jost',sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#5F6E66;font-weight:600;background:var(--mist)}
+  tr:last-child td{border-bottom:0}
+  .pass{color:#3E6B4F;font-weight:600}
+  .cond{color:#8A6D2F;font-weight:600}
+  .fail{color:#B0532F;font-weight:600}
+
+  /* ---------- type ---------- */
+  .spec{background:var(--cloud);border:1px solid var(--hair);border-radius:14px;padding:28px 30px;margin-top:22px}
+  .spec .big{font-family:'Cinzel',serif;font-size:44px;letter-spacing:.05em;color:var(--deep);line-height:1.15}
+  .spec .alpha{font-family:'Cinzel',serif;font-size:19px;letter-spacing:.08em;color:var(--ink);margin-top:14px;word-break:break-all}
+  .spec .alpha2{font-family:'Jost',sans-serif;font-size:17px;color:var(--ink);margin-top:12px;word-break:break-all}
+  .spec .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--ochre);font-weight:600;margin-bottom:10px}
+  .scale{margin-top:8px}
+  .scale div{display:flex;align-items:baseline;gap:18px;padding:10px 0;border-bottom:1px solid var(--mist)}
+  .scale div:last-child{border-bottom:0}
+  .scale .tname{width:130px;flex:none;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:#8A958E;font-weight:500}
+
+  /* ---------- voice ---------- */
+  .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+  @media(max-width:820px){.vgrid{grid-template-columns:1fr}}
+  .vcard{background:var(--cloud);border:1px solid var(--hair);border-radius:12px;padding:20px 22px;font-size:14.5px}
+  .vcard b{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.08em;color:var(--deep);display:block;margin-bottom:10px}
+  .vcard .q{font-style:normal;border-left:3px solid var(--gold);padding-left:14px;margin:10px 0;color:var(--ink)}
+  .words{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .words span{background:var(--mist);border-radius:999px;padding:5px 13px;font-size:13px}
+  .words.avoid span{background:#F1E4DC;color:#7A4A33}
+
+  /* ---------- applications ---------- */
+  .apps{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+  @media(max-width:820px){.apps{grid-template-columns:1fr}}
+  .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:500;font-size:15px;letter-spacing:.02em;border-radius:999px;padding:13px 28px;text-decoration:none}
+  .btn-p{background:var(--deep);color:var(--linen)}
+  .btn-s{background:transparent;color:var(--deep);border:1.5px solid var(--sagelt)}
+  .btn-g{background:var(--gold);color:var(--ink)}
+  .democard{background:var(--cloud);border:1px solid var(--hair);border-radius:16px;padding:28px}
+  .democard .eyebrow{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+  .democard h4{font-family:'Cinzel',serif;font-size:22px;letter-spacing:.03em;color:var(--deep);margin:10px 0 8px}
+  .democard p{font-size:14.5px;color:#5F6E66}
+  .democard .row{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+  .demodark{background:var(--ink);border-radius:16px;padding:28px}
+  .demodark .eyebrow{color:var(--gold)}
+  .demodark h4{color:var(--linen)}
+  .demodark p{color:#B9C4BE}
+
+  footer{padding:44px 0 70px;font-size:13px;color:#8A958E;border-top:1px solid var(--hair)}
 </style>
 </head>
-<body data-font="cinzel">
-<div class="wrap">
+<body>
 
-  <header>
-    <h1>Tri-color rings × palettes</h1>
-    <p>Each ring now carries a different color from its palette. The geometry is traced from your original artwork — <strong>same circle sizes, same stroke weight, same overlaps</strong> — rebuilt as vectors so each ring can be colored independently. Left ring takes the palette's deep primary, middle the supporting tone, right the accent. Typeface switcher up top works across all six.</p>
-  </header>
-
-  <div class="switch" role="group" aria-label="Wordmark typeface">
-    <span class="lbl">Typeface</span>
-    <button class="pill on" data-f="cinzel">Cinzel</button>
-    <button class="pill" data-f="cormorant">Cormorant Garamond</button>
-    <button class="pill" data-f="fraunces">Fraunces</button>
-    <button class="pill" data-f="instrument">Instrument Serif</button>
-    <button class="pill" data-f="ebgaramond">EB Garamond</button>
-    <button class="pill" data-f="playfair">Playfair Display</button>
-    <button class="pill" data-f="forum">Forum</button>
-    <button class="pill" data-f="prata">Prata</button>
-    <button class="pill" data-f="italiana">Italiana</button>
-    <button class="pill" data-f="goudy">Sorts Mill Goudy</button>
-  </div>
-
-  <div class="grid">
-
-    <!-- 1 · Pine & Ember -->
-    <div class="card">
-      <div class="stage" style="background:#FBF8F2">
-        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three interlocking rings in pine, tint, and ember">
-          <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#0F4F49" stroke-width="28"/>
-          <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#9FB9B6" stroke-width="28"/>
-          <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B8501F" stroke-width="28"/>
-        </svg>
-        <div class="wm" style="color:#0F4F49"><span>Integrated</span><span>Wellness Institute</span></div>
-      </div>
-      <div class="head"><div class="name">1 · Pine &amp; Ember</div><div class="tag">pine · tint · ember</div></div>
-      <div class="swatches">
-        <div class="sw"><i style="background:#0F4F49"></i><b>Pine</b><s>#0F4F49</s></div>
-        <div class="sw"><i style="background:#9FB9B6"></i><b>Tint</b><s>#9FB9B6</s></div>
-        <div class="sw"><i style="background:#B8501F"></i><b>Ember</b><s>#B8501F</s></div>
-        <div class="sw"><i style="background:#FBF8F2"></i><b>Bone</b><s>#FBF8F2</s></div>
-      </div>
-    </div>
-
-    <!-- 2 · Harbor Teal -->
-    <div class="card">
-      <div class="stage" style="background:#F7F9F9">
-        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three interlocking rings in harbor, tint, and coral">
-          <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#1F5E68" stroke-width="28"/>
-          <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#A5BFC3" stroke-width="28"/>
-          <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#E07B39" stroke-width="28"/>
-        </svg>
-        <div class="wm" style="color:#1F5E68"><span>Integrated</span><span>Wellness Institute</span></div>
-      </div>
-      <div class="head"><div class="name">2 · Harbor Teal</div><div class="tag">harbor · tint · coral</div></div>
-      <div class="swatches">
-        <div class="sw"><i style="background:#1F5E68"></i><b>Harbor</b><s>#1F5E68</s></div>
-        <div class="sw"><i style="background:#A5BFC3"></i><b>Tint</b><s>#A5BFC3</s></div>
-        <div class="sw"><i style="background:#E07B39"></i><b>Coral</b><s>#E07B39</s></div>
-        <div class="sw"><i style="background:#F7F9F9"></i><b>Mist</b><s>#F7F9F9</s></div>
-      </div>
-    </div>
-
-    <!-- 3 · Umber Monochrome -->
-    <div class="card">
-      <div class="stage" style="background:#F6F1E9">
-        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three interlocking rings in umber, ring grey, and bronze">
-          <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#4A3F35" stroke-width="28"/>
-          <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B7B2AE" stroke-width="28"/>
-          <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#8A6E52" stroke-width="28"/>
-        </svg>
-        <div class="wm" style="color:#4A3F35"><span>Integrated</span><span>Wellness Institute</span></div>
-      </div>
-      <div class="head"><div class="name">3 · Umber Monochrome</div><div class="tag">umber · grey · bronze</div></div>
-      <div class="swatches">
-        <div class="sw"><i style="background:#4A3F35"></i><b>Umber</b><s>#4A3F35</s></div>
-        <div class="sw"><i style="background:#B7B2AE"></i><b>Grey</b><s>#B7B2AE</s></div>
-        <div class="sw"><i style="background:#8A6E52"></i><b>Bronze</b><s>#8A6E52</s></div>
-        <div class="sw"><i style="background:#F6F1E9"></i><b>Parchment</b><s>#F6F1E9</s></div>
-      </div>
-    </div>
-
-    <!-- 4 · Sage & Gold -->
-    <div class="card">
-      <div class="stage" style="background:#F8F7F2">
-        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three interlocking rings in deep sage, sage, and gold">
-          <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#465A50" stroke-width="28"/>
-          <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#7A8C80" stroke-width="28"/>
-          <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#C9A253" stroke-width="28"/>
-        </svg>
-        <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
-      </div>
-      <div class="head"><div class="name">4 · Sage &amp; Gold</div><div class="tag">deep sage · sage · gold</div></div>
-      <div class="swatches">
-        <div class="sw"><i style="background:#465A50"></i><b>Deep Sage</b><s>#465A50</s></div>
-        <div class="sw"><i style="background:#7A8C80"></i><b>Sage</b><s>#7A8C80</s></div>
-        <div class="sw"><i style="background:#C9A253"></i><b>Gold</b><s>#C9A253</s></div>
-        <div class="sw"><i style="background:#F8F7F2"></i><b>Linen</b><s>#F8F7F2</s></div>
-      </div>
-    </div>
-
-    <!-- 5 · Slate & Amber -->
-    <div class="card">
-      <div class="stage" style="background:#F6F7F8">
-        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three interlocking rings in slate, steel, and amber">
-          <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#2C3A47" stroke-width="28"/>
-          <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#5C6B77" stroke-width="28"/>
-          <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#E8A33D" stroke-width="28"/>
-        </svg>
-        <div class="wm" style="color:#2C3A47"><span>Integrated</span><span>Wellness Institute</span></div>
-      </div>
-      <div class="head"><div class="name">5 · Slate &amp; Amber</div><div class="tag">slate · steel · amber</div></div>
-      <div class="swatches">
-        <div class="sw"><i style="background:#2C3A47"></i><b>Slate</b><s>#2C3A47</s></div>
-        <div class="sw"><i style="background:#5C6B77"></i><b>Steel</b><s>#5C6B77</s></div>
-        <div class="sw"><i style="background:#E8A33D"></i><b>Amber</b><s>#E8A33D</s></div>
-        <div class="sw"><i style="background:#F6F7F8"></i><b>Fog</b><s>#F6F7F8</s></div>
-      </div>
-    </div>
-
-    <!-- 6 · Sienna Dusk -->
-    <div class="card">
-      <div class="stage" style="background:#FAF5EF">
-        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three interlocking rings in sienna, dune, and evergreen">
-          <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#7E4526" stroke-width="28"/>
-          <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#D9B592" stroke-width="28"/>
-          <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#3D4A44" stroke-width="28"/>
-        </svg>
-        <div class="wm" style="color:#7E4526"><span>Integrated</span><span>Wellness Institute</span></div>
-      </div>
-      <div class="head"><div class="name">6 · Sienna Dusk</div><div class="tag">sienna · dune · evergreen</div></div>
-      <div class="swatches">
-        <div class="sw"><i style="background:#7E4526"></i><b>Sienna</b><s>#7E4526</s></div>
-        <div class="sw"><i style="background:#D9B592"></i><b>Dune</b><s>#D9B592</s></div>
-        <div class="sw"><i style="background:#3D4A44"></i><b>Evergreen</b><s>#3D4A44</s></div>
-        <div class="sw"><i style="background:#FAF5EF"></i><b>Cream</b><s>#FAF5EF</s></div>
-      </div>
-    </div>
-
-  </div>
-
-  <footer>
-    <strong>Notes.</strong> Ring order runs deep primary → supporting tone → accent, left to right, so the mark reads darkest-to-brightest the way the eye scans. Where rings overlap, the later ring passes over the earlier one — if you'd prefer a true woven interlock (each ring alternating over and under, Olympic-style), that's a small change to the vector and I can produce both versions. Because these are now vectors, whichever direction wins exports to SVG at any size with no redraw.
-  </footer>
-
+<!-- ═══════════ COVER ═══════════ -->
+<div class="cover wrap">
+  <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg" aria-label="IWI ring mark">
+    <circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/>
+    <circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/>
+    <circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/>
+  </svg>
+  <div class="wordmark"><span>Integrated</span><span>Wellness Institute</span></div>
+  <div class="rule"></div>
+  <div class="sub">Brand Style Guide</div>
+  <div class="ver">Sage &amp; Gold · Cinzel · Version 1.0 · 2026</div>
 </div>
 
-<script>
-  const pills = document.querySelectorAll('.pill');
-  pills.forEach(p => p.addEventListener('click', () => {
-    pills.forEach(x => x.classList.remove('on'));
-    p.classList.add('on');
-    document.body.dataset.font = p.dataset.f;
-  }));
-</script>
+<div class="wrap">
+  <div class="toc">
+    <a href="#found"><b>01</b>Foundation &amp; Archetype</a>
+    <a href="#logo"><b>02</b>Logo System</a>
+    <a href="#color"><b>03</b>Color</a>
+    <a href="#type"><b>04</b>Typography</a>
+    <a href="#voice"><b>05</b>Voice &amp; Tone</a>
+    <a href="#img"><b>06</b>Imagery</a>
+    <a href="#apps"><b>07</b>Applications</a>
+    <a href="#dont"><b>08</b>Misuse</a>
+  </div>
+</div>
+
+<!-- ═══════════ 01 FOUNDATION ═══════════ -->
+<section id="found"><div class="wrap">
+  <div class="kick">01 · Foundation</div>
+  <h2>Brand Archetype</h2>
+  <p>Integrated Wellness Institute occupies a <strong>composed archetype: Clinical Trustworthy, warmed</strong>. The clinical half is non-negotiable — doctorate-level course developers, NBCC ACEP approval, evidence-based curriculum — but the classic clinical aesthetic (cool blues, sterile sans-serifs, hospital register) would misrepresent a brand whose subject is human resilience. Sage &amp; Gold warms the archetype: sage carries the clinical calm, gold carries the human reward. Imagery follows a <strong>Documentary Honest</strong> direction throughout.</p>
+
+  <div class="axes">
+    <div class="axis"><b>Tone Register</b>
+      <div class="track"><span class="dot" style="left:34%"></span></div>
+      <div class="ends"><span>Conversational</span><span>Professional</span></div>
+      <p>Professional, softening toward conversational only on individual-facing pages. Never casual with agencies; never cold with individuals.</p>
+    </div>
+    <div class="axis"><b>Aesthetic Register</b>
+      <div class="track"><span class="dot" style="left:38%"></span></div>
+      <div class="ends"><span>Restrained</span><span>Expressive</span></div>
+      <p>Restrained-to-considered. Gold is the only expressive note, and it is rationed — one accent per composition.</p>
+    </div>
+    <div class="axis"><b>Audience Relationship</b>
+      <div class="track"><span class="dot" style="left:70%"></span></div>
+      <div class="ends"><span>Companion</span><span>Authority</span></div>
+      <p>Authority with agencies and procurement; peer with licensed clinicians; guide with individuals. Never companion-cute.</p>
+    </div>
+    <div class="axis"><b>Sensory Ambition</b>
+      <div class="track"><span class="dot" style="left:45%"></span></div>
+      <div class="ends"><span>Utilitarian</span><span>Theatrical</span></div>
+      <p>Considered. Quality signaled through spacing, hierarchy, and warm neutrals — never through effects or drama.</p>
+    </div>
+  </div>
+
+  <div class="flag"><b>Adaptation choices, flagged.</b> Three deliberate deviations from archetype defaults: (1) the Clinical Trustworthy palette is warmed from blue-grey to sage to accommodate the fixed warm-grey ring mark; (2) type is serif-led (Cinzel) rather than sans-led, honoring the inscriptional wordmark; (3) the audience axis holds at Authority despite the wellness vertical's usual drift toward Companion, because the primary buyer is institutional. The archetype to actively avoid is <b>Rugged Utilitarian</b> — no tactical black, OD green, coyote tan, or thin-line motifs, ever.</div>
+</div></section>
+
+<!-- ═══════════ 02 LOGO ═══════════ -->
+<section id="logo"><div class="wrap">
+  <div class="kick">02 · Logo System</div>
+  <h2>The Mark</h2>
+  <p>The identity is a three-tier logo system built on one fixed geometry: three interlocking rings above the Cinzel wordmark. The rings' shape, stroke weight, and overlap never change — only their color, and only per the tiers below.</p>
+
+  <div class="logo-grid">
+    <div class="plate">
+      <div class="st">
+        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/></svg>
+        <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
+      </div>
+      <div class="cap"><b>Primary mark</b><span class="u">Heritage grey rings #B9B1AD · Deep Sage wordmark. Default everywhere: website header, documents, certificates, signage.</span></div>
+    </div>
+
+    <div class="plate">
+      <div class="st">
+        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/></svg>
+        <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
+      </div>
+      <div class="cap"><b>Tonal mark</b><span class="u">Sage-tint rings #B5BDB9. For fully sage-toned layouts where the heritage grey would read as a mismatch. Interchangeable with primary; never mix both in one piece.</span></div>
+    </div>
+
+    <div class="plate">
+      <div class="st">
+        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#465A50" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#7A8C80" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#C9A253" stroke-width="28"/></svg>
+        <div class="wm" style="color:#465A50"><span>Integrated</span><span>Wellness Institute</span></div>
+      </div>
+      <div class="cap"><b>Accent mark</b><span class="u">Tri-color rings: Deep Sage · Sage · Gold, left to right. Secondary use only — course badges, social avatars, certificates of completion, celebratory moments. Never the website header or formal documents.</span></div>
+    </div>
+
+    <div class="plate">
+      <div class="st dark-st">
+        <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B5BDB9" stroke-width="28"/></svg>
+        <div class="wm" style="color:#F8F7F2"><span>Integrated</span><span>Wellness Institute</span></div>
+      </div>
+      <div class="cap"><b>Reversed mark</b><span class="u">On Evergreen or photography: sage-tint rings, Linen wordmark. Gold wordmark is permitted on Evergreen for celebratory pieces only.</span></div>
+    </div>
+  </div>
+
+  <h3>Clearspace &amp; Minimum Size</h3>
+  <p class="muted">Keep clear space on all sides equal to <strong>half the height of the ring artwork</strong> (X = ring height ÷ 2). Nothing enters this zone — no text, rules, photography edges, or other marks. Minimum sizes: full lockup 120px wide on screen / 30mm in print; rings-only mark 24px / 8mm.</p>
+  <div class="clearspace">
+    <svg viewBox="0 0 473 223" xmlns="http://www.w3.org/2000/svg"><circle cx="111.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/><circle cx="236.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/><circle cx="361.5" cy="111.5" r="97.5" fill="none" stroke="#B9B1AD" stroke-width="28"/></svg>
+    <span class="xlab" style="top:14px;left:50%;transform:translateX(-50%)">½X</span>
+    <span class="xlab" style="bottom:14px;left:50%;transform:translateX(-50%)">½X</span>
+    <span class="xlab" style="left:12px;top:50%;transform:translateY(-50%)">½X</span>
+    <span class="xlab" style="right:12px;top:50%;transform:translateY(-50%)">½X</span>
+  </div>
+</div></section>
+
+<!-- ═══════════ 03 COLOR ═══════════ -->
+<section id="color"><div class="wrap">
+  <div class="kick">03 · Color</div>
+  <h2>Sage &amp; Gold</h2>
+  <p>Sage is the brand's clinical calm; gold is its human reward. The system is built so sage does the talking and gold does the pointing — <strong>gold appears once per composition</strong>, on the element that matters most.</p>
+
+  <div class="pal">
+    <div class="chip"><i style="background:#465A50"></i><div class="m"><b>Deep Sage</b><s>#465A50 · RGB 70 90 80</s><u>Primary. Wordmark, headings, primary buttons.</u></div></div>
+    <div class="chip"><i style="background:#7A8C80"></i><div class="m"><b>Sage</b><s>#7A8C80 · RGB 122 140 128</s><u>Supporting. Large text, icons, secondary UI.</u></div></div>
+    <div class="chip"><i style="background:#C9A253"></i><div class="m"><b>Gold</b><s>#C9A253 · RGB 201 162 83</s><u>Accent. Rules, highlights, badges — never body text on light.</u></div></div>
+    <div class="chip"><i style="background:#2E3B34"></i><div class="m"><b>Evergreen</b><s>#2E3B34 · RGB 46 59 52</s><u>Ink &amp; dark surfaces. Body text, footers, agency chapters.</u></div></div>
+    <div class="chip"><i style="background:#F8F7F2;border-bottom:1px solid var(--hair)"></i><div class="m"><b>Linen</b><s>#F8F7F2 · RGB 248 247 242</s><u>Canvas. Default page background.</u></div></div>
+    <div class="chip"><i style="background:#B5BDB9"></i><div class="m"><b>Sage Tint</b><s>#B5BDB9 · RGB 181 189 185</s><u>Tonal rings, hairlines, disabled states.</u></div></div>
+    <div class="chip"><i style="background:#8A6D2F"></i><div class="m"><b>Ochre</b><s>#8A6D2F · RGB 138 109 47</s><u>Accessible gold. Links, eyebrows, small gold text on light.</u></div></div>
+    <div class="chip"><i style="background:#B9B1AD"></i><div class="m"><b>Heritage Grey</b><s>#B9B1AD · RGB 185 177 173</s><u>Primary-mark rings only. Not a UI color.</u></div></div>
+  </div>
+
+  <h3>Contrast &amp; Accessibility</h3>
+  <p class="muted">Measured WCAG ratios. AA requires 4.5:1 for body text, 3:1 for large text (24px+, or 19px bold) and UI components.</p>
+  <table>
+    <tr><th>Combination</th><th>Ratio</th><th>Use</th></tr>
+    <tr><td>Evergreen on Linen</td><td>10.9:1</td><td class="pass">Body text — AAA</td></tr>
+    <tr><td>Deep Sage on Linen</td><td>6.9:1</td><td class="pass">Headings &amp; text — AA (AAA large)</td></tr>
+    <tr><td>Linen on Deep Sage</td><td>6.9:1</td><td class="pass">Primary buttons — AA</td></tr>
+    <tr><td>Ochre on Linen</td><td>4.5:1</td><td class="pass">Links, eyebrows — AA</td></tr>
+    <tr><td>Gold on Evergreen</td><td>4.9:1</td><td class="pass">Gold text on dark — AA</td></tr>
+    <tr><td>Sage on Linen</td><td>3.3:1</td><td class="cond">Large text &amp; icons only</td></tr>
+    <tr><td>Gold on Linen</td><td>2.2:1</td><td class="fail">Decorative only — never text</td></tr>
+  </table>
+</div></section>
+
+<!-- ═══════════ 04 TYPOGRAPHY ═══════════ -->
+<section id="type"><div class="wrap">
+  <div class="kick">04 · Typography</div>
+  <h2>Cinzel &amp; Jost</h2>
+  <p><strong>Cinzel</strong> is the brand voice at display size — Roman inscriptional capitals that match the wordmark, reserved for the logo, page titles, and section headings. It is always set in <strong>caps with tracking of 0.04–0.10em</strong>, never in running text. <strong>Jost</strong> is the workhorse: body copy, UI, captions, tables, forms. Its geometric warmth keeps dense content approachable without competing with Cinzel's formality. Both are free Google Fonts.</p>
+
+  <div class="spec">
+    <div class="lbl">Cinzel · Display</div>
+    <div class="big">Resilience Is A Capability</div>
+    <div class="alpha">ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</div>
+  </div>
+  <div class="spec">
+    <div class="lbl">Jost · Text &amp; UI</div>
+    <div class="alpha2" style="font-size:19px">Structured, online, self-paced training for high-demand professionals — built by doctorate-level clinicians.</div>
+    <div class="alpha2">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz 0123456789</div>
+  </div>
+
+  <h3>Type Scale</h3>
+  <div class="spec scale">
+    <div><span class="tname">Display · H1</span><span style="font-family:'Cinzel',serif;font-size:40px;letter-spacing:.04em;color:var(--deep)">Mastering Resilience</span></div>
+    <div><span class="tname">H2</span><span style="font-family:'Cinzel',serif;font-size:28px;letter-spacing:.05em;color:var(--deep)">Program Overview</span></div>
+    <div><span class="tname">H3</span><span style="font-family:'Cinzel',serif;font-size:18px;letter-spacing:.07em;color:var(--ink)">Key Features</span></div>
+    <div><span class="tname">Eyebrow</span><span style="font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--ochre)">For First Responders</span></div>
+    <div><span class="tname">Body</span><span style="font-family:'Jost',sans-serif;font-size:16px;line-height:1.65">Five modules, thirty-five lessons, one shared language across your department.</span></div>
+    <div><span class="tname">Caption</span><span style="font-family:'Jost',sans-serif;font-size:13px;color:#5F6E66">365-day access · Certificate of completion · NBCC ACEP No. 7535</span></div>
+  </div>
+  <p class="muted" style="margin-top:16px;font-size:14px">Rules: Cinzel never below 16px and never lowercase. Jost body at 15–17px, line-height 1.6–1.7, max measure 72ch. Numerals in specs and pricing use Jost medium. Never letterspace Jost lowercase.</p>
+</div></section>
+
+<!-- ═══════════ 05 VOICE ═══════════ -->
+<section id="voice"><div class="wrap">
+  <div class="kick">05 · Voice &amp; Tone</div>
+  <h2>How IWI Speaks</h2>
+  <p>The voice is <strong>declarative, numeric, and calm</strong> — an experienced clinician briefing professionals, never a wellness brand soothing consumers and never a tactical brand hyping operators. Claims are countable; urgency is absent; trauma is named clinically, not dramatized. This also keeps advertising inside Google's health-policy lines: <strong>advertise the credential, never the condition</strong>.</p>
+
+  <div class="vgrid">
+    <div class="vcard"><b>Say It Like This</b>
+      <div class="q">Resilience is a capability, not a trait.</div>
+      <div class="q">Built by doctorate-level clinicians. Approved by NBCC. Completed on shift or off.</div>
+      <div class="q">Five modules. Thirty-five lessons. One shared language across your department.</div>
+      <div class="q">If it is trained across roles and ranks, it becomes culture.</div>
+    </div>
+    <div class="vcard"><b>Never Like This</b>
+      <div class="q" style="border-color:#C77B4F">Still carrying what you saw on that call?</div>
+      <div class="q" style="border-color:#C77B4F">Unlock your inner warrior. 🔥</div>
+      <div class="q" style="border-color:#C77B4F">Don't wait — spots are filling fast!</div>
+      <div class="q" style="border-color:#C77B4F">Your journey to zen starts here.</div>
+    </div>
+    <div class="vcard"><b>Words We Use</b>
+      <div class="words"><span>capability</span><span>evidence-based</span><span>shared language</span><span>on shift</span><span>doctorate-level</span><span>turnkey</span><span>culture</span><span>certificate</span></div>
+    </div>
+    <div class="vcard"><b>Words We Avoid</b>
+      <div class="words avoid"><span>warrior</span><span>battle</span><span>tactical</span><span>zen</span><span>journey</span><span>unlock</span><span>hack</span><span>trauma-dumping hooks</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══════════ 06 IMAGERY ═══════════ -->
+<section id="img"><div class="wrap">
+  <div class="kick">06 · Imagery</div>
+  <h2>Documentary Honest</h2>
+  <p>Photography shows <strong>real people doing real work in natural light</strong> — a dispatcher mid-shift, a firehouse kitchen conversation, a training room in use. Muted warm grade that sits on Linen without fighting sage or gold. No posed hero stances, no flag-and-eagle montages, no tactical costume, no stock-photo gloss, and no imagery that dramatizes crisis or trauma. When people appear, they are working or talking — never staring meaningfully into the middle distance.</p>
+  <p class="muted">Treatment: warm highlights, soft green-grey shadows, gentle contrast. Duotone treatments, when needed for covers, use Evergreen shadows with Linen highlights — never gold duotones over faces.</p>
+</div></section>
+
+<!-- ═══════════ 07 APPLICATIONS ═══════════ -->
+<section id="apps"><div class="wrap">
+  <div class="kick">07 · Applications</div>
+  <h2>The System In Use</h2>
+
+  <h3>Buttons</h3>
+  <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:14px">
+    <a class="btn btn-p" href="#">Schedule a Consultation</a>
+    <a class="btn btn-s" href="#">View Programs</a>
+    <a class="btn btn-g" href="#">Enroll — $149.99</a>
+  </div>
+  <p class="muted" style="margin-top:14px;font-size:14px">Deep Sage filled is the default primary. Gold filled is reserved for the single money action on a page — enroll or purchase — and appears at most once per view. Outline secondary uses Sage Tint borders.</p>
+
+  <div class="apps">
+    <div class="democard">
+      <div class="eyebrow">For First Responders</div>
+      <h4>Mastering Resilience</h4>
+      <p>Structured, self-paced training built around the PEACE Resilience Model. Five modules, thirty-five lessons, 365-day access, certificate of completion.</p>
+      <div class="row"><a class="btn btn-p" href="#" style="padding:11px 22px;font-size:14px">Learn More</a><a class="btn btn-s" href="#" style="padding:11px 22px;font-size:14px">Sample Course</a></div>
+    </div>
+    <div class="demodark">
+      <div class="eyebrow">For Agencies</div>
+      <h4 >Bring It To Your Organization</h4>
+      <p>3,500+ first responders trained. Self-paced, instructor-led, or hybrid deployment — fully turnkey, no curriculum development required.</p>
+      <div class="row"><a class="btn btn-g" href="#" style="padding:11px 22px;font-size:14px">Request a Quote</a></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══════════ 08 MISUSE ═══════════ -->
+<section id="dont"><div class="wrap">
+  <div class="kick">08 · Misuse</div>
+  <h2>Never Do This</h2>
+  <div class="dont">
+    <div class="d">Alter ring geometry, stroke weight, spacing, or add a fourth ring</div>
+    <div class="d">Set the wordmark in any face other than Cinzel, or in lowercase</div>
+    <div class="d">Use gold for body text on light backgrounds (2.2:1 — fails)</div>
+    <div class="d">Mix heritage-grey and sage-tint rings in the same piece</div>
+    <div class="d">Use the tri-color accent mark on formal documents or the site header</div>
+    <div class="d">Place the mark over busy photography without a scrim</div>
+    <div class="d">Introduce tactical black / OD green / coyote tan or thin-line motifs</div>
+    <div class="d">Use more than one gold accent per composition</div>
+    <div class="d">Write trauma-forward hooks or urgency copy ("spots filling fast")</div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">Integrated Wellness Institute · Brand Style Guide v1.0 · Sage &amp; Gold / Cinzel / Jost · All type via Google Fonts · Ring geometry traced from original artwork (473×223, stroke 28)</div></footer>
+
 </body>
 </html>
