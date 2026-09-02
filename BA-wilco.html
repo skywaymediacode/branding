@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skyway Media: Brand Archetype Report for Wilco Arthritis Institute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+
+  /* ============================================================
+     SKYWAY MEDIA · BRAND ARCHETYPE REPORT · Edition 01
+     Tokens per Brand Style Guide, Edition 01
+     ============================================================ */
+  :root{
+    --midnight:#181A31;
+    --altitude:#1E348E;
+    --skyway:#3C72E7;
+    --jetstream:#5DC9AE;
+    --goldenhour:#F3B13D;
+    --paper:#FBFBFD;
+    --ink-soft:#181A31;
+    --hairline:rgba(24,26,49,.14);
+    --serif:'Big Moore','Libre Baskerville',Baskerville,Georgia,serif;
+    --sans:'Brother XL','Archivo',Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--midnight);font-family:var(--sans);font-weight:400;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--goldenhour);color:var(--midnight);}
+
+  .page{max-width:920px;margin:0 auto;padding:0 48px;}
+  section{padding:80px 0;border-bottom:1px solid var(--hairline);}
+  section:last-of-type{border-bottom:none;}
+
+  .eyebrow{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--skyway);display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+  .eyebrow::before{content:"";width:34px;height:2px;background:var(--goldenhour);flex:0 0 auto;}
+  h2{font-family:var(--serif);font-weight:400;font-size:clamp(28px,4vw,40px);line-height:1.15;margin-bottom:16px;letter-spacing:-.01em;}
+  h3{font-family:var(--sans);font-weight:600;font-size:19px;line-height:1.3;margin-bottom:10px;}
+  .lede{max-width:640px;color:var(--ink-soft);font-size:17px;margin-bottom:44px;}
+  p{max-width:680px;}
+  p em{font-style:italic;}
+
+  /* ---------- COVER ---------- */
+  .cover{background:var(--midnight);color:#fff;min-height:88vh;display:flex;flex-direction:column;position:relative;overflow:hidden;border-bottom:none;padding:0;}
+  .cover .page{display:flex;flex-direction:column;justify-content:space-between;flex:1;padding-top:44px;padding-bottom:64px;position:relative;z-index:2;min-height:88vh;}
+  .cover-top{display:flex;justify-content:center;align-items:baseline;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:500;}
+  .cover-logo{height:116px;width:auto;display:block;}
+  .cover-mark,.cover-mark-l{position:absolute;bottom:34px;height:210px;width:auto;max-width:38vw;object-fit:contain;opacity:.085;z-index:1;pointer-events:none;}
+  .cover-mark{right:24px;}
+  .cover-mark-l{left:24px;}
+  .cover h1{font-family:var(--serif);font-weight:400;font-size:clamp(33px,5.6vw,66px);line-height:1.08;letter-spacing:-.015em;margin:auto 0 0;}
+  .cover h1 em{font-style:italic;color:var(--jetstream);}
+  .cover-client{margin-top:30px;font-family:var(--sans);font-size:20px;font-weight:500;color:#fff;}
+  .cover-client span{color:var(--goldenhour);}
+  .cover-sub{margin-top:26px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+  .cover-sub .tag{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--goldenhour);font-weight:600;}
+  .cover-sub .rule{flex:1;height:1px;background:rgba(255,255,255,.22);min-width:80px;}
+  .cover-sub .ver{font-size:13px;color:rgba(255,255,255,.55);}
+  /* Horizon band: signature device, used ONCE per artifact (cover base) */
+  .horizon{position:absolute;left:0;right:0;bottom:0;height:10px;display:flex;z-index:3;}
+  .horizon span{flex:1;}
+  .horizon .a{background:var(--altitude);}
+  .horizon .b{background:var(--skyway);}
+  .horizon .c{background:var(--jetstream);}
+  .horizon .d{background:var(--goldenhour);}
+
+  /* ---------- ARCHETYPE DUO CARDS ---------- */
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin:40px 0 10px;}
+  .trio{grid-template-columns:1fr 1fr 1fr;}
+  .duo-col{background:#fff;padding:32px 30px;}
+  .duo-col.dark{background:var(--midnight);color:#fff;}
+  .duo-col .who{font-family:var(--serif);font-size:24px;margin-bottom:2px;}
+  .trio .duo-col .who{font-size:21px;}
+  .duo-col .role{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--skyway);margin-bottom:6px;}
+  .duo-col.dark .role{color:var(--jetstream);}
+  .duo-col .lead{font-size:13.5px;color:var(--ink-soft);margin-bottom:14px;}
+  .duo-col.dark .lead{color:rgba(255,255,255,.66);}
+  .duo-col ul{list-style:none;}
+  .duo-col li{padding:9px 0 9px 22px;position:relative;font-size:14px;color:var(--ink-soft);border-top:1px dashed var(--hairline);}
+  .duo-col.dark li{color:rgba(255,255,255,.75);border-top:1px dashed rgba(255,255,255,.16);}
+  .duo-col li::before{content:"";position:absolute;left:0;top:16px;width:8px;height:8px;border-radius:50%;background:var(--jetstream);}
+  .duo-col.dark li::before{background:var(--goldenhour);}
+  .duo-col .d{font-size:13px;color:var(--ink-soft);font-style:italic;margin-bottom:12px;}
+
+  /* ---------- IDEA BLOCKS ---------- */
+  .ideas{margin-top:44px;display:flex;flex-direction:column;gap:30px;}
+  .idea h3{font-family:var(--serif);font-weight:400;font-size:22px;}
+  .idea p{font-size:15px;color:var(--ink-soft);}
+  .idea p em{font-style:italic;}
+  .idea .cue{font-weight:600;color:var(--altitude);}
+
+  /* ---------- BUNDLE CALLOUT (dark keybox) ---------- */
+  .bundle{margin-top:44px;background:var(--midnight);color:#fff;padding:40px 48px;border-left:6px solid var(--goldenhour);}
+  .bundle .bk{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--jetstream);margin-bottom:12px;}
+  .bundle .q{font-family:var(--serif);font-size:clamp(21px,2.8vw,27px);line-height:1.4;max-width:680px;}
+  .bundle .q b{color:var(--goldenhour);font-weight:400;}
+  .bundle p{margin-top:14px;font-size:14px;color:rgba(255,255,255,.72);max-width:640px;}
+
+  /* ---------- PULLQUOTE ---------- */
+  .pullquote{margin-top:46px;max-width:760px;}
+  .pullquote .pq{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(28px,4vw,40px);line-height:1.25;letter-spacing:-.01em;color:var(--jetstream);display:block;}
+  .pullquote .attr{margin-top:14px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);opacity:.55;}
+
+  /* ---------- OUTCOME CALLOUT ---------- */
+  .outcome{margin-top:36px;padding:20px 24px;border-left:3px solid var(--goldenhour);background:rgba(243,177,61,.07);font-size:14px;color:var(--ink-soft);max-width:680px;}
+  .outcome strong{color:var(--midnight);}
+  .terms{margin-top:26px;font-size:13.5px;color:var(--ink-soft);max-width:680px;}
+  .terms strong{color:var(--midnight);}
+
+  /* ---------- MAKEUP: SPLIT + CHART ---------- */
+  .split{display:flex;height:58px;overflow:hidden;margin:40px 0 8px;border:1px solid var(--hairline);}
+  .split-seg{display:flex;flex-direction:column;justify-content:center;padding:0 20px;color:#fff;min-width:0;}
+  .split-seg.a{background:var(--altitude);}
+  .split-seg.b{background:var(--goldenhour);color:var(--midnight);}
+  .split-seg.c{background:var(--jetstream);color:var(--midnight);}
+  .split-seg .k{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.8;white-space:nowrap;}
+  .split-seg .v{font-family:var(--serif);font-size:19px;white-space:nowrap;}
+  .splitnote{font-size:12.5px;color:var(--ink-soft);font-style:italic;margin-bottom:8px;}
+
+  .chart{margin-top:40px;border:1px solid var(--hairline);background:#fff;padding:28px 26px;}
+  .chart-title{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--skyway);margin-bottom:18px;}
+  .bar{display:grid;grid-template-columns:96px 1fr 34px;align-items:center;gap:14px;padding:5px 0;}
+  .bar .l{font-size:13px;color:var(--ink-soft);text-align:right;white-space:nowrap;}
+  .bar.lead .l,.bar.snd .l{font-weight:600;color:var(--midnight);}
+  .bar .track{height:11px;background:rgba(24,26,49,.06);overflow:hidden;}
+  .bar .fill{height:100%;width:var(--w,0%);background:rgba(24,26,49,.22);}
+  .bar.lead .fill{background:linear-gradient(90deg,var(--altitude),var(--skyway));}
+  .bar.snd .fill{background:var(--goldenhour);}
+  .bar.trd .l{font-weight:600;color:var(--midnight);}
+  .bar.trd .fill{background:var(--jetstream);}
+  .bar .v{font-family:var(--serif);font-size:15px;color:var(--ink-soft);text-align:right;}
+  .bar.lead .v,.bar.snd .v,.bar.trd .v{color:var(--midnight);}
+  .chart-cap{margin-top:16px;font-size:12.5px;color:var(--ink-soft);font-style:italic;}
+
+  /* ---------- "IN YOUR WORDS" NOTES ---------- */
+  .quotes{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:28px 44px;max-width:860px;}
+  .qnote{border-left:3px solid var(--skyway);padding-left:18px;}
+  .qnote .k{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--skyway);margin-bottom:6px;}
+  .qnote p{font-size:14px;color:var(--ink-soft);}
+  .qnote em{font-family:var(--serif);font-style:italic;color:var(--midnight);}
+
+  /* ---------- ARCHETYPE MEANING GRID ---------- */
+  .deliv{display:grid;grid-template-columns:1fr 1fr;gap:26px 44px;max-width:860px;margin-top:44px;}
+  .deliv-item{font-size:14px;color:var(--ink-soft);padding-left:22px;position:relative;}
+  .deliv-item::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--jetstream);}
+  .deliv-item.hot::before{background:var(--goldenhour);}
+  .deliv-item strong{color:var(--midnight);font-weight:600;display:block;margin-bottom:2px;}
+  .deliv-item strong span{font-weight:400;color:var(--skyway);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-left:8px;}
+
+  /* ---------- PURPOSE ---------- */
+  .purpose-body{font-family:var(--serif);font-size:clamp(19px,2.4vw,24px);line-height:1.5;max-width:720px;color:var(--midnight);}
+  .alt-quotes{margin-top:36px;max-width:680px;}
+  .alt-quotes .k{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--skyway);margin-bottom:12px;}
+  .alt-quotes p{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--altitude);padding:10px 0;border-top:1px dashed var(--hairline);}
+  .alt-quotes p:last-child{border-bottom:1px dashed var(--hairline);}
+
+  /* ---------- VOICE ---------- */
+  .persona{font-size:16px;color:var(--ink-soft);max-width:700px;}
+  .persona b{font-weight:600;color:var(--midnight);}
+  .attrs{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hairline);border:1px solid var(--hairline);margin:40px 0 0;}
+  .attr{background:#fff;padding:26px 26px;}
+  .attr h3{font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:8px;}
+  .attr .meta{font-size:13.5px;color:var(--ink-soft);}
+  .attr .meta b{color:var(--midnight);font-weight:600;}
+  .attr .ex{margin-top:10px;font-family:var(--serif);font-style:italic;font-size:14.5px;color:var(--altitude);}
+  .dials{margin-top:26px;font-size:13.5px;color:var(--ink-soft);max-width:720px;}
+  .dials b{color:var(--midnight);font-weight:600;}
+
+  /* ---------- CAMPS (landscape) ---------- */
+  .kv{display:grid;grid-template-columns:96px 1fr;gap:8px 14px;align-items:baseline;margin-top:14px;}
+  .trio .kv{grid-template-columns:64px 1fr;gap:10px 12px;}
+  .kv .k{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--skyway);white-space:nowrap;padding-top:2px;}
+  .kv .v{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+  .kv .v b{color:var(--midnight);font-weight:600;}
+
+  /* ---------- PILLARS ---------- */
+  .steps{counter-reset:step;max-width:760px;margin-top:8px;}
+  .step-row{display:flex;gap:22px;padding:26px 0;border-top:1px solid var(--hairline);}
+  .step-row:last-child{border-bottom:1px solid var(--hairline);}
+  .step-row::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-family:var(--serif);font-size:26px;color:var(--altitude);line-height:1;flex:0 0 auto;padding-top:2px;}
+  .step-row h4{font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:8px;line-height:1.2;}
+  .step-row p{font-size:14.5px;color:var(--ink-soft);}
+  .step-row .inbrand{margin-top:12px;font-size:14px;color:var(--midnight);}
+  .step-row .inbrand span{font-weight:600;text-transform:uppercase;font-size:11px;letter-spacing:.16em;color:var(--goldenhour);margin-right:10px;}
+
+  /* ---------- CTA (sweet spot) ---------- */
+  .cta{margin-top:44px;background:var(--midnight);color:#fff;padding:44px 48px;}
+  .cta .bk{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--jetstream);margin-bottom:12px;}
+  .cta .q{font-family:var(--serif);font-size:clamp(24px,3.4vw,34px);line-height:1.3;max-width:680px;}
+  .cta .q b{color:var(--goldenhour);font-weight:400;}
+  .cta p{margin-top:14px;font-size:15px;color:rgba(255,255,255,.72);max-width:640px;}
+
+  /* ---------- CONCEPT LISTS ---------- */
+  .duo-col .lk{font-size:10.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--skyway);margin:16px 0 4px;}
+  .reason{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:44px;max-width:920px;}
+  .reason h3{font-family:var(--serif);font-weight:400;font-size:21px;}
+  .reason p{font-size:14px;color:var(--ink-soft);}
+
+  /* ---------- BAND ---------- */
+  .band{background:var(--midnight);color:#fff;border-bottom:none;padding:56px 0;}
+  .band .k{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--goldenhour);margin-bottom:14px;}
+  .band h2{color:#fff;margin-bottom:10px;}
+  .band p{color:rgba(255,255,255,.72);max-width:640px;}
+
+  footer{background:var(--midnight);color:rgba(255,255,255,.6);padding:40px 0;font-size:12.5px;}
+  footer .page{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+  footer b{color:#fff;font-weight:600;}
+  footer .fine{width:100%;margin-top:14px;font-size:11.5px;color:rgba(255,255,255,.42);max-width:640px;}
+
+  /* ---------- THE PLATE (signature artwork) ---------- */
+  .plate{background:var(--midnight);border-bottom:none;padding:0;overflow:hidden;}
+  .plate figure{margin:0;}
+  /* Edge to edge, but height-capped so the artwork reads as a cinematic band
+     between Part I and Part II rather than a full-screen takeover. object-fit
+     crops the tall dimension instead of letter-boxing it. */
+  .plate .frame{position:relative;overflow:hidden;line-height:0;
+    height:clamp(320px,44vw,600px);}
+  .plate img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 42%;}
+  /* dissolve both edges into the midnight ground so there is no hard seam */
+  .plate .frame::after{content:"";position:absolute;left:0;right:0;top:0;bottom:0;pointer-events:none;
+    background:
+      linear-gradient(to bottom,var(--midnight) 0,rgba(24,26,49,0) 14%,rgba(24,26,49,0) 74%,var(--midnight) 100%),
+      linear-gradient(to right,var(--midnight) 0,rgba(24,26,49,0) 9%,rgba(24,26,49,0) 91%,var(--midnight) 100%);}
+  .plate-cap{padding:6px 0 56px;}
+  .plate .k{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--goldenhour);margin-bottom:12px;display:block;}
+  .plate .line{font-family:var(--serif);font-size:clamp(19px,2.5vw,25px);line-height:1.4;color:#fff;max-width:660px;}
+  .plate .cap{margin-top:12px;font-size:13px;color:rgba(255,255,255,.5);max-width:620px;}
+
+  /* ---------- DECK LINK BAND ---------- */
+  /* Bridges the report to the colour directions. Skyway palette, not the client
+     deck's: the report stays in house colours until a direction is chosen. */
+  .deck-band{background:var(--paper);padding:64px 0;}
+  .deck-rule{display:inline-block;width:34px;height:2px;background:var(--goldenhour);margin-bottom:18px;}
+  .deck-k{font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--skyway);margin-bottom:14px;}
+  /* Colours live here, not inline: an inline background would outrank :hover. */
+  .deck-cta{display:inline-block;background:var(--altitude);color:#fff;font-weight:700;
+    font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;
+    padding:15px 34px;border-radius:99px;box-shadow:0 0 0 rgba(30,52,142,0);
+    transition:background-color .3s ease,transform .3s cubic-bezier(.22,.61,.36,1),box-shadow .3s cubic-bezier(.22,.61,.36,1);}
+  .deck-cta:hover{background:var(--skyway);transform:translateY(-2px);box-shadow:0 10px 24px rgba(30,52,142,.26);}
+
+  /* ---------- MOTION ---------- */
+  /* Progressive enhancement: every rule here is gated behind .js-motion, which
+     a tiny inline script in <head> sets before first paint. With JS off, or in
+     print, nothing below applies and the page renders in its final state.
+     Reveals animate the `translate`/`scale` properties, NOT `transform`, so the
+     hover lifts further down can own `transform` without the two clobbering
+     each other. */
+  .js-motion .idea,
+  .js-motion .duo-col,
+  .js-motion .qnote,
+  .js-motion .deliv-item,
+  .js-motion .step-row,
+  .js-motion .attr,
+  .js-motion .bundle,
+  .js-motion .cta,
+  .js-motion .pullquote,
+  .js-motion .outcome,
+  .js-motion .alt-quotes,
+  .js-motion .reason-col,
+  .js-motion .chart,
+  .js-motion .plate-cap{
+    opacity:0;translate:0 18px;
+    transition:opacity .7s cubic-bezier(.22,.61,.36,1),translate .7s cubic-bezier(.22,.61,.36,1);
+    transition-delay:var(--d,0ms);
+  }
+  /* Elements that ALSO have a hover state must carry the reveal properties and
+     the hover properties in a single transition list. The rule above sets a
+     `transition` shorthand at (0,2,0), which outranks the plain .duo-col rule
+     in the HOVER block at (0,1,0); the shorthand replaces the entire list, so
+     transform/box-shadow would be left with no transition and snap instantly.
+     Delays are per-property, in list order, so the reveal keeps its stagger
+     while hover stays immediate. */
+  .js-motion .duo-col,.js-motion .attr{
+    transition:opacity .7s cubic-bezier(.22,.61,.36,1),translate .7s cubic-bezier(.22,.61,.36,1),
+               transform .34s cubic-bezier(.22,.61,.36,1),box-shadow .34s cubic-bezier(.22,.61,.36,1);
+    transition-delay:var(--d,0ms),var(--d,0ms),0s,0s;}
+  .js-motion .qnote{
+    transition:opacity .7s cubic-bezier(.22,.61,.36,1),translate .7s cubic-bezier(.22,.61,.36,1),
+               border-color .3s ease,padding-left .3s cubic-bezier(.22,.61,.36,1);
+    transition-delay:var(--d,0ms),var(--d,0ms),0s,0s;}
+  .js-motion .deliv-item,.js-motion .step-row{
+    transition:opacity .7s cubic-bezier(.22,.61,.36,1),translate .7s cubic-bezier(.22,.61,.36,1),
+               background-color .3s ease,color .3s ease;
+    transition-delay:var(--d,0ms),var(--d,0ms),0s,0s;}
+
+  /* single-class selector, placed after the list so source order wins */
+  .js-motion .in{opacity:1;translate:none;}
+
+  /* the artwork settles out of a slow push-in */
+  .js-motion .plate .frame img{scale:1.06;transition:scale 1.7s cubic-bezier(.22,.61,.36,1);}
+  .js-motion .plate .frame.in img{scale:1;}
+
+  /* bar fills grow from zero, staggered top to bottom, once the chart lands */
+  .js-motion .chart .fill{width:0;transition:width 1s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms);}
+  .js-motion .chart.in .fill{width:var(--w);}
+  .js-motion .split-seg{transform:scaleX(0);transform-origin:left center;
+    transition:transform .9s cubic-bezier(.22,.61,.36,1);transition-delay:var(--d,0ms);}
+  .js-motion .split.in .split-seg{transform:none;}
+
+  /* ---------- HOVER ---------- */
+  /* Cards declare a zero-size shadow at rest so the hover shadow interpolates
+     rather than popping in (box-shadow can't tween out of `none` smoothly).
+     Slower out than in, on the same easing curve as the scroll reveals. */
+  .duo-col,.attr{
+    position:relative;box-shadow:0 0 0 rgba(24,26,49,0);
+    transition:transform .5s cubic-bezier(.22,.61,.36,1),box-shadow .5s cubic-bezier(.22,.61,.36,1);}
+  .duo-col:hover,.attr:hover{
+    transform:translateY(-5px);box-shadow:0 16px 38px rgba(24,26,49,.13);z-index:1;}
+  .duo-col.dark{box-shadow:0 0 0 rgba(0,0,0,0);}
+  .duo-col.dark:hover{box-shadow:0 16px 38px rgba(0,0,0,.34);}
+  .deliv-item,.step-row,.bar .track,.bar .l,.bar .v{
+    transition:background-color .3s ease,color .3s ease;}
+  .qnote{transition:border-color .3s ease,padding-left .3s cubic-bezier(.22,.61,.36,1);}
+  .qnote:hover{border-left-color:var(--goldenhour);padding-left:22px;}
+  .deliv-item::before{transition:transform .3s cubic-bezier(.22,.61,.36,1);}
+  .deliv-item:hover{color:var(--midnight);}
+  .deliv-item:hover::before{transform:scale(1.45);}
+  .step-row:hover{background:rgba(60,114,231,.035);}
+  .step-row::before{transition:color .22s ease;}
+  .step-row:hover::before{color:var(--goldenhour);}
+  .chart .bar:hover .track{background:rgba(24,26,49,.12);}
+  .chart .bar:hover .l,.chart .bar:hover .v{color:var(--midnight);}
+
+  /* touch devices get the states but none of the lift */
+  @media(hover:none){
+    .duo-col:hover,.attr:hover,.deck-cta:hover{transform:none;box-shadow:none;}
+    .qnote:hover{padding-left:18px;}
+    .step-row:hover{background:none;}
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media(max-width:1100px){.cover-mark,.cover-mark-l{height:150px;bottom:26px;}}
+  @media(max-width:760px){.cover-mark,.cover-mark-l{height:96px;bottom:18px;}.cover-mark{right:14px;}.cover-mark-l{left:14px;}}
+  @media(max-width:860px){
+    .page{padding:0 24px;}
+    section{padding:56px 0;}
+    .duo,.trio{grid-template-columns:1fr;}
+    .quotes,.deliv,.attrs,.reason{grid-template-columns:1fr;}
+    .bar{grid-template-columns:80px 1fr 30px;}
+    .bundle,.cta{padding:32px 28px;}
+  }
+  /* Honour reduced-motion: show every final state immediately, animate nothing. */
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .js-motion *{opacity:1!important;translate:none!important;transition:none!important;}
+    .js-motion .plate .frame img{scale:none!important;}
+    .js-motion .chart .fill{width:var(--w)!important;}
+    .js-motion .split-seg{transform:none!important;}
+    .duo-col:hover,.attr:hover,.deck-cta:hover{transform:none;box-shadow:none;}
+  }
+
+  /* ---------- PRINT ---------- */
+  @media print{
+    body{font-size:12.5px;}
+    .cover{min-height:96vh;}
+    section{padding:44px 0;page-break-inside:avoid;}
+    .pb{page-break-before:always;}
+    a{color:inherit;text-decoration:none;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+    /* never let a not-yet-triggered scroll animation print blank */
+    .js-motion *{opacity:1!important;translate:none!important;}
+    .js-motion .chart .fill{width:var(--w)!important;}
+    .js-motion .split-seg{transform:none!important;}
+    .js-motion .plate .frame img{scale:none!important;}
+    .plate{page-break-inside:avoid;}
+  }
+
+/* ============ appendix tabs ============
+   Added for the "Their answers" view. Uses only existing tokens. */
+.tabs{position:sticky;top:0;z-index:40;background:var(--paper);
+  border-bottom:1px solid var(--hairline);padding:0 48px}
+.tabs-in{max-width:920px;margin:0 auto;display:flex;gap:28px}
+.tabs button{appearance:none;background:none;border:0;cursor:pointer;
+  font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:rgba(24,26,49,.45);padding:20px 0 17px;
+  border-bottom:3px solid transparent;transition:color .18s,border-color .18s}
+.tabs button:hover{color:var(--midnight)}
+.tabs button[aria-selected="true"]{color:var(--midnight);
+  border-bottom-color:var(--goldenhour)}
+.view[hidden]{display:none}
+
+#answers .page{padding-top:64px;padding-bottom:96px}
+.ans-group{margin-top:52px}
+.ans-group > .eyebrow{margin-bottom:22px}
+.ans-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+@media(max-width:760px){.ans-grid{grid-template-columns:1fr}}
+.ans{padding:15px 0;border-bottom:1px solid var(--hairline)}
+.ans .q{font-family:var(--sans);font-size:13px;line-height:1.45;
+  color:rgba(24,26,49,.5);margin-bottom:5px}
+.ans .a{font-family:var(--sans);font-size:16.5px;line-height:1.5;
+  color:var(--midnight)}
+.ans .a em{font-style:italic;color:rgba(24,26,49,.55)}
+.ans-wide{grid-column:1/-1}
+.ans-swatches{display:flex;gap:7px;flex-wrap:wrap;margin-top:4px}
+.ans-swatches span{width:30px;height:30px;border:1px solid var(--hairline);
+  display:block}
+.ans-note{font-family:var(--sans);font-size:13px;color:rgba(24,26,49,.5);
+  margin-top:26px;font-style:italic}
+
+</style>
+<script>
+  /* Set the motion flag before first paint so nothing renders in its final
+     state and then jumps. Gated on IntersectionObserver: browsers without it
+     never get the flag, so they keep the plain, fully-visible page. */
+  if ('IntersectionObserver' in window) document.documentElement.className += ' js-motion';
+</script>
+</head>
+<body>
+
+<div class="tabs">
+  <div class="tabs-in">
+    <button id="tab-report"  aria-selected="true"  onclick="showView('report')">The report</button>
+    <button id="tab-answers" aria-selected="false" onclick="showView('answers')">Their answers</button>
+  </div>
+</div>
+
+<div class="view" id="view-report">
+
+<!-- ============ COVER ============ -->
+<header class="cover">
+  <div class="page">
+    <div class="cover-top">
+      <span style="font-family:'Archivo',Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82);">Skyway Media &middot; Digital Marketing</span>
+    </div>
+    <div>
+      <h1>A Lover&rsquo;s devotion. A Caregiver&rsquo;s hands. <em>A practice built for one patient at a time.</em></h1>
+      <div class="cover-client">A brand archetype report &amp; differentiation strategy for <span>Wilco Arthritis Institute</span> &middot; Steve Engstrom, MD</div>
+      <div class="cover-sub">
+        <span class="tag">Brand Archetype Report</span>
+        <span class="rule"></span>
+        <span class="ver">Identity &middot; Voice &middot; Landscape &middot; Differentiation &middot; Visual Direction &middot; August 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="horizon" aria-hidden="true"><span class="a"></span><span class="b"></span><span class="c"></span><span class="d"></span></div>
+</header>
+
+<!-- ============ 01 BRAND IDENTITY ============ -->
+<section id="identity" class="pb">
+  <div class="page">
+    <div class="outcome" style="margin:0 0 48px;"><strong>What this report is:</strong>the result of your brand archetype assessment, scored on Skyway&rsquo;s weighted 37-point engine across all twelve archetypes, then translated into identity, voice, competitive position and visual direction. Your assessment returned an exact tie at the top. It was resolved in a clarifying session on 31 August 2026, and that session is disclosed in section 02 rather than buried.</div>
+    <div class="eyebrow">01 &middot; Brand Identity</div>
+    <h2>The surgeon who kept the part of medicine everyone else sold off</h2>
+    <p class="lede">Two archetypes finished level at 8 points each, and they are not competing for the same job. One is what the brand <em>is</em>. The other is how it is built. Lover leads: the relationship between you and a patient is not the setting for the care, it is the thing being sold. Caregiver sits underneath as machinery &mdash; the financing, the foundation, the promise that the model will not become a velvet rope.</p>
+    <div class="duo trio">
+      <div class="duo-col">
+        <div class="role">Lover &middot; The What</div>
+        <div class="who">The relationship is the product</div>
+        <p class="lead">A surgeon who has run 600 joint replacements a year inside the volume machine, and is now building the opposite of it on purpose.</p>
+        <ul>
+          <li>Your stated purpose, verbatim: <em>&ldquo;to connect to others.&rdquo;</em></li>
+          <li>Your symbol was <em>touching hands</em>. Your character was the <em>kind neighbor</em>.</li>
+          <li>Among your three deepest fears: <em>rejection</em> &mdash; the Lover&rsquo;s fear, word for word.</li>
+        </ul>
+      </div>
+      <div class="duo-col dark">
+        <div class="role">Caregiver &middot; The How</div>
+        <div class="who">Service, built into the structure</div>
+        <p class="lead">Level on points, and it shows up where most brands never put it: in the financial architecture rather than the voice.</p>
+        <ul>
+          <li>You&rsquo;d reward the people who <em>&ldquo;consistently offer empathy and support to everyone around them.&rdquo;</em></li>
+          <li>Your brand&rsquo;s character: <em>&ldquo;nurturing and compassionate.&rdquo;</em></li>
+          <li>Asked about the patient who cannot pay, you held the price and then built financing and a foundation to answer it.</li>
+        </ul>
+      </div>
+      <div class="duo-col">
+        <div class="role" style="color:#1E8E62;">Magician &middot; The Ambition</div>
+        <div class="who">A model, not just a practice</div>
+        <p class="lead">Third at 5 points, and it decided a tie of its own: asked what would matter in ten years, you chose other surgeons running your model.</p>
+        <ul>
+          <li>Among your three strengths: <em>transformative</em>, and <em>innovative</em>.</li>
+          <li>Among your fears: <em>stagnation</em>.</li>
+          <li>You wrote that no practice like this exists in the country. You are not opting out. You are building a template.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ideas">
+      <div class="idea">
+        <h3>At the core, you&rsquo;re a Lover.</h3>
+        <p>The Lover&rsquo;s drive is intimacy: devotion, appreciation, being chosen. It is the least expected archetype in orthopaedic surgery and it is exactly right for what you are building. Your purpose answer was <em>&ldquo;to connect to others,&rdquo;</em> your symbol was touching hands, and your deepest fear is rejection. In the clarifying session you chose, four times out of five, the answer where the relationship is the point: the panel is capped so the bond can be rare, the patient should leave the first consult <em>struck</em>, and the compliment you want is &ldquo;I would never go to anyone else.&rdquo; That is not a service brand. It is a devotion brand.<span class="cue">Lean into:</span> the hour itself, the phone that gets answered, being chosen and choosing back.</p>
+      </div>
+      <div class="idea">
+        <h3>Caregiver is how it is delivered.</h3>
+        <p>Caregiver tied at 8 and belongs in the delivery rather than the voice, because that is where you actually put it. Asked about a patient who genuinely needs you and cannot pay, you would not take the clean Lover answer. You held the line on the model and immediately described medical financing and a charitable foundation. That is the Caregiver 8 in its correct place: not softening the language, but building the structure that keeps the promise honest. <span class="cue">Lean into:</span> the financing plan on the website, the foundation named and dated, access as engineering rather than sentiment.</p>
+      </div>
+      <div class="idea">
+        <h3>Why the combination is one-of-a-kind.</h3>
+        <p>The twelve archetypes group into four families by core drive. Connector carries 16 of your 37 points and Structural carries 12 &mdash; your two leaders come from different families, and that crossing is the whole brand. Connector archetypes are about the bond; Structural archetypes are about the system that holds it. Most concierge medicine picks one: warmth with no architecture, or architecture with no warmth. You scored both, and you have already built both. Note what is absent: <strong>Sage 0 and Hero 0</strong>, from a surgeon who trained 40 residents and 13 fellows and leads national advocacy. The expertise is not in question and your instincts know it. The brand should not spend a word arguing for your competence.</p>
+      </div>
+    </div>
+    <div class="bundle">
+      <div class="bk">The one thing to make unmistakable</div>
+      <div class="q">Every surgeon in Williamson County can replace a hip. Not one of them can give you the afternoon. <b>You are not selling a better operation. You are selling the only version of it that still comes with a doctor attached.</b></div>
+    </div>
+    <div class="pullquote">
+      <span class="pq">&ldquo;The last practice where the surgeon is actually yours.&rdquo;</span>
+      <div class="attr">The identity in one line: the relationship is the product, the structure protects it, and the whole thing is a model somebody else should copy</div>
+    </div>
+    <div class="outcome"><strong>One drive sits underneath: Explorer, at 4.</strong>&ldquo;You only get one life, make it count&rdquo; was your motto, and rugged mountains was your setting. It reads as freedom, and it is worth saying plainly that it is not: asked directly, you said the stallion and the mountains were about vitality and activity. That is the patient after surgery, not you leaving the system. Keep it as an outcome, never as a rebellion.</div>
+    <p class="terms"><strong>The guardrail:</strong> Lover leads; Caregiver builds. Devotion without the structure becomes a spa, and structure without the devotion becomes a fee schedule. If a line could appear on a med-spa homepage <em>or</em> in an insurance brochure, it is the wrong line. You are neither.</p>
+  </div>
+</section>
+
+<!-- ============ 02 THE ARCHETYPE MAKEUP ============ -->
+<section id="makeup" class="pb">
+  <div class="page">
+    <div class="eyebrow">02 &middot; The Archetype Makeup</div>
+    <h2>Lover at the heart. Caregiver in the hands.</h2>
+    <p class="lede">Your response was complete and valid &mdash; all twelve questions answered, 37 points of 37. It also produced an exact tie: Lover 8, Caregiver 8, a margin of zero. The engine ranks; it does not break ties, and a confident single-archetype report written over a dead heat would have read authoritative and been arbitrary.</p>
+    <div class="split">
+      <div class="split-seg a" style="flex:0 0 38.1%;"><span class="k">Lover &middot; Core</span><span class="v">8</span></div>
+      <div class="split-seg b" style="flex:0 0 38.1%;"><span class="k">Caregiver &middot; The How</span><span class="v">8</span></div>
+      <div class="split-seg c" style="flex:0 0 23.8%;"><span class="k">Magician &middot; The Ambition</span><span class="v">5</span></div>
+    </div>
+    <p class="splitnote">Lover 8 &middot; Caregiver 8 &middot; Magician 5. <strong>The tie was resolved by a clarifying session on 31 August 2026</strong>, run as eight forced-choice pairs and one open question, with the archetypes unnamed in the room and every answer recorded in full under &ldquo;Their answers.&rdquo; Five pairs separated Lover from Caregiver and returned <strong>4&ndash;1 to Lover</strong>, past the threshold for a decision. Four further items tested whether the stallion and the rugged-mountains setting signalled an Explorer drive the quiz had under-read; only one landed there, so the reading holds. The points remain 8 and 8. The order came from you, not from the engine, and Caregiver is not a distant second &mdash; it is level, and it has a different job. <strong>Twenty-one answers sit behind this report</strong>: the twelve scored questions, and the nine that decided which of the two leads.</p>
+    <div class="chart">
+      <div class="chart-title">The full picture &middot; weighted score across all twelve archetypes</div>
+      <div class="bar lead"><div class="l">Lover</div><div class="track"><div class="fill" style="--w:100%"></div></div><div class="v">8</div></div>
+      <div class="bar snd"><div class="l">Caregiver</div><div class="track"><div class="fill" style="--w:100%"></div></div><div class="v">8</div></div>
+      <div class="bar trd"><div class="l">Magician</div><div class="track"><div class="fill" style="--w:62.5%"></div></div><div class="v">5</div></div>
+      <div class="bar"><div class="l">Jester</div><div class="track"><div class="fill" style="--w:62.5%"></div></div><div class="v">5</div></div>
+      <div class="bar"><div class="l">Explorer</div><div class="track"><div class="fill" style="--w:50%"></div></div><div class="v">4</div></div>
+      <div class="bar"><div class="l">Everyman</div><div class="track"><div class="fill" style="--w:37.5%"></div></div><div class="v">3</div></div>
+      <div class="bar"><div class="l">Creator</div><div class="track"><div class="fill" style="--w:37.5%"></div></div><div class="v">3</div></div>
+      <div class="bar"><div class="l">Ruler</div><div class="track"><div class="fill" style="--w:12.5%"></div></div><div class="v">1</div></div>
+      <div class="bar"><div class="l">Outlaw</div><div class="track"><div class="fill" style="--w:0%"></div></div><div class="v">0</div></div>
+      <div class="bar"><div class="l">Hero</div><div class="track"><div class="fill" style="--w:0%"></div></div><div class="v">0</div></div>
+      <div class="bar"><div class="l">Innocent</div><div class="track"><div class="fill" style="--w:0%"></div></div><div class="v">0</div></div>
+      <div class="bar"><div class="l">Sage</div><div class="track"><div class="fill" style="--w:0%"></div></div><div class="v">0</div></div>
+      <div class="chart-cap">Scored with the same weighted engine as every Skyway archetype read, with each answer mapping verified against the quiz builder&rsquo;s option table. Points are out of 37, not normalised, so they compare directly across every report we have written &mdash; which is why the clarifying session below is reported separately rather than folded into these twelve figures.</div>
+    </div>
+    <div class="split" style="margin-top:36px;">
+      <div class="split-seg a" style="flex:0 0 80%;"><span class="k">Lover &middot; the session</span><span class="v">4</span></div>
+      <div class="split-seg b" style="flex:0 0 20%;"><span class="k">Caregiver</span><span class="v">1</span></div>
+    </div>
+    <p class="splitnote">The five questions that separated the two, scored on their own five-point scale. <strong>This did not move the points above, and it was never going to.</strong> Every one of those five questions was a forced choice between Lover and Caregiver, so the other ten archetypes were not on the ballot and could not have scored; adding the result into the 37 would inflate two archetypes against ten that never had the chance. What the session settled was the <em>order</em>, not the size. Lover and Caregiver remain level at 8 apiece, and that is the honest picture: a brand with two equally strong drives, one of which you chose to lead.</p>
+    <div class="quotes">
+      <div class="qnote">
+        <div class="k">Lover &middot; in your words</div>
+        <p>Your purpose was <em>&ldquo;to connect to others,&rdquo;</em> your symbol was <em>touching hands</em>, your character was the <em>kind neighbor</em>, and among your fears sits <em>rejection</em>. Four separate questions, one drive.</p>
+      </div>
+      <div class="qnote">
+        <div class="k">Caregiver &middot; how you&rsquo;d run it</div>
+        <p>You&rsquo;d reward people who <em>&ldquo;consistently offer empathy and support,&rdquo;</em> your brand&rsquo;s character is <em>&ldquo;nurturing and compassionate,&rdquo;</em> and you approach problems <em>&ldquo;with passion and care.&rdquo;</em> The service instinct is real and it is level with the first.</p>
+      </div>
+      <div class="qnote">
+        <div class="k">Connector carries 16 of 37</div>
+        <p>Lover 8, Jester 5, Everyman 3. The Jester 5 is not noise &mdash; it is the reason a room with you in it is not solemn. Structural follows at 12, Legacy at 5, Spiritual at 4. Your centre of gravity is human connection, by a clear margin over everything else.</p>
+      </div>
+      <div class="qnote">
+        <div class="k">The absence that matters</div>
+        <p><em>Sage 0. Hero 0.</em>Nothing in your answers reached for authority or for the fight. From a surgeon with 600 cases a year, 40 residents trained and a national advocacy record, that is not modesty. It is an instinct that the credentials are the price of entry, not the pitch.</p>
+      </div>
+    </div>
+    <div class="deliv">
+      <div class="deliv-item hot"><strong>Lover &middot; 8<span>Intimacy</span></strong>Your core, decided in session. Connection as the stated purpose, touching hands as the symbol, rejection as the fear. &rarr; Devoted, personal, unhurried, chosen.</div>
+      <div class="deliv-item hot"><strong>Caregiver &middot; 8<span>Service</span></strong>Level on points, different job. Empathy is what you&rsquo;d reward and nurture is the character &mdash; but you expressed it as financing and a foundation. Structure, not tone.</div>
+      <div class="deliv-item hot"><strong>Magician &middot; 5<span>Power</span></strong>The ambition. &ldquo;Transformative&rdquo; and &ldquo;innovative&rdquo; among your strengths, stagnation among your fears, and a ten-year goal of other surgeons running the model.</div>
+      <div class="deliv-item"><strong>Jester &middot; 5<span>Enjoyment</span></strong>Tied with Magician and easy to miss. The lightness that keeps a consultation human. Never the lead, but do not scrub it out &mdash; it is why people like the room.</div>
+      <div class="deliv-item"><strong>Explorer &middot; 4<span>Freedom</span></strong>Your motto and your rugged-mountains setting. Tested in session and it reads as the patient&rsquo;s vitality, not your escape. An outcome word, not a posture.</div>
+      <div class="deliv-item"><strong>Everyman &middot; 3<span>Belonging</span></strong>The kind neighbor. You want to be approachable, not exalted &mdash; which is a useful brake on a luxury palette.</div>
+      <div class="deliv-item"><strong>Creator &middot; 3<span>Innovation</span></strong>Present as build, not as identity. You are designing a practice from nothing. It shows up in the model, not the voice.</div>
+      <div class="deliv-item"><strong>Ruler &middot; 1<span>Control</span></strong>Nearly absent, and clarifying. This is not an institution brand. No crests, no &ldquo;Institute&rdquo; formality in the tone even though it is in the name.</div>
+      <div class="deliv-item"><strong>Outlaw &middot; 0<span>Liberation</span></strong>Zero. You are leaving the insurance system without making rebellion the story. Do not let the brand pick that fight.</div>
+      <div class="deliv-item"><strong>Hero &middot; 0<span>Mastery</span></strong>Zero, from one of the highest-volume joint surgeons in the region. Your skill is assumed. Arguing for it would weaken the brand.</div>
+      <div class="deliv-item"><strong>Innocent &middot; 0<span>Safety</span></strong>Not you. No reassurance language, no soft-focus wellness register.</div>
+      <div class="deliv-item"><strong>Sage &middot; 0<span>Understanding</span></strong>Zero. Notable for an academic who has taught 53 trainees. Teach in the room; never in the marketing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 CORE PURPOSE ============ -->
+<section id="purpose" class="pb">
+  <div class="page">
+    <div class="eyebrow">03 &middot; Core Purpose</div>
+    <h2>Put the doctor and the patient back in the same room</h2>
+    <p class="purpose-body">Wilco Arthritis Institute exists for the person over fifty who still hikes, still plays, still has places to be, and who is losing that life to a hip or a knee &mdash; and who has discovered that the system built to fix it will give them ten minutes with a surgeon they may not meet again until they are already sedated. The technical case is real &mdash; fellowship training in joint preservation and reconstruction, six hundred of these a year &mdash; but it is not the case that wins, because every practice in the market makes it in nearly the same words and a patient has no way to referee it. What you can prove, and they structurally cannot, is the thing the volume model sold off to survive: a surgeon who knows your name, has your whole problem in his head, and picks up the phone. The operation restores the motion. The relationship is what you are actually charging for, and it is the only part of orthopaedics that nobody in your market is currently selling.</p>
+    <p class="terms" style="margin-top:28px;">It is the Lover&rsquo;s purpose &mdash; <strong>to connect to others</strong>, in your own words &mdash; delivered the Caregiver&rsquo;s way: with financing, a foundation, and a structure that means the promise survives contact with someone&rsquo;s bank account.</p>
+    <div class="alt-quotes">
+      <div class="k">Alternates to react to</div>
+      <p>Get your motion back from a surgeon who is actually yours.</p>
+      <p>Medicine, with two people in the room again.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 VOICE & PERSONALITY ============ -->
+<section id="voice" class="pb">
+  <div class="page">
+    <div class="eyebrow">04 &middot; Voice &amp; Personality</div>
+    <h2>Speak like the one doctor who isn&rsquo;t rushing.</h2>
+    <p class="persona"><b>If the brand were a person:</b>a surgeon who has done six hundred of these in a year and still sits all the way down before he says anything. Direct about what the operation will and will not fix. Completely unembarrassed about the price, because he has thought about it more carefully than you have. Warm without performing warmth, funny in a dry way when the room needs it, and visibly more interested in what you want your life to look like in a year than in your imaging.</p>
+    <div class="attrs">
+      <div class="attr">
+        <h3>Devoted</h3>
+        <div class="meta"><b>We are</b> personal, attentive, in it with you &nbsp;&middot;&nbsp; <b>not</b> fawning, precious, or concierge-cliché.</div>
+        <div class="ex">&ldquo;You will have my number. You will not be handed to someone else halfway through.&rdquo;</div>
+      </div>
+      <div class="attr">
+        <h3>Unhurried</h3>
+        <div class="meta"><b>We are</b> spacious, patient, willing to sit in silence &nbsp;&middot;&nbsp; <b>not</b> slow, vague, or precious about &ldquo;the journey.&rdquo;</div>
+        <div class="ex">&ldquo;We have an hour. Start wherever you want to start.&rdquo;</div>
+      </div>
+      <div class="attr">
+        <h3>Transparent</h3>
+        <div class="meta"><b>We are</b> plain about money, specific about what you get &nbsp;&middot;&nbsp; <b>not</b> coy, euphemistic, or &ldquo;investment in yourself.&rdquo;</div>
+        <div class="ex">&ldquo;Here is the number. Here is exactly what is in it. There is nothing after it.&rdquo;</div>
+      </div>
+      <div class="attr">
+        <h3>Vital</h3>
+        <div class="meta"><b>We are</b> about motion, capability, the life after &nbsp;&middot;&nbsp; <b>not</b> clinical, pain-scale, or before-and-after gruesome.</div>
+        <div class="ex">&ldquo;The goal is not a good X-ray. The goal is the trail you stopped walking.&rdquo;</div>
+      </div>
+    </div>
+    <p class="dials"><b>On the dials:</b>personal over institutional &middot; unhurried over efficient &middot; plain over clinical &middot; confident over promotional &middot; warm, and never soft about the money</p>
+    <div class="duo trio" style="margin-top:40px;">
+      <div class="duo-col">
+        <div class="role">Homepage opening</div>
+        <p class="ex" style="font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--midnight);">&ldquo;A hip and knee practice with room for a few hundred people a year. You will meet one surgeon, and he will be the one who operates.&rdquo;</p>
+      </div>
+      <div class="duo-col">
+        <div class="role">The price page</div>
+        <p class="ex" style="font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--midnight);">&ldquo;We do not bill insurance, which is why we can tell you the price. Here it is, in full, before you book anything.&rdquo;</p>
+      </div>
+      <div class="duo-col">
+        <div class="role">A follow-up note</div>
+        <p class="ex" style="font-family:var(--serif);font-style:italic;font-size:15.5px;color:var(--midnight);">&ldquo;Six weeks. You said the goal was the back nine by spring. Tell me honestly how the stairs are going and we will talk about whether that holds.&rdquo;</p>
+      </div>
+    </div>
+    <div class="outcome"><strong>The guardrail:</strong> the authority comes from attention, never from prestige. Every competitor can list credentials, and two of them can out-list you. If a line is arguing that you are a good surgeon, cut it &mdash; it is spending the brand&rsquo;s only real advantage on the one thing nobody doubts.</div>
+  </div>
+</section>
+
+<!-- ============ THE PLATE ============ -->
+<section class="plate">
+  <figure>
+    <div class="frame">
+      <img src="wilco-plate.jpg" width="2400" height="1309" loading="lazy" decoding="async"
+           alt="An abstract impasto oil painting of a stallion at full gallop, its body extended mid-stride and rendered entirely in deep cobalt blue, moving toward a break of clean white light, with flecks of crimson underpainting showing through the blue field around it.">
+    </div>
+    <figcaption class="plate-cap">
+      <div class="page">
+        <span class="k">The brand, in one image</span>
+        <p class="line">The warmth of the red rises out of the blue, which is the Lover. The stallion drives ahead, doing the work, which is the Caregiver. The light it is running into is the transformation, which is the Magician.</p>
+        <p class="cap">Commissioned for this report. Painted in your palette: cobalt for the field and the stallion, crimson worked into the underpainting, white for the break of light. No gold, at your instruction.</p>
+      </div>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ============ PART II BAND ============ -->
+<section class="band">
+  <div class="page">
+    <div class="k">Part II &middot; The Strategy</div>
+    <h2>Now that we know who you are, here&rsquo;s how you win.</h2>
+    <p>The identity only matters if it opens a lane the competition cannot follow you into. So we mapped the orthopaedic market around Williamson County and Nashville &mdash; the groups, the academic centre you came from, and the performance practices &mdash; and looked for the thing none of them can say.</p>
+  </div>
+</section>
+
+<!-- ============ 05 COMPETITIVE LANDSCAPE ============ -->
+<section id="landscape" class="pb">
+  <div class="page">
+    <div class="eyebrow">05 &middot; Competitive Landscape</div>
+    <h2>Three camps. None of them own your lane.</h2>
+    <p class="lede">Hip and knee arthritis care across the Nashville metro and Williamson County sorts into three camps: the large groups, the academic centre, and the performance practices. Each is strong on something, and all three are structurally unable to sell what you are selling. <em>(Read from each brand&rsquo;s public positioning as of 31 August 2026, scoped to the few-county reach you described. To be validated with you on review &mdash; you named these four, and we would want your read on whether the camps are drawn where you would draw them.)</em></p>
+    <div class="duo trio">
+      <div class="duo-col">
+        <div class="role">Camp One</div>
+        <div class="who">The large groups</div>
+        <div class="kv">
+          <span class="k">Who</span><span class="v">Tennessee Orthopaedic Alliance, Bone and Joint Institute of Tennessee</span>
+          <span class="k">Our read</span><span class="v">Ruler + Caregiver. Scale, locations, subspecialty depth, insurance breadth</span>
+          <span class="k">Voice</span><span class="v">Comprehensive and reassuring; &ldquo;convenient locations,&rdquo; &ldquo;most major insurance accepted,&rdquo; team-of-experts language</span>
+          <span class="k">You win</span><span class="v">They sell <b>coverage and convenience</b>; you sell <b>the surgeon&rsquo;s actual time</b>. Their scale is the direct cause of the ten-minute appointment &mdash; they cannot fix it without dismantling the thing that makes them large.</span>
+        </div>
+      </div>
+      <div class="duo-col">
+        <div class="role">Camp Two</div>
+        <div class="who">The academic centre</div>
+        <div class="kv">
+          <span class="k">Who</span><span class="v">Vanderbilt Orthopaedics</span>
+          <span class="k">Our read</span><span class="v">Sage + Ruler. Research, rankings, faculty, complex and revision cases</span>
+          <span class="k">Voice</span><span class="v">Institutional and credentialed; nationally ranked, academic medical centre, referral language</span>
+          <span class="k">You win</span><span class="v">You are not arguing against their expertise. You <b>are</b> their expertise, unbundled &mdash; eight years on that faculty, 40 residents and 13 fellows trained. The pitch is not &ldquo;better than Vanderbilt.&rdquo; It is <b>Vanderbilt-trained care without the institution between you and it.</b></span>
+        </div>
+      </div>
+      <div class="duo-col">
+        <div class="role">Camp Three</div>
+        <div class="who">The performance practices</div>
+        <div class="kv">
+          <span class="k">Who</span><span class="v">Elite Sports Medicine, and the sports-orthopaedic practices around it</span>
+          <span class="k">Our read</span><span class="v">Hero. Return-to-play, athletic identity, speed of recovery</span>
+          <span class="k">Voice</span><span class="v">Energetic and competitive; athletes, seasons, getting back on the field</span>
+          <span class="k">You win</span><span class="v">They are built for the twenty-five-year-old with a torn ACL. Your patient is fifty-five, has arthritis rather than an injury, and wants a decade of hiking rather than a season. <b>Same vocabulary of motion, entirely different promise.</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="bundle">
+      <div class="bk">The open lane</div>
+      <div class="q">Nobody in this market is selling <b>the relationship</b>. They are selling throughput, prestige, or performance.</div>
+      <p>The groups cannot slow down without breaking their economics. The academic centre cannot be personal at its scale; the institution is the product. The performance practices are aimed at a different body and a different decade of life. And none of the four can put a price on a website, because none of them knows what it is. You can do all of it, and the reason is structural rather than promotional &mdash; which is why it will hold when they try to copy the language.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 06 DIFFERENTIATION STRATEGY ============ -->
+<section id="differentiation" class="pb">
+  <div class="page">
+    <div class="eyebrow">06 &middot; Differentiation Strategy</div>
+    <h2>Five ways to pull away</h2>
+    <p class="lede">Each pillar targets the open lane, and each is something the brand should actively say rather than imply. Three of the five are things your competitors are structurally unable to copy.</p>
+    <div class="steps">
+      <div class="step-row">
+        <div>
+          <h4>Sell the hour, not the operation.</h4>
+          <p>Every practice in all three camps sells the procedure &mdash; techniques, implants, robotic assistance, recovery timelines. Whatever the real differences are between them, a patient cannot audit them, and every competitor is making the claim in nearly the same words. What differs visibly, and can be checked before anyone books anything, is the hour: who is in the room, how long they stay, and whether they are there again afterwards. That is your product and it should be quantified rather than implied. A capped panel is a number. Sixty minutes is a number. Numbers are what make a claim survive a comparison.</p>
+          <p class="inbrand"><span>In the brand</span>Put the panel cap and the appointment length on the homepage as figures. &ldquo;A few hundred patients a year,&rdquo; &ldquo;a full hour,&rdquo; &ldquo;the surgeon you meet is the surgeon who operates.&rdquo; Lead with those, not with implants and technique &mdash; the technical detail belongs in the consultation, where you can actually answer for it.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div>
+          <h4>Put the price on the website.</h4>
+          <p>Not one practice in your named set publishes a price, and it is not cowardice &mdash; billing insurance means they genuinely do not know it. Your model is the only one that can, and published pricing does something no adjective achieves: it proves the respect you are claiming. A number on a page tells a fifty-five-year-old you are not going to do anything to them they did not agree to. For a Lover brand whose fear is rejection, transparency is also the mechanism that makes being chosen possible &mdash; people cannot choose what they cannot see.</p>
+          <p class="inbrand"><span>In the brand</span>A real pricing page, itemised, with what is included and what happens if something goes wrong. No &ldquo;contact us for pricing.&rdquo; No &ldquo;investment.&rdquo; The number, and what it buys.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div>
+          <h4>Say plainly who this is not for.</h4>
+          <p>The instinct with a premium model is to soften the exclusion. Do the opposite. A brand that will not name its limits reads as though it is hoping you will not notice the price. Saying &ldquo;if you want the fastest route to a covered surgery, we are the wrong practice, and here is who is right&rdquo; costs you patients who were never going to convert and converts the ones who were, harder. This is the Lover&rsquo;s selection working in your favour: the panel is small because it is chosen, and being chosen has to run both directions to mean anything.</p>
+          <p class="inbrand"><span>In the brand</span>A short, unapologetic &ldquo;is this right for you&rdquo; section. Name the patient this suits and the patient it does not. Refer the second one somewhere real.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div>
+          <h4>Make the financing and the foundation part of the story, not the fine print.</h4>
+          <p>The obvious attack on a cash practice is that it is care for the wealthy. You have already answered it structurally &mdash; medical financing now, a charitable foundation as the goal &mdash; and that answer is currently invisible. Left in a footnote it reads defensive. Stated in the open it becomes the proof that this is a reimagined model rather than a price increase, and it is the clearest expression of your Caregiver 8 anywhere in the business.</p>
+          <p class="inbrand"><span>In the brand</span>Financing on the pricing page, in the same type size as the price. When the foundation exists, give it a name and a page. Never phrase either as charity for the patient; phrase both as the model working as designed.</p>
+        </div>
+      </div>
+      <div class="step-row">
+        <div>
+          <h4>Promise motion, not repair.</h4>
+          <p>The category talks about pain: pain scores, pain relief, pain management. You told us what you are actually after &mdash; relieve pain, restore motion, improve people&rsquo;s activity levels &mdash; and the second and third are the ones worth owning. Pain relief is what every competitor promises and what an insurance company pays for. Motion is what your patient actually wants and cannot get anywhere else in the sentence. It is also what your own stallion answer was about, which means it is already how you think.</p>
+          <p class="inbrand"><span>In the brand</span>Write outcomes as activities, specifically and unglamorously: the third green, the grandchild on the shoulders, the trail. Photograph movement, never anatomy. Ask new patients what they stopped doing, and make that the record you measure against.</p>
+        </div>
+      </div>
+    </div>
+    <div class="cta">
+      <div class="bk">Your strategic sweet spot</div>
+      <div class="q"><b>The devoted surgeon.</b></div>
+      <p>Academic-grade hip and knee care, sold as a relationship instead of a procedure, priced in the open, and built so the promise survives.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 VISUAL IDENTITY ============ -->
+<section id="visual" class="pb">
+  <div class="page">
+    <div class="eyebrow">07 &middot; Visual Identity &middot; Concept Strategies</div>
+    <h2>Three ways to look the part</h2>
+    <p class="lede">Direction, not decoration: three strategic concepts, each true to Lover &times; Caregiver, and each tested against the palette and style words you chose. We design the boards after you react to these.</p>
+    <div class="duo trio">
+      <div class="duo-col">
+        <div class="role">Concept A</div>
+        <div class="who">The private house</div>
+        <p class="d">Quiet, spacious, unmistakably expensive.</p>
+        <p class="lead">Deep cobalt and generous white, editorial spacing, almost nothing on the page. The visual language of a private bank or a members&rsquo; club rather than a clinic. Luxury signalled by restraint and room, which is the only luxury register available to you once gold is off the table.</p>
+        <div class="lk">Pros</div>
+        <ul>
+          <li>Matches all three style words at once: luxurious, modern, timeless</li>
+          <li>Space on the page is the visual argument for space in the schedule</li>
+          <li>Nothing in the local market looks remotely like it</li>
+        </ul>
+        <div class="lk">Tradeoffs</div>
+        <ul>
+          <li>Can read cold; needs real photography of you to carry the Lover</li>
+          <li>Risks the exclusivity feeling closed, which cuts against Everyman 3</li>
+        </ul>
+      </div>
+      <div class="duo-col">
+        <div class="role">Concept B</div>
+        <div class="who">Motion study</div>
+        <p class="d">The life, not the joint.</p>
+        <p class="lead">Cobalt ground, one crimson accent, and photography built entirely on people over fifty in motion &mdash; walking, lifting, climbing, playing. No anatomy, no implants, no operating theatre. The brand becomes a record of the activity it restores.</p>
+        <div class="lk">Pros</div>
+        <ul>
+          <li>Puts the &ldquo;promise motion&rdquo; pillar in the visual system itself</li>
+          <li>Directly separates you from the pain-and-anatomy category look</li>
+          <li>Your own stallion answer already points here</li>
+        </ul>
+        <div class="lk">Tradeoffs</div>
+        <ul>
+          <li>Drifts toward the sports-medicine camp if the photography skews young or athletic</li>
+          <li>Depends on a real shoot; stock will kill it immediately</li>
+        </ul>
+      </div>
+      <div class="duo-col">
+        <div class="role">Concept C</div>
+        <div class="who">The consulting room</div>
+        <p class="d">Two chairs, no desk between them.</p>
+        <p class="lead">Warmer and closer: portraiture, hands, the room itself, type at conversational scale. The most literal expression of the Lover, built around the encounter rather than the outcome.</p>
+        <div class="lk">Pros</div>
+        <ul>
+          <li>The most direct expression of the core archetype</li>
+          <li>Founder-led and personal, which is what you are actually selling</li>
+        </ul>
+        <div class="lk">Tradeoffs</div>
+        <ul>
+          <li>Closest to the concierge-medicine template already in circulation</li>
+          <li>Underplays the luxury and modern style words you chose</li>
+          <li>Warmth without structure is the failure mode your Caregiver 8 is meant to prevent</li>
+        </ul>
+      </div>
+    </div>
+    <div class="reason">
+      <div class="reason-col">
+        <h3>The color thinking</h3>
+        <p>You chose cobalt, crimson and white, and ruled out gold, marigold and ink. That combination is more interesting than it looks, because it removes both standard routes to &ldquo;expensive&rdquo;: no gold means no luxury shorthand, and no ink means no near-black to anchor the dark end. So cobalt has to do two jobs &mdash; it is both the brand colour and the deepest value in the system &mdash; which means owning a genuinely deep, saturated cobalt rather than the mid-blue every medical practice in the country already uses. White then becomes the actual luxury signal: unfilled space is the most expensive thing on a page, and it happens to argue the same point your business does. <strong>The one caution is crimson.</strong> In a surgical context, large fields of red read as blood or emergency, and your fifty-five-year-old is already nervous. Keep it to a single accent &mdash; a rule, a mark, one word &mdash; never a background, and never adjacent to clinical imagery. Used at one percent of the page it reads as vitality, which is what you meant by it. <strong>One further check to make early:</strong> cobalt, crimson and white together are the flag palette, and in a Tennessee practice that can read as patriotic before it reads as premium. Pushing the cobalt deeper than flag-blue and holding crimson to a genuine accent is most of what keeps the combination reading as yours rather than as a civic institution&rsquo;s.</p>
+      </div>
+      <div class="reason-col">
+        <h3>The type thinking</h3>
+        <p>&ldquo;Sturdy and characterful&rdquo; is a useful brief because it rules out the two obvious wrong answers. It is not the thin geometric sans that every concierge practice defaults to, which reads generically premium and says nothing, and it is not institutional Helvetica-blue, which is the camp you are leaving. Sturdy plus characterful points to a serif with weight and a real voice for headlines &mdash; <strong>Fraunces</strong> at a low optical size carries warmth and heft without nostalgia; <strong>Instrument Serif</strong> is sharper and more editorial if Concept A leads. Set body copy in a grotesque with enough width to feel calm rather than efficient: <strong>Archivo</strong> or <strong>Mulish</strong>. Type sizes should run slightly larger than the category standard across the board. It is a small thing and it does more work than any other single decision here: your patients are over fifty, and a brand that is physically easy to read is making the same promise the practice is.</p>
+      </div>
+    </div>
+    <div class="outcome"><strong>Our lean:</strong>Concept B, built on Concept A&rsquo;s restraint. The private house gives you the register your style words asked for; the motion photography keeps it from becoming a bank. Concept C should survive inside both, in the portraiture &mdash; it is the right instinct in the wrong container.</div>
+  </div>
+</section>
+
+<!-- ============ 08 SUMMARY ============ -->
+<section class="band">
+  <div class="page">
+    <div class="k">08 &middot; Summary</div>
+    <h2>A Lover brand with a Caregiver&rsquo;s architecture.</h2>
+    <p>Devotion as the product, structure as the guarantee, and a model built deliberately enough that other surgeons should end up copying it. In a market selling throughput, prestige and performance, you are the only practice in a position to sell the relationship &mdash; and the only one that can put the price of it in writing.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="page">
+    <span><b>Skyway Media</b> &middot; 1029 Central Ave STE 200, St. Petersburg, FL</span>
+    <span>skyway.media</span>
+    <span class="fine">Prepared for Steve Engstrom, MD &middot; Wilco Arthritis Institute, Brentwood, TN. This brand archetype report was custom made in St. Petersburg, FL. Scored on the Skyway 37-point engine; the primary tie was resolved in a clarifying session on 31 August 2026.</span>
+  </div>
+</footer>
+
+</div>
+
+<div class="view" id="view-answers" hidden>
+  <section id="answers">
+    <div class="page">
+      <div class="eyebrow">Appendix &middot; As submitted</div>
+      <h2>What you told us.</h2>
+      <p class="lede">Every answer from the assessment, unedited. The report is our reading of these; this is the record they were read from.</p>
+
+      <div class="ans-group">
+        <div class="eyebrow">The business</div>
+        <div class="ans-grid">
+          <div class="ans ans-wide">
+            <div class="q">Describe what you do</div>
+            <div class="a">I am a board-certified orthopaedic surgeon specializing in adult reconstruction.  My primary practice is related to surgical and non-surgical care of osteoarthritis--primarily hip and knee replacement surgery.  I completed my undergraduate education at Boston College.  I completed medical school at the University of Connecticut.  I completed residency at Vanderbilt University Medical Center and went on to fellowship training in Joint Preservation, Reconstruction and Replacement at Washington University in St. Louis.  For the past eight years, I have worked in Academic Practice at Vanderbilt University Medical center.  During that time, I built a busy practice seeing over 2000 patients per year and over 600 joint replacement surgeries per year.  In addition, I have trained over 40 orthopaedic residents and 13 fellows.<br><br>Outside of my clinical practice, I have become a leader in the American Association of Hip and Knee surgeons.  My work with AAHKS has primarily focused on patient and physician advocacy efforts to maintain appropriate physician reimbursement and value-based care for joint replacement surgeries.<br><br>I am now embarking on a new endeavor to begin a concierge osteoarthritis practice--one not-focused on volume and throughput, but one that returns to an era when medicine was more personal.  I seek to restore the physician-patient relationship by exiting the traditional bureaucracy of the insurance system and operating on a transparent cash-based system where patients actually understand what they are receiving and the value of the care that I am providing.</div>
+          </div>
+          <div class="ans"><div class="q">Industry</div><div class="a">Healthcare- Orthopaedic Surgeon</div></div>
+          <div class="ans"><div class="q">Market reach</div><div class="a">Regional &mdash; a few counties</div></div>
+          <div class="ans"><div class="q">Based in</div><div class="a">Brentwood, TN</div></div>
+          <div class="ans ans-wide"><div class="q">Who they lose business to</div><div class="a">The biggest hurdle of this model is that I am providing services that are typically covered by insurance.  I need a brand that will emphasize to patients that they are paying for something that cannot be provided by other local surgeons.  Most surgeons need to see as many people as possible in a day to generate the revenue needed to sustain a practice.  I am going to focus on a smaller number of patients at a higher price point in order to provide better care.  These competitors include<br><br>Bone and Joint Institute of TN<br>Elite Sports Medicine<br>Vanderbilt Orthopaedics<br>Tennessee Orthopaedic Alliance</div></div>
+          <div class="ans ans-wide"><div class="q">Ideal customer</div><div class="a">My patient population consists of adults over the age of 50 with hip and knee osteoarthritis.  I seek to target affluent, healthy and active individuals who are currently suffering with pain associated with osteoarthritis and are interested in seeking concierge type care to restore their mobility and quality of life.</div></div>
+          <div class="ans ans-wide"><div class="q">What makes them different</div><div class="a">To my knowledge, there are no practices exactly like mine in the country.  While many joint replacement surgeons have &ldquo;opted-out&rdquo; of Medicare due to declining reimbursement, none have reimagined their entire practice to become a cash-based, concierge model.  The current healthcare system rewards surgeons for volume (10-minute appointment times, 8-12 surgeries per day, care driven by mid-level providers (NP, PA)) and de-emphasizes the personalized aspects of the doctor-patient relationship.  At Wilco Arthritis Institute, I seek to offer a cash-based system that is both affordable and breaks the chains of the traditional model.  By not participating in insurance, I am not bound by the red tape imposed by Medicare and the insurance industry and will be free to focus my efforts on a smaller number of patients to provide unparalled access and ultra high-quality care</div></div>
+        </div>
+      </div>
+
+      <div class="ans-group">
+        <div class="eyebrow">The twelve questions</div>
+        <div class="ans-grid">
+          <div class="ans"><div class="q">What of the following mottos resonates the most for your brand?</div><div class="a">You only get one life, make it count.</div></div>
+          <div class="ans"><div class="q">Which of the following individuals and characters align most closely with your brand?</div><div class="a">Kind Neighbor</div></div>
+          <div class="ans"><div class="q">Which of the following align most closely with your brand&rsquo;s character?</div><div class="a">Nurturing and compassionate</div></div>
+          <div class="ans"><div class="q">Our brand rewards and praises employees who</div><div class="a">Consistently offer empathy and support to everyone around them.</div></div>
+          <div class="ans"><div class="q">What is the primary purpose of your brand?</div><div class="a">To connect to others</div></div>
+          <div class="ans"><div class="q">When thinking about your brand, which gradient resonates most?</div><div class="a">Blue into cyan</div></div>
+          <div class="ans"><div class="q">Which words describe your brand&rsquo;s strengths?</div><div class="a">Innovative, Caring, Transformative</div></div>
+          <div class="ans"><div class="q">Which words describe what your brand fears most?</div><div class="a">Rejection, Stagnation, Negativity</div></div>
+          <div class="ans"><div class="q">When thinking about your brand, what symbol resonates most?</div><div class="a">Touching hands</div></div>
+          <div class="ans"><div class="q">What animal would be a great ambassador for your brand?</div><div class="a">Stallion</div></div>
+          <div class="ans"><div class="q">How does your brand approach problems?</div><div class="a">We approach problems with passion and care.</div></div>
+          <div class="ans"><div class="q">Which setting best reflects the spirit of your brand?</div><div class="a">Rugged mountains</div></div>
+        </div>
+      </div>
+
+      <div class="ans-group">
+        <div class="eyebrow">Brand direction</div>
+        <div class="ans-grid">
+          <div class="ans"><div class="q">Colours that pull you in</div><div class="a">Cobalt #2660B8, Crimson #B32334, White #FFFFFF <span class="ans-swatches"><span style="background:#2660B8" title="Cobalt #2660B8"></span><span style="background:#B32334" title="Crimson #B32334"></span><span style="background:#FFFFFF" title="White #FFFFFF"></span></span></div></div>
+          <div class="ans"><div class="q">Colours to avoid</div><div class="a">Gold #C9A227, Ink #14161F, Marigold #F2B01E <span class="ans-swatches"><span style="background:#C9A227" title="Gold #C9A227"></span><span style="background:#14161F" title="Ink #14161F"></span><span style="background:#F2B01E" title="Marigold #F2B01E"></span></span></div></div>
+          <div class="ans"><div class="q">Notes on colour</div><div class="a"><em>None marked</em></div></div>
+          <div class="ans"><div class="q">Style</div><div class="a">Luxurious / High-End, Modern / Sleek, Classic / Timeless</div></div>
+          <div class="ans"><div class="q">Type voice</div><div class="a">Sturdy and characterful</div></div>
+          <div class="ans"><div class="q">Typeface to keep</div><div class="a"><em>None marked</em></div></div>
+          <div class="ans"><div class="q">Tagline</div><div class="a">Just something to convey high-end concierge care</div></div>
+          <div class="ans"><div class="q">Where the brand is used</div><div class="a">Website, Apparel, Signage, Social media, Email</div></div>
+          <div class="ans"><div class="q">Scope</div><div class="a">Business cards &amp; stationery, Website branding, Social media templates</div></div>
+          <div class="ans"><div class="q">Symbols</div><div class="a"><em>None marked</em></div></div>
+          <div class="ans"><div class="q">Existing assets</div><div class="a">Starting fresh</div></div>
+          <div class="ans"><div class="q">Anything else</div><div class="a">None</div></div>
+        </div>
+      </div>
+
+      <div class="ans-group">
+        <div class="eyebrow">The clarifying session &middot; 31 August 2026</div>
+        <div class="ans-grid">
+          <div class="ans ans-wide"><div class="q">Why this session happened</div><div class="a">The assessment returned Lover 8 and Caregiver 8 &mdash; an exact tie the engine cannot break. Nine questions were put to you live, with the archetypes unnamed, to decide which of the two leads. Your answers are recorded below as given.</div></div>
+          <div class="ans"><div class="q">1. You&rsquo;re capping the panel deliberately. What&rsquo;s the cap actually for?</div><div class="a">So what happens between me and a patient can be something rare &mdash; the kind of meaningful doctor-patient relationship that barely exists anymore.</div></div>
+          <div class="ans"><div class="q">2. Someone who genuinely needs you can&rsquo;t pay. What&rsquo;s honest about your reaction?</div><div class="a">This one is tough. I am working on options for medical financing for patients who can&rsquo;t pay at one time. Also, my ultimate goal would be to establish a charitable foundation to help patients who need it. So for now, I would choose &ldquo;it&rsquo;s real, but my model only works if I hold the line&rdquo; &mdash; but with financing available.</div></div>
+          <div class="ans"><div class="q">3. Which is the worse outcome?</div><div class="a">A patient feels you let them down at the moment they needed you.</div></div>
+          <div class="ans"><div class="q">4. First consult ends. What do you want them feeling in the parking lot?</div><div class="a">Struck. That was not like any doctor&rsquo;s appointment they&rsquo;ve had.</div></div>
+          <div class="ans"><div class="q">5. Which compliment would you rather get?</div><div class="a">&ldquo;I would never go to anyone else.&rdquo;</div></div>
+          <div class="ans"><div class="q">6. Say it in one line to a stranger at a party. What is this practice?</div><div class="a">A better way to care for people with arthritis. <em>&mdash; but really both</em></div></div>
+          <div class="ans"><div class="q">7. Ten years on, which would mean more?</div><div class="a">Surgeons in other cities running your model.</div></div>
+          <div class="ans"><div class="q">8. Which sentence would you fight to keep in the brand?</div><div class="a">The time and attention your care deserves.</div></div>
+          <div class="ans ans-wide"><div class="q">9. You picked a stallion, and you picked rugged mountains. What was it about these images that drew you in?</div><div class="a">I tried to pick symbols of vitality and activity. My goal is to relieve pain, restore motion, and improve people&rsquo;s lives and activity levels.</div></div>
+          <div class="ans ans-wide"><div class="q">How it was read</div><div class="a">Questions 1&ndash;5 separated the two tied archetypes and returned 4&ndash;1 to Lover, which decided the primary. Questions 6&ndash;9 tested whether the stallion and the rugged-mountains setting pointed to an Explorer drive the assessment had under-read; one of the four landed there, below the threshold, so the reading stands. Question 7 also broke the second tie, between Magician and Jester at 5 points each, in favour of Magician.</div></div>
+        </div>
+      </div>
+
+      <p class="ans-note">Twenty-one answers on record &middot; twelve from the assessment,
+        submitted 31 August 2026, and nine from the clarifying session the same day
+        &middot; scored on the Skyway 37-point engine &middot; answer string
+        L &middot; F &middot; G &middot; G &middot; B &middot; C &middot; BGI &middot; BDE &middot; B &middot; L &middot; D &middot; L</p>
+    </div>
+  </section>
+</div>
+
+<script>
+function showView(v){
+  ['report','answers'].forEach(function(n){
+    document.getElementById('view-'+n).hidden = (n !== v);
+    document.getElementById('tab-'+n).setAttribute('aria-selected', String(n === v));
+  });
+  window.scrollTo(0,0);
+}
+</script>
+
+<script>(function () {
+  var root = document.documentElement;
+  if (root.className.indexOf('js-motion') === -1) return;
+  // Must stay in sync with the .js-motion opacity:0 list in the stylesheet.
+  // Anything hidden there and missing here never receives .in and stays
+  // invisible forever. Listed by the same class names the CSS uses.
+  var RISE = '.idea,.duo-col,.qnote,.deliv-item,.step-row,.attr,.bundle,.cta,.pullquote,.outcome,.alt-quotes,.reason-col,.chart,.plate-cap';
+  function stagger(nodes, step, cap) {
+    for (var i = 0; i < nodes.length; i++) {
+      nodes[i].style.setProperty('--d', Math.min(i * step, cap) + 'ms');
+    }
+  }
+  var groups = document.querySelectorAll('.ideas,.duo,.quotes,.deliv,.attrs,.steps,.reason');
+  for (var g = 0; g < groups.length; g++) {
+    stagger(groups[g].children, 90, 450);
+  }
+  stagger(document.querySelectorAll('.chart .fill'), 65, 800);
+  stagger(document.querySelectorAll('.split-seg'), 130, 400);
+  var io = new IntersectionObserver(function (entries) {
+    for (var i = 0; i < entries.length; i++) {
+      if (!entries[i].isIntersecting) continue;
+      entries[i].target.classList.add('in');
+      io.unobserve(entries[i].target);
+    }
+  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.12 });
+  var watch = document.querySelectorAll(RISE + ',.split,.plate .frame');
+  for (var i = 0; i < watch.length; i++) io.observe(watch[i]);
+  requestAnimationFrame(function () {
+    for (var i = 0; i < watch.length; i++) {
+      var r = watch[i].getBoundingClientRect();
+      if (r.top < window.innerHeight && r.bottom > 0) {
+        watch[i].classList.add('in');
+        io.unobserve(watch[i]);
+      }
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
