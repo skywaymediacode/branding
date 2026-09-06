@@ -6,14 +6,14 @@
 <title>Project 10 · Color &amp; Typography</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Mulish:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --sand:#EDEBD1; --cloud:#FFFFFF; --parchment:#F6F5E8; --dune:#E3E1C3;
-    --deep:#2E5A52; --sea:#80B0A6; --tint:#C9DED9;
+    --sand:#FFFFFF; --cloud:#FFFFFF; --parchment:#FFFFFF; --dune:#F4F2EA; --gold:#CFC493;
+    --deep:#25565C; --sea:#80B0A6; --tint:#BFD8D8;
     --lemon:#DBE442;
-    --ink:#24413C; --hair:#D5D3B9;
-    --muted:#5A6E68; --soft:#7E918B;
+    --ink:#1E3F44; --hair:#D9D5C4;
+    --muted:#4E6266; --soft:#6E8286;
   }
   *{margin:0;padding:0;box-sizing:border-box;border-radius:0}
   html{scroll-behavior:smooth}
@@ -39,7 +39,7 @@
   .bg-sand{background:var(--sand)}
   .bg-parch{background:var(--parchment)}
   .bg-dune{background:var(--dune)}
-  .bg-dark{background:var(--ink);color:#C6D5D0}
+  .bg-dark{background:var(--ink);color:#C6D5D6}
   .bg-dark h2{color:var(--sand)}
   .bg-dark h3{color:var(--lemon)}
   .bg-dark .snum{border-color:#3E5A54}
@@ -56,7 +56,7 @@
   .cover .wordmark{font-family:'Archivo',sans-serif;font-weight:700;font-size:52px;letter-spacing:-.02em;color:var(--deep);line-height:1.1}
   .cover .wordmark span{display:block}
   .cover .sub{font-family:'Fraunces',serif;font-style:italic;font-size:25px;color:var(--muted);margin-top:18px}
-  .cover .meta{margin-top:56px;padding-top:22px;border-top:1px solid var(--hair);display:flex;gap:44px;flex-wrap:wrap;font-size:15.5px;color:var(--muted);letter-spacing:.02em}
+  .cover .meta{margin-top:56px;padding-top:22px;border-top:1px solid var(--hair);display:flex;gap:44px;flex-wrap:wrap;font-size:15.5px;color:var(--ink);letter-spacing:.02em}
   .cover .meta b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft);font-weight:700;margin-bottom:3px}
 
   .toc{border-top:1px solid var(--hair);padding:34px 0 78px}
@@ -98,10 +98,12 @@
   .palnote{font-size:17.5px;color:var(--muted);margin:14px 0 18px;max-width:78ch}
   .strip{display:flex;height:64px;border:1px solid var(--hair);margin-bottom:2px}
   .strip i{display:block}
+  .strip i.w{border-right:1px solid var(--hair)}
+  .chip i.w{border-bottom:1px solid var(--hair)}
   .grad{height:26px;border:1px solid var(--hair);border-top:0;margin-bottom:14px;position:relative}
   .grad span{position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#fff;font-weight:700;mix-blend-mode:normal}
   .pal{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--hair);border:1px solid var(--hair)}
-  .pal.six{grid-template-columns:repeat(6,1fr)}
+  .pal.six{grid-template-columns:repeat(7,1fr)}
   @media(max-width:820px){.pal,.pal.six{grid-template-columns:repeat(2,1fr)}}
   .chip{background:var(--cloud)}
   .chip i{display:block;height:96px}
@@ -214,11 +216,11 @@
 <!-- ═══════════ COVER · sand ═══════════ -->
 <div class="wrap cover" style="min-height:60vh">
   <div class="top">Project 10 · Transition Education Network</div>
-  <div class="bar" aria-hidden="true"><i style="background:#2E5A52"></i><i style="background:#80B0A6"></i><i style="background:#DBE442"></i></div>
+  <div class="bar" aria-hidden="true"><i style="background:#CFC493"></i><i style="background:#25565C"></i><i style="background:#80B0A6"></i><i style="background:#DBE442"></i></div>
   <div class="wordmark"><span>Color &amp;</span><span>Typography</span></div>
-  <div class="sub">Five palettes. Five font pairings. One recommendation for each.</div>
+  <div class="sub">Two palettes. Two font pairings. One recommendation for each.</div>
   <div class="meta">
-    <div><b>Recommended palette</b>01 · Seaglass &amp; Sand</div>
+    <div><b>Recommended palette</b>01 · Tidewater</div>
     <div><b>Recommended pairing</b>01 · Archivo + Mulish</div>
     <div><b>Accent</b>Fraunces Italic</div>
     <div><b>Version</b>1.0 · 2026</div>
@@ -227,142 +229,90 @@
 
 <div class="wrap toc">
   <ol>
-    <li><a href="#color">Color · Five Palettes<i>01</i></a></li>
-    <li><a href="#type">Typography · Five Pairings<i>02</i></a></li>
+    <li><a href="#color">Color · Two Palettes<i>01</i></a></li>
+    <li><a href="#type">Typography · Two Pairings<i>02</i></a></li>
   </ol>
 </div>
 
 <!-- ═══════════ 01 COLOR · parchment ═══════════ -->
 <section id="color" class="bg-parch"><div class="wrap">
-  <div class="snum"><span class="n">01</span><h2>Seaglass &amp; Sand</h2><span class="r">Color · Five Palettes</span></div>
-  <p>The client's questionnaire selected three colors — <strong>Sand #EDEBD1, Lemongrass #DBE442, and Seaglass #80B0A6</strong> — and a teal-into-green gradient. Those three are honored in every palette below. What changes from palette to palette is the <strong>deep working color</strong> that carries text, headings, and buttons (Seaglass itself measures only 2.01:1 on Sand and can never be text), and the supporting tint that sits between them.</p>
-  <p>Palette 01 is the recommended system and is used throughout this document. Palettes 02–05 are complete, accessibility-checked alternatives that shift the temperature or the emphasis while keeping the client's three chosen colors intact. Pick one; do not blend palettes across a single piece.</p>
+  <div class="snum"><span class="n">01</span><h2>Seaglass &amp; USF Gold</h2><span class="r">Color · Two Palettes</span></div>
+  <p>The client's questionnaire selected three colors — <strong>Sand #EDEBD1, Lemongrass #DBE442, and Seaglass #80B0A6</strong> — and a teal-into-green gradient. Sand has since been replaced by <strong>white #FFFFFF</strong> as the canvas, and <strong>USF Gold #CFC493</strong>, the University of South Florida's secondary color, joins the palette as the brand's warm color so that Project 10 reads as a USF-affiliated network. Lemongrass and Seaglass are honored in both palettes below. What changes from palette to palette is the <strong>deep working color</strong> that carries text, headings, and buttons (Seaglass itself measures only 2.3:1 on white and can never be text), and the supporting tint that sits between them.</p>
+  <p>USF Gold is used as a color, not a page background: cover bands, header blocks, panels, certificates. Anything set on it is held to the ratios below — body text on gold goes in the palette's Ink, and both working colors were deepened one step so they clear 4.5:1 on gold as well as on white. Palette 01 is the recommended system and is used throughout this document. Pick one; do not blend palettes across a single piece.</p>
 
   <!-- ── PALETTE 01 ── -->
-  <div class="palhead"><span class="pn">01</span><span class="pk">Palette</span><h4>Seaglass &amp; Sand</h4><span class="tag">Recommended</span></div>
-  <p class="palnote">The report's own resolution of the client's three colors. Seaglass is deepened to a cool green-teal for ink and buttons; Sand becomes the canvas; Lemongrass is the single accent. Balanced, calm, and clearly on the education side of the line rather than the resort side.</p>
-  <div class="strip"><i style="flex:5;background:#EDEBD1"></i><i style="flex:3;background:#2E5A52"></i><i style="flex:2;background:#80B0A6"></i><i style="flex:1.5;background:#C9DED9"></i><i style="flex:1;background:#24413C"></i><i style="flex:.5;background:#DBE442"></i></div>
-  <div class="grad" style="background:linear-gradient(90deg,#2E5A52,#80B0A6)"><span>Teal → Green gradient · Deep Seaglass to Seaglass</span></div>
+  <div class="palhead"><span class="pn">01</span><span class="pk">Palette</span><h4>Tidewater</h4><span class="tag">Recommended</span></div>
+  <p class="palnote">Pushes the working color toward true teal. Paired with USF Gold this reads as gold-and-teal on white — clearly related to the university, clearly not USF's own green-and-gold — and it is the palette that feels most "digital-first." Lemongrass pops harder against teal, so the five-percent cap matters even more here.</p>
+  <div class="strip"><i class="w" style="flex:4;background:#FFFFFF"></i><i style="flex:2;background:#CFC493"></i><i style="flex:3;background:#25565C"></i><i style="flex:2;background:#4A8F96"></i><i style="flex:1.5;background:#80B0A6"></i><i style="flex:1;background:#1E3F44"></i><i style="flex:.5;background:#DBE442"></i></div>
+  <div class="grad" style="background:linear-gradient(90deg,#25565C,#80B0A6)"><span>Teal → Green gradient · Deep Tide to Seaglass</span></div>
   <div class="pal six">
-    <div class="chip"><i style="background:#EDEBD1"></i><div class="m"><b>Sand</b><s>#EDEBD1 · 237 235 209</s><u>Canvas. Default page and document background.</u></div></div>
-    <div class="chip"><i style="background:#2E5A52"></i><div class="m"><b>Deep Seaglass</b><s>#2E5A52 · 46 90 82</s><u>Primary. Headings, buttons, links, body text on Sand.</u></div></div>
-    <div class="chip"><i style="background:#80B0A6"></i><div class="m"><b>Seaglass</b><s>#80B0A6 · 128 176 166</s><u>Supporting. Icon fills, panels, rules — never text.</u></div></div>
-    <div class="chip"><i style="background:#C9DED9"></i><div class="m"><b>Seaglass Tint</b><s>#C9DED9 · 201 222 217</s><u>Soft panels, table stripes, disabled states.</u></div></div>
-    <div class="chip"><i style="background:#24413C"></i><div class="m"><b>Evergreen Ink</b><s>#24413C · 36 65 60</s><u>Dark surfaces, footers, long-form text at small sizes.</u></div></div>
-    <div class="chip"><i style="background:#DBE442"></i><div class="m"><b>Lemongrass</b><s>#DBE442 · 219 228 66</s><u>Accent, ≤5%. Highlight blocks, active states, one icon fill.</u></div></div>
-  </div>
-  <div class="bestfor">
-    <div><b>Best for</b><p>The primary identity: website, PDFs, training decks, letterhead. The safest all-purpose system.</p></div>
-    <div><b>Watch for</b><p>Seaglass and Sand together at large scale drift toward "coastal." Keep Deep Seaglass visibly present on every page.</p></div>
-  </div>
-
-  <!-- ── PALETTE 02 ── -->
-  <div class="palhead"><span class="pn">02</span><span class="pk">Palette</span><h4>Tidewater</h4><span class="tag alt">Cooler · Blue-leaning</span></div>
-  <p class="palnote">Pushes the working color further toward true teal. This is the palette that puts the most distance between Project 10 and USF green, and the one that reads most "digital-first." Lemongrass pops harder against teal, so the five-percent cap matters even more here.</p>
-  <div class="strip"><i style="flex:5;background:#EDEBD1"></i><i style="flex:3;background:#2F6B72"></i><i style="flex:2;background:#4A8F96"></i><i style="flex:1.5;background:#80B0A6"></i><i style="flex:1;background:#1E3F44"></i><i style="flex:.5;background:#DBE442"></i></div>
-  <div class="grad" style="background:linear-gradient(90deg,#2F6B72,#80B0A6)"><span>Teal → Green gradient · Deep Tide to Seaglass</span></div>
-  <div class="pal six">
-    <div class="chip"><i style="background:#EDEBD1"></i><div class="m"><b>Sand</b><s>#EDEBD1 · 237 235 209</s><u>Canvas.</u></div></div>
-    <div class="chip"><i style="background:#2F6B72"></i><div class="m"><b>Deep Tide</b><s>#2F6B72 · 47 107 114</s><u>Primary. Headings, buttons, links. 5.0:1 on Sand.</u></div></div>
-    <div class="chip"><i style="background:#4A8F96"></i><div class="m"><b>Tide</b><s>#4A8F96 · 74 143 150</s><u>Mid-tone for large text (24px+) and icon fills.</u></div></div>
+    <div class="chip"><i class="w" style="background:#FFFFFF"></i><div class="m"><b>White</b><s>#FFFFFF · 255 255 255</s><u>Canvas. Page background for every document and screen.</u></div></div>
+    <div class="chip"><i style="background:#CFC493"></i><div class="m"><b>USF Gold</b><s>#CFC493 · 207 196 147</s><u>Brand warm. Cover bands, headers, panels, certificates — never a full text page.</u></div></div>
+    <div class="chip"><i style="background:#25565C"></i><div class="m"><b>Deep Tide</b><s>#25565C · 37 86 92</s><u>Primary. Headings, buttons, links. 8.2:1 on white, 4.7:1 on gold.</u></div></div>
+    <div class="chip"><i style="background:#4A8F96"></i><div class="m"><b>Tide</b><s>#4A8F96 · 74 143 150</s><u>Mid-tone. Large text (24px+) and icon fills on white; decorative on gold.</u></div></div>
     <div class="chip"><i style="background:#80B0A6"></i><div class="m"><b>Seaglass</b><s>#80B0A6 · 128 176 166</s><u>Supporting fields and panels — never text.</u></div></div>
-    <div class="chip"><i style="background:#1E3F44"></i><div class="m"><b>Harbor Ink</b><s>#1E3F44 · 30 63 68</s><u>Body text and dark surfaces. 9.4:1 on Sand.</u></div></div>
+    <div class="chip"><i style="background:#1E3F44"></i><div class="m"><b>Harbor Ink</b><s>#1E3F44 · 30 63 68</s><u>Body text and dark surfaces. 14.4:1 on white, 6.5:1 on gold.</u></div></div>
     <div class="chip"><i style="background:#DBE442"></i><div class="m"><b>Lemongrass</b><s>#DBE442 · 219 228 66</s><u>Accent, ≤5%.</u></div></div>
   </div>
   <div class="bestfor">
-    <div><b>Best for</b><p>Web product, dashboards, the annual cohort-data report, anything that must look unlike a university department.</p></div>
-    <div><b>Watch for</b><p>Deep Tide sits closer to the 4.5:1 floor; use Harbor Ink for paragraphs under 16px.</p></div>
+    <div><b>Best for</b><p>The primary identity: website, PDFs, training decks, dashboards, the annual cohort-data report.</p></div>
+    <div><b>Watch for</b><p>On white everything clears AAA. On gold blocks, Deep Tide clears AA with little to spare — set paragraphs there in Harbor Ink and keep Deep Tide for headings and buttons.</p></div>
   </div>
 
-  <!-- ── PALETTE 03 ── -->
-  <div class="palhead"><span class="pn">03</span><span class="pk">Palette</span><h4>Canopy</h4><span class="tag alt">Teal into Green</span></div>
-  <p class="palnote">Leans into the client's gradient preference by giving the system a second mid-tone, Fern, so the teal-to-green transition happens inside the palette itself. Greens stay cool and grey-cast rather than warm or yellowed — this is a canopy seen through morning light, not a lawn.</p>
-  <div class="strip"><i style="flex:5;background:#EDEBD1"></i><i style="flex:3;background:#2F5F4D"></i><i style="flex:2;background:#5C9A83"></i><i style="flex:1.5;background:#80B0A6"></i><i style="flex:1;background:#1B3A31"></i><i style="flex:.5;background:#DBE442"></i></div>
-  <div class="grad" style="background:linear-gradient(90deg,#2F5F4D,#5C9A83,#80B0A6)"><span>Teal → Green gradient · Canopy · Fern · Seaglass</span></div>
+  <!-- ── PALETTE 02 ── -->
+  <div class="palhead"><span class="pn">02</span><span class="pk">Palette</span><h4>Slate &amp; Seaglass</h4><span class="tag alt">Institutional</span></div>
+  <p class="palnote">Answers the Ruler note in the assessment. A cool slate replaces the teal working color so Seaglass and Lemongrass become the only color in the system — white, USF Gold, and the slate neutrals do the structure; the client's colors do the personality. The more formal of the two; reads well on district and state-level documents.</p>
+  <div class="strip"><i class="w" style="flex:4;background:#FFFFFF"></i><i style="flex:2;background:#CFC493"></i><i style="flex:3;background:#344C56"></i><i style="flex:2;background:#80B0A6"></i><i style="flex:1.5;background:#DDE6E3"></i><i style="flex:1;background:#22333B"></i><i style="flex:.5;background:#DBE442"></i></div>
+  <div class="grad" style="background:linear-gradient(90deg,#344C56,#80B0A6)"><span>Teal → Green gradient · Slate to Seaglass</span></div>
   <div class="pal six">
-    <div class="chip"><i style="background:#EDEBD1"></i><div class="m"><b>Sand</b><s>#EDEBD1 · 237 235 209</s><u>Canvas.</u></div></div>
-    <div class="chip"><i style="background:#2F5F4D"></i><div class="m"><b>Canopy</b><s>#2F5F4D · 47 95 77</s><u>Primary. Headings, buttons, links. 6.1:1 on Sand.</u></div></div>
-    <div class="chip"><i style="background:#5C9A83"></i><div class="m"><b>Fern</b><s>#5C9A83 · 92 154 131</s><u>Mid-tone for icon fills and gradient bridge. Not text.</u></div></div>
-    <div class="chip"><i style="background:#80B0A6"></i><div class="m"><b>Seaglass</b><s>#80B0A6 · 128 176 166</s><u>Supporting fields and panels — never text.</u></div></div>
-    <div class="chip"><i style="background:#1B3A31"></i><div class="m"><b>Understory Ink</b><s>#1B3A31 · 27 58 49</s><u>Body text and dark surfaces. 10.3:1 on Sand.</u></div></div>
-    <div class="chip"><i style="background:#DBE442"></i><div class="m"><b>Lemongrass</b><s>#DBE442 · 219 228 66</s><u>Accent, ≤5%. Reads as new growth against these greens.</u></div></div>
-  </div>
-  <div class="bestfor">
-    <div><b>Best for</b><p>The growth-mark icon family, printed resource covers, environmental graphics — wherever the tree metaphor is literal.</p></div>
-    <div><b>Watch for</b><p>This is the palette closest to USF's green. Keep Canopy blue-cast as specified; do not warm it, and never pair with gold.</p></div>
-  </div>
-
-  <!-- ── PALETTE 04 ── -->
-  <div class="palhead"><span class="pn">04</span><span class="pk">Palette</span><h4>Slate &amp; Seaglass</h4><span class="tag alt">Institutional</span></div>
-  <p class="palnote">Answers the Ruler note in the assessment. A cool slate replaces the green working color so Seaglass and Lemongrass become the only color in the system — the neutrals do the structure, the client's colors do the personality. The most formal of the five; reads well on district and state-level documents.</p>
-  <div class="strip"><i style="flex:5;background:#EDEBD1"></i><i style="flex:3;background:#3B5560"></i><i style="flex:2;background:#80B0A6"></i><i style="flex:1.5;background:#DDE6E3"></i><i style="flex:1;background:#22333B"></i><i style="flex:.5;background:#DBE442"></i></div>
-  <div class="grad" style="background:linear-gradient(90deg,#3B5560,#80B0A6)"><span>Teal → Green gradient · Slate to Seaglass</span></div>
-  <div class="pal six">
-    <div class="chip"><i style="background:#EDEBD1"></i><div class="m"><b>Sand</b><s>#EDEBD1 · 237 235 209</s><u>Canvas.</u></div></div>
-    <div class="chip"><i style="background:#3B5560"></i><div class="m"><b>Slate</b><s>#3B5560 · 59 85 96</s><u>Primary. Headings, buttons, links. 6.6:1 on Sand.</u></div></div>
+    <div class="chip"><i class="w" style="background:#FFFFFF"></i><div class="m"><b>White</b><s>#FFFFFF · 255 255 255</s><u>Canvas. Page background for every document and screen.</u></div></div>
+    <div class="chip"><i style="background:#CFC493"></i><div class="m"><b>USF Gold</b><s>#CFC493 · 207 196 147</s><u>Brand warm. Cover bands, headers, panels, certificates — never a full text page.</u></div></div>
+    <div class="chip"><i style="background:#344C56"></i><div class="m"><b>Slate</b><s>#344C56 · 52 76 86</s><u>Primary. Headings, buttons, links. 9.1:1 on white, 5.2:1 on gold.</u></div></div>
     <div class="chip"><i style="background:#80B0A6"></i><div class="m"><b>Seaglass</b><s>#80B0A6 · 128 176 166</s><u>The brand color. Panels, icon fills, section markers.</u></div></div>
     <div class="chip"><i style="background:#DDE6E3"></i><div class="m"><b>Mist</b><s>#DDE6E3 · 221 230 227</s><u>Soft panels, table stripes, form fields.</u></div></div>
-    <div class="chip"><i style="background:#22333B"></i><div class="m"><b>Charcoal Ink</b><s>#22333B · 34 51 59</s><u>Body text and dark surfaces. 10.9:1 on Sand.</u></div></div>
+    <div class="chip"><i style="background:#22333B"></i><div class="m"><b>Charcoal Ink</b><s>#22333B · 34 51 59</s><u>Body text and dark surfaces. 15.2:1 on white, 7.5:1 on gold.</u></div></div>
     <div class="chip"><i style="background:#DBE442"></i><div class="m"><b>Lemongrass</b><s>#DBE442 · 219 228 66</s><u>Accent, ≤5%.</u></div></div>
   </div>
   <div class="bestfor">
     <div><b>Best for</b><p>Policy briefs, procedure manuals, compliance-facing materials, conference presentations to administrators.</p></div>
-    <div><b>Watch for</b><p>Too much Slate and the Creator disappears. Seaglass must appear on every spread, not just the cover.</p></div>
+    <div><b>Watch for</b><p>Too much Slate and the Creator disappears. Seaglass must appear on every spread, not just the cover. Mist on gold is nearly invisible (1.4:1) — use Mist panels on white pages only.</p></div>
   </div>
 
-  <!-- ── PALETTE 05 ── -->
-  <div class="palhead"><span class="pn">05</span><span class="pk">Palette</span><h4>Tonal Seaglass</h4><span class="tag alt">Monochrome</span></div>
-  <p class="palnote">One hue, five steps. Everything is built from a single Seaglass scale running from near-white to near-black, with Sand as the warm counterpoint and Lemongrass as the only outside note. The quietest palette and the easiest to keep consistent across many hands — a good fit for a network that publishes a lot of documents from a lot of authors.</p>
-  <div class="strip"><i style="flex:5;background:#EDEBD1"></i><i style="flex:1.5;background:#E3EEEB"></i><i style="flex:1.5;background:#B5D0CA"></i><i style="flex:2;background:#80B0A6"></i><i style="flex:1.5;background:#4C7F75"></i><i style="flex:2;background:#2E5A52"></i><i style="flex:1;background:#1F3D38"></i><i style="flex:.5;background:#DBE442"></i></div>
-  <div class="grad" style="background:linear-gradient(90deg,#1F3D38,#2E5A52,#4C7F75,#80B0A6,#B5D0CA)"><span>Full tonal scale · Seaglass 900 → 300</span></div>
-  <div class="pal six">
-    <div class="chip"><i style="background:#EDEBD1"></i><div class="m"><b>Sand</b><s>#EDEBD1 · 237 235 209</s><u>Canvas.</u></div></div>
-    <div class="chip"><i style="background:#2E5A52"></i><div class="m"><b>Seaglass 700</b><s>#2E5A52 · 46 90 82</s><u>Primary. Headings, buttons, links. 6.5:1 on Sand.</u></div></div>
-    <div class="chip"><i style="background:#4C7F75"></i><div class="m"><b>Seaglass 600</b><s>#4C7F75 · 76 127 117</s><u>Large text (24px+), icon strokes, secondary buttons.</u></div></div>
-    <div class="chip"><i style="background:#80B0A6"></i><div class="m"><b>Seaglass 500</b><s>#80B0A6 · 128 176 166</s><u>The client's color. Fields and panels — never text.</u></div></div>
-    <div class="chip"><i style="background:#B5D0CA"></i><div class="m"><b>Seaglass 300</b><s>#B5D0CA · 181 208 202</s><u>Soft panels and stripes. Ink on 300 clears 7.2:1.</u></div></div>
-    <div class="chip"><i style="background:#DBE442"></i><div class="m"><b>Lemongrass</b><s>#DBE442 · 219 228 66</s><u>Accent, ≤5%.</u></div></div>
-  </div>
-  <div class="bestfor">
-    <div><b>Best for</b><p>Templates handed to many authors: worksheets, checklists, transition-planning forms, slide masters.</p></div>
-    <div><b>Watch for</b><p>Monochrome can go flat. Use Sand generously as the warm counterweight, and keep Seaglass 100 (#E3EEEB) and 900 (#1F3D38) available as the extreme steps.</p></div>
-  </div>
-
-  <h3>Rules That Apply To All Five</h3>
+  <h3>Rules That Apply To Both</h3>
   <ul class="rules">
-    <li><strong>Seaglass #80B0A6 is never text.</strong> At 2.01:1 on Sand and 1.6:1 on white it fails every WCAG threshold, including large text. Use it as a field, a fill, or a rule.</li>
+    <li><strong>Seaglass #80B0A6 is never text.</strong> At 2.3:1 on white and 1.4:1 on USF Gold it fails every WCAG threshold, including large text. Use it as a field, a fill, or a rule.</li>
     <li><strong>Lemongrass is capped at about five percent</strong> of any composition: a background block, an icon fill, an active state, a single highlight. It is never a page background, a heading color, or body text.</li>
-    <li><strong>The deep working color carries every word.</strong> Whichever palette is chosen, all text under 24px is set in that palette's Primary or Ink.</li>
-    <li><strong>The gradient is one transition, one direction.</strong> Deep working color into Seaglass, or the tonal scale in Palette 05. Never three-plus hues, never into Lemongrass, never behind text.</li>
-    <li><strong>Keep greens cool and grey-cast.</strong> No warm, yellowed, or olive greens anywhere — they pull the brand toward USF's green-and-gold and toward "eco" clichés.</li>
-    <li><strong>Never pair with gold, orange, or coral.</strong> Warm accents plus green is the university's territory; Lemongrass is the only warm-adjacent note permitted.</li>
-    <li><strong>Sand is the canvas, white is the exception.</strong> Use pure white only for cards, forms, and images that need a clean edge inside a Sand page.</li>
+    <li><strong>The deep working color carries every word.</strong> All text under 24px is set in the palette's Primary or Ink. On USF Gold specifically, paragraphs are set in Ink; the Primary is reserved for headings, buttons, and links.</li>
+    <li><strong>The gradient is one transition, one direction.</strong> Deep working color into Seaglass. Never three-plus hues, never into Lemongrass, never behind text.</li>
+    <li><strong>Keep the teal cool and blue-cast.</strong> No warm, yellowed, or olive greens anywhere. Gold-and-teal is Project 10; gold-and-green is the university. The blue cast is what keeps the two related but distinct.</li>
+    <li><strong>USF Gold is the only warm color.</strong> No orange, coral, or a second gold. Lemongrass is the only other warm-adjacent note, and it stays under five percent.</li>
+    <li><strong>White is the canvas; USF Gold is a color.</strong> Every page and screen sits on white. Gold appears as a cover band, a header block, a panel, or a certificate ground — never as the background of a full text page, and never tinted or screened back.</li>
   </ul>
 
   <h3>Contrast &amp; Accessibility · Palette 01</h3>
   <p class="muted">Measured WCAG 2.1 ratios. AA requires 4.5:1 for body text, 3:1 for large text (24px+, or 19px bold) and UI components.</p>
   <table>
     <tr><th colspan="2">Combination</th><th>Ratio</th><th>Use</th></tr>
-    <tr><td class="sw"><i style="background:#24413C"></i></td><td>Evergreen Ink on Sand</td><td>9.2:1</td><td class="pass">Body text — AAA</td></tr>
-    <tr><td class="sw"><i style="background:#2E5A52"></i></td><td>Deep Seaglass on Sand</td><td>6.5:1</td><td class="pass">Headings, links, body text — AA (AAA large)</td></tr>
-    <tr><td class="sw"><i style="background:#EDEBD1"></i></td><td>Sand on Deep Seaglass</td><td>6.5:1</td><td class="pass">Primary buttons — AA</td></tr>
-    <tr><td class="sw"><i style="background:#FFFFFF"></i></td><td>White on Deep Seaglass</td><td>7.8:1</td><td class="pass">Reversed text — AAA</td></tr>
-    <tr><td class="sw"><i style="background:#DBE442"></i></td><td>Lemongrass on Evergreen Ink</td><td>8.0:1</td><td class="pass">Accent text on dark — AAA</td></tr>
-    <tr><td class="sw"><i style="background:#24413C"></i></td><td>Evergreen Ink on Lemongrass</td><td>8.0:1</td><td class="pass">Text on a Lemongrass block — AAA</td></tr>
-    <tr><td class="sw"><i style="background:#2E5A52"></i></td><td>Deep Seaglass on Seaglass Tint</td><td>5.5:1</td><td class="pass">Text on soft panels — AA</td></tr>
-    <tr><td class="sw"><i style="background:#80B0A6"></i></td><td>Seaglass on Evergreen Ink</td><td>4.6:1</td><td class="cond">Large text &amp; icons on dark only</td></tr>
-    <tr><td class="sw"><i style="background:#80B0A6"></i></td><td>Seaglass on Sand</td><td>2.0:1</td><td class="fail">Decorative only — never text</td></tr>
-    <tr><td class="sw"><i style="background:#DBE442"></i></td><td>Lemongrass on Sand</td><td>1.2:1</td><td class="fail">Decorative only — never text</td></tr>
+    <tr><td class="sw"><i style="background:#1E3F44"></i></td><td>Harbor Ink on White</td><td>14.4:1</td><td class="pass">Body text — AAA</td></tr>
+    <tr><td class="sw"><i style="background:#25565C"></i></td><td>Deep Tide on White</td><td>8.2:1</td><td class="pass">Headings, links, body text — AAA</td></tr>
+    <tr><td class="sw"><i style="background:#1E3F44"></i></td><td>Harbor Ink on USF Gold</td><td>6.5:1</td><td class="pass">Body text on gold blocks — AA (AAA large)</td></tr>
+    <tr><td class="sw"><i style="background:#25565C"></i></td><td>Deep Tide on USF Gold</td><td>4.7:1</td><td class="pass">Headings, links, buttons on gold blocks — AA</td></tr>
+    <tr><td class="sw"><i style="background:#FFFFFF"></i></td><td>White on Deep Tide</td><td>8.2:1</td><td class="pass">Primary buttons, reversed text — AAA</td></tr>
+    <tr><td class="sw"><i style="background:#DBE442"></i></td><td>Lemongrass on Harbor Ink</td><td>8.2:1</td><td class="pass">Accent text on dark — AAA</td></tr>
+    <tr><td class="sw"><i style="background:#1E3F44"></i></td><td>Harbor Ink on Lemongrass</td><td>8.2:1</td><td class="pass">Text on a Lemongrass block — AAA</td></tr>
+    <tr><td class="sw"><i style="background:#1E3F44"></i></td><td>Harbor Ink on Seaglass Tint</td><td>7.6:1</td><td class="pass">Text on soft panels — AAA</td></tr>
+    <tr><td class="sw"><i style="background:#80B0A6"></i></td><td>Seaglass on Harbor Ink</td><td>4.7:1</td><td class="cond">Large text &amp; icons on dark only</td></tr>
+    <tr><td class="sw"><i style="background:#CFC493"></i></td><td>USF Gold on Deep Tide</td><td>4.7:1</td><td class="cond">Large text &amp; UI on dark only</td></tr>
+    <tr><td class="sw"><i style="background:#4A8F96"></i></td><td>Tide on USF Gold</td><td>2.1:1</td><td class="fail">Decorative only — never text on gold</td></tr>
+    <tr><td class="sw"><i style="background:#80B0A6"></i></td><td>Seaglass on USF Gold</td><td>1.4:1</td><td class="fail">Decorative only — never text</td></tr>
+    <tr><td class="sw"><i style="background:#DBE442"></i></td><td>Lemongrass on USF Gold</td><td>1.3:1</td><td class="fail">Decorative only — never text</td></tr>
   </table>
 
   <h3>Palette Comparison</h3>
   <table>
-    <tr><th>Palette</th><th>Primary on Sand</th><th>Ink on Sand</th><th>White on Primary</th><th>Temperature</th><th>Distance from USF</th></tr>
-    <tr><td>01 Seaglass &amp; Sand</td><td class="pass">6.5:1</td><td class="pass">9.2:1</td><td class="pass">7.8:1</td><td>Cool green-teal</td><td>Good</td></tr>
-    <tr><td>02 Tidewater</td><td class="pass">5.0:1</td><td class="pass">9.4:1</td><td class="pass">6.1:1</td><td>Cool teal</td><td>Strongest</td></tr>
-    <tr><td>03 Canopy</td><td class="pass">6.1:1</td><td class="pass">10.3:1</td><td class="pass">7.3:1</td><td>Cool green</td><td>Adequate — hold the blue cast</td></tr>
-    <tr><td>04 Slate &amp; Seaglass</td><td class="pass">6.6:1</td><td class="pass">10.9:1</td><td class="pass">7.9:1</td><td>Cool blue-grey</td><td>Strong</td></tr>
-    <tr><td>05 Tonal Seaglass</td><td class="pass">6.5:1</td><td class="pass">9.8:1</td><td class="pass">7.8:1</td><td>Cool green-teal</td><td>Good</td></tr>
+    <tr><th>Palette</th><th>Primary on White</th><th>Ink on White</th><th>Primary on USF Gold</th><th>Ink on USF Gold</th><th>Temperature</th><th>Character</th></tr>
+    <tr><td>01 Tidewater</td><td class="pass">8.2:1</td><td class="pass">14.4:1</td><td class="pass">4.7:1</td><td class="pass">6.5:1</td><td>Cool teal</td><td>Digital-first, gold-and-teal</td></tr>
+    <tr><td>02 Slate &amp; Seaglass</td><td class="pass">9.1:1</td><td class="pass">15.2:1</td><td class="pass">5.2:1</td><td class="pass">7.5:1</td><td>Cool blue-grey</td><td>Institutional, gold-and-slate</td></tr>
   </table>
 </div></section>
 
@@ -370,9 +320,9 @@
 
 <!-- ═══════════ 02 TYPOGRAPHY · white ═══════════ -->
 <section id="type" class="bg-cloud"><div class="wrap">
-  <div class="snum"><span class="n">02</span><h2>Five Font Pairings</h2><span class="r">Typography</span></div>
-  <p>The brief asks for type that is <strong>geometric and character-driven at display size</strong> and <strong>open, tall-x-height, and legible at 14px</strong> in body — a PDF a teacher opens on her phone is the test case. All five pairings below meet that brief with free Google Fonts, and all five use <strong>Fraunces italic</strong> as the single warm accent (in Pairing 05 it steps up to the display role). The wordmark's "10" numeral is a drawn glyph and is not set in any of these faces.</p>
-  <p>Pairing 01 is the recommended system and is used throughout this document. Pairings 02–05 shift the balance between the Sage and Creator halves of the archetype. Pick one pairing and one palette; do not mix across pieces.</p>
+  <div class="snum"><span class="n">02</span><h2>Two Font Pairings</h2><span class="r">Typography</span></div>
+  <p>The brief asks for type that is <strong>geometric and character-driven at display size</strong> and <strong>open, tall-x-height, and legible at 14px</strong> in body — a PDF a teacher opens on her phone is the test case. Both pairings below meet that brief with free Google Fonts, and both use <strong>Fraunces italic</strong> as the single warm accent. The wordmark's "10" numeral is a drawn glyph and is not set in any of these faces.</p>
+  <p>Pairing 01 is the recommended system and is used throughout this document. Pairing 02 is its lighter, more Sage-forward alternative. Pick one pairing and one palette; do not mix across pieces.</p>
 
   <div class="pair" id="pair1">
     <div class="ph"><span class="pn">01</span><span class="pk">Pairing</span><h4>Archivo + Mulish · Fraunces accent</h4><span class="tag">Recommended</span></div>
@@ -399,7 +349,7 @@
   </div>
   <div class="pair" id="pair2">
     <div class="ph"><span class="pn">02</span><span class="pk">Pairing</span><h4>Instrument Sans + Nunito Sans</h4><span class="tag alt">Lighter · Report alternate</span></div>
-    <p class="palnote">The report's named alternates, paired together. Instrument Sans is narrower and quieter than Archivo, with a slight softness in the terminals; Nunito Sans is the same open, friendly text face family as Mulish with a touch more roundness. The most approachable of the five without tipping into Caregiver.</p>
+    <p class="palnote">The report's named alternates, paired together. Instrument Sans is narrower and quieter than Archivo, with a slight softness in the terminals; Nunito Sans is the same open, friendly text face family as Mulish with a touch more roundness. The more approachable of the two without tipping into Caregiver.</p>
     <div class="sample">
       <div class="cell">
         <div class="lbl">Display</div>
@@ -420,76 +370,7 @@
       <div><b>Watch for</b><p>Softer overall — Creator recedes. Keep the grid visible and colour fields flat so the system still reads as built.</p></div>
     </div>
   </div>
-  <div class="pair" id="pair3">
-    <div class="ph"><span class="pn">03</span><span class="pk">Pairing</span><h4>Space Grotesk + Work Sans</h4><span class="tag alt">Most built · Creator-forward</span></div>
-    <p class="palnote">The most overtly geometric option. Space Grotesk has visibly constructed letterforms — the single-storey a, the squared-off counters — that make headings feel engineered. Work Sans is a neutral, highly legible text face that stays out of the way. Together they lean hardest into "unmistakably built."</p>
-    <div class="sample">
-      <div class="cell">
-        <div class="lbl">Display</div>
-        <div class="hd" style="font-family:'Space Grotesk',sans-serif;font-weight:600">Every student deserves a plan. Every educator deserves the tools.</div>
-        <div class="al" style="font-family:'Space Grotesk',sans-serif;font-weight:600">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
-      </div>
-      <div class="cell">
-        <div class="lbl">Text &amp; UI · Accent</div>
-        <div class="eb" style="font-family:'Space Grotesk',sans-serif">For District Administrators</div>
-        <div class="bd" style="font-family:'Work Sans',sans-serif">Custom resources, training, and technical assistance for Florida educators supporting students with disabilities through transition. Five stages, one shared framework, and the Florida-specific procedures you need at each step.</div>
-        <div class="ac" style="font-family:'Fraunces',serif;font-style:italic;font-weight:500">Cultivators of growth, connections, and possibilities.</div>
-        <div class="al" style="font-family:'Work Sans',sans-serif">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz 0123456789</div>
-      </div>
-    </div>
-    <div class="why">
-      <div><b>Archetype fit</b><p>Creator-forward, with Ruler's structure. Best when the finished tool is the hero.</p></div>
-      <div><b>Best for</b><p>The annual cohort-data report, dashboards, tool and template covers, anything data-led.</p></div>
-      <div><b>Watch for</b><p>Space Grotesk can read as tech-startup if over-tracked or set too large. Keep it to headings and eyebrows; never body.</p></div>
-    </div>
-  </div>
-  <div class="pair" id="pair4">
-    <div class="ph"><span class="pn">04</span><span class="pk">Pairing</span><h4>Bricolage Grotesque + Figtree</h4><span class="tag alt">Most character</span></div>
-    <p class="palnote">The pairing with the most personality in the display face. Bricolage Grotesque has an optical-size axis: at headline sizes it tightens and gains quirks — a curled t, a distinctive g — that carry the client's "playful, whimsical" preference in type without touching the copy. Figtree is a clean, friendly geometric text face that keeps everything else composed.</p>
-    <div class="sample">
-      <div class="cell">
-        <div class="lbl">Display</div>
-        <div class="hd" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700">Every student deserves a plan. Every educator deserves the tools.</div>
-        <div class="al" style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
-      </div>
-      <div class="cell">
-        <div class="lbl">Text &amp; UI · Accent</div>
-        <div class="eb" style="font-family:'Bricolage Grotesque',sans-serif">For District Administrators</div>
-        <div class="bd" style="font-family:'Figtree',sans-serif">Custom resources, training, and technical assistance for Florida educators supporting students with disabilities through transition. Five stages, one shared framework, and the Florida-specific procedures you need at each step.</div>
-        <div class="ac" style="font-family:'Fraunces',serif;font-style:italic;font-weight:500">Cultivators of growth, connections, and possibilities.</div>
-        <div class="al" style="font-family:'Figtree',sans-serif">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz 0123456789</div>
-      </div>
-    </div>
-    <div class="why">
-      <div><b>Archetype fit</b><p>Creator with the Jester note the brand doesn't score but the client's visual taste wants — contained to headlines.</p></div>
-      <div><b>Best for</b><p>Campaign pieces, event materials, social graphics, the icon-family launch.</p></div>
-      <div><b>Watch for</b><p>The personality lives at large sizes only. Below 24px Bricolage flattens out; and too much of it competes with the illustrated growth marks.</p></div>
-    </div>
-  </div>
-  <div class="pair" id="pair5">
-    <div class="ph"><span class="pn">05</span><span class="pk">Pairing</span><h4>Fraunces + Mulish</h4><span class="tag alt">Serif-led · Sage-forward</span></div>
-    <p class="palnote">The one serif-led option. Fraunces moves from accent to display: a soft, slightly old-style serif with an optical-size axis that keeps it crisp at headline sizes and warm at text sizes. Mulish carries the body exactly as in Pairing 01. This is the most "knowing" of the five — a wise voice, a cultivated feel — at the cost of some of the geometric "built" quality.</p>
-    <div class="sample">
-      <div class="cell">
-        <div class="lbl">Display</div>
-        <div class="hd" style="font-family:'Fraunces',serif;font-weight:600">Every student deserves a plan. Every educator deserves the tools.</div>
-        <div class="al" style="font-family:'Fraunces',serif;font-weight:600">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
-      </div>
-      <div class="cell">
-        <div class="lbl">Text &amp; UI</div>
-        <div class="eb" style="font-family:'Fraunces',serif">For District Administrators</div>
-        <div class="bd" style="font-family:'Mulish',sans-serif">Custom resources, training, and technical assistance for Florida educators supporting students with disabilities through transition. Five stages, one shared framework, and the Florida-specific procedures you need at each step.</div>
-        <div class="ac" style="font-family:'Fraunces',serif;font-weight:500">If it can be imagined, it can be created.</div>
-        <div class="al" style="font-family:'Mulish',sans-serif">AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz 0123456789</div>
-      </div>
-    </div>
-    <div class="why">
-      <div><b>Archetype fit</b><p>Sage-forward. The knowing organisation, with Creator held in the layout rather than the type.</p></div>
-      <div><b>Best for</b><p>Thought-leadership pieces, the motto, printed guides, certificates, anything where the Sage should lead.</p></div>
-      <div><b>Watch for</b><p>Serif display plus Sand can drift toward heritage or wellness. Keep colour fields flat, the grid strict, and the Lemongrass accent present.</p></div>
-    </div>
-  </div>
-
+  
   <h3>Type Scale · Pairing 01</h3>
   <div class="scale">
     <div><span class="tname">Display · H1</span><span style="font-family:'Archivo',sans-serif;font-weight:700;font-size:40px;letter-spacing:-.02em;color:var(--deep);line-height:1.1">Transition Planning Toolkit</span></div>
@@ -503,7 +384,7 @@
 
   </div></section>
 
-<footer><div class="wrap">Project 10 · Transition Education Network · Color &amp; Typography v1.0 · Palettes derived from client selections Sand #EDEBD1 · Lemongrass #DBE442 · Seaglass #80B0A6 · All type via Google Fonts · Prepared by Skyway Media</div></footer>
+<footer><div class="wrap">Project 10 · Transition Education Network · Color &amp; Typography v1.0 · Palettes built on White #FFFFFF · USF Gold #CFC493 · Lemongrass #DBE442 · Seaglass #80B0A6 · All type via Google Fonts · Prepared by Skyway Media</div></footer>
 
 </body>
 </html>
