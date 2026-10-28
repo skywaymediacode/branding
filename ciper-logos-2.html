@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Ciper & Veil Logo Round 2</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Archivo:wght@400;500;600&display=swap">
+<style>
+/* Layout: one quiet scrolling document, 1180px measure, three numbered sections like the C3 round pages. Marks are mono and sit alone; type and colour each get their own section. */
+:root{
+  --bg:#F6F1E7;        /* parchment ground */
+  --fg:#14161F;        /* ink */
+  --muted:#555966;     /* slate text */
+  --rule:#D9D2C3;      /* hairline */
+  --ink:#14161F;       /* ink tile, both themes */
+  --ink-fg:#FFFFFF;
+  --sand-deep:#8A7449; /* sand that passes on light */
+  --display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --body:'Instrument Sans','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-block:56px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+svg.sprite{position:absolute;width:0;height:0;overflow:hidden}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+h1{font-family:var(--display);font-size:clamp(44px,6vw,76px);line-height:1;letter-spacing:-0.01em}
+h1 em{font-style:italic}
+h2{font-family:var(--display);font-size:clamp(32px,3.6vw,46px);line-height:1.08}
+h3{font-family:var(--display);font-size:26px;line-height:1.15}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-deep)}
+.meta{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.lede{font-size:18px;line-height:1.5;max-width:62ch}
+header.top{display:flex;flex-direction:column;gap:18px;padding-bottom:40px;border-bottom:1px solid var(--rule)}
+header.top .row{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+section{padding-block:56px;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:32px}
+section:last-of-type{border-bottom:0}
+.sechead{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start}
+.num{font-family:var(--display);font-size:30px;color:var(--sand-deep);line-height:1.1;padding-top:6px}
+.sechead .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sechead .txt p{max-width:66ch;color:var(--muted)}
+/* 01 marks: one row per concept */
+.marks{display:flex;flex-direction:column;gap:18px}
+.mrow{display:grid;grid-template-columns:240px 1fr 1fr;gap:18px;align-items:stretch}
+.mrow .lab{display:flex;flex-direction:column;gap:8px;justify-content:center;min-width:0;padding-right:12px}
+.mrow .lab .n{font-family:var(--display);font-size:30px;line-height:1.05}
+.mrow .lab .n b{font-weight:400;color:var(--sand-deep);margin-right:8px}
+.mrow .lab p{font-size:13.5px;line-height:1.5;color:var(--muted)}
+.badge{display:inline-block;width:max-content;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand-deep);border:1px solid var(--sand-deep);padding:3px 8px}
+.tile{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:12% 16%;min-width:0}
+.tile.light{background:#FFFFFF;color:#14161F}
+.tile.dark{background:var(--ink);color:var(--ink-fg)}
+.tile svg{display:block;width:100%;height:100%}
+/* scale strip */
+.scale{display:flex;align-items:flex-end;gap:36px;padding:28px 32px;background:#FFFFFF;color:#14161F;grid-column:2/-1;flex-wrap:wrap}
+.scale .s{display:flex;flex-direction:column;align-items:center;gap:10px}
+.scale .s svg{display:block;width:auto}
+.scale .s span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#555966}
+/* 02 type */
+.faces{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.face{display:grid;grid-template-columns:220px 1fr;gap:24px;padding-block:28px;border-bottom:1px solid var(--rule);align-items:center}
+.face .who{display:flex;flex-direction:column;gap:6px;min-width:0}
+.face .who .fn{font-size:15px;font-weight:600}
+.face .who .role{font-size:13px;color:var(--muted);line-height:1.45}
+.face .spec{display:flex;flex-direction:column;gap:10px;min-width:0}
+.face .spec:has(.caps){flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:14px 56px}
+.face .spec:has(.caps) .adv{flex-basis:100%}
+.face .wm{font-size:clamp(30px,3.8vw,50px);line-height:1;letter-spacing:.01em;white-space:nowrap}
+.face .wm i{font-style:italic}
+.face .caps{font-size:clamp(30px,3.8vw,50px);letter-spacing:.12em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.face .adv{font-size:11px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+.face .sans{font-size:clamp(22px,2.6vw,30px);line-height:1.2}
+.face .body{font-size:16px;line-height:1.55;max-width:60ch}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.pair{display:flex;flex-direction:column;gap:14px;padding:26px;border:1px solid var(--rule);min-width:0}
+.pair .h{font-size:44px;line-height:1.02}
+.pair .t{font-size:19px;line-height:1.3;color:var(--sand-deep)}
+.pair .b{font-size:15px;line-height:1.55}
+.pair dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:auto 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:13px}
+.pair dt{font-weight:600}.pair dd{margin:0;color:var(--muted)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.rules b{color:var(--fg);font-weight:600}
+/* 03 colours */
+.palettes{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.pal{display:grid;grid-template-columns:300px 1fr;gap:28px;padding-block:28px;border-bottom:1px solid var(--rule);align-items:start}
+.pal .info{display:flex;flex-direction:column;gap:10px;min-width:0}
+.pal .info p{color:var(--muted);font-size:14px;line-height:1.5}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;min-width:0}
+.sw{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sw .c{height:96px}
+.sw .lab{display:flex;flex-direction:column;gap:2px;font-size:12px;line-height:1.3}
+.sw .lab b{font-weight:600}
+.sw .lab span{color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.03em}
+footer{padding-top:40px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+@media (max-width:860px){
+  .mrow{grid-template-columns:1fr 1fr}
+  .mrow .lab{grid-column:1/-1}
+  .face{grid-template-columns:1fr}
+  .scale{grid-column:1/-1}
+  .pal{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .sechead{grid-template-columns:1fr}
+  .mrow{grid-template-columns:1fr}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+  .sw .lab{font-size:11px}
+  .face .wm,.face .caps{white-space:normal}
+}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="cv2" viewBox="20 200 960 600"><path fill="currentColor" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
+  <symbol id="cv3" viewBox="90 70 910 880"><path fill="currentColor" d="M508.26,83.16c72.54,0,135.09,36.32,177.56,92.53,26.62,35.23,37.9,80.16,37.9,142.1h4.78v-153.23h-4.78c0,51.11-7.12,46.42-15.99,33.26t0,0c-4.13-6.54-11.88-17.71-13.34-19.67-36.94-49.8-99.48-99.78-186.13-99.78-73.9,0-142.58,22.32-199.68,60.59,11.39,4.53,22.4,9.58,33.06,15.16,46.08-44.36,103.55-70.97,166.63-70.97Z"/><path fill="currentColor" d="M673.94,732.37c31.51-30.16,54.24-68.22,68.94-108.13h-4.78c-17.09,42.91-39.56,77.01-66.07,102.94-5.71,5.59-11.61,10.8-17.67,15.63-17.93,14.29-37.38,25.33-57.99,33.28-6.84,2.64-13.81,4.94-20.9,6.91-21.46,5.95-43.98,8.84-67.21,8.84-156.03,0-277.73-162.81-277.73-354.34,0-81.94,22.27-158.62,59.98-219.54-13.68-10.69-27.86-19.96-42.57-27.85-61.23,64.41-98.81,151.51-98.81,247.39,0,198.34,160.79,359.12,359.13,359.12,24.95,0,47.92-3.2,68.96-9.04,7.19-1.99,14.16-4.3,20.91-6.89,21.59-8.29,40.92-19.51,58.06-32.93,6.21-4.86,12.12-10,17.76-15.4Z"/><path fill="currentColor" d="M264.57,173.71c13.11,7.41,25.89,15.92,38.33,25.59,5.73,4.45,11.39,9.13,16.98,14.08,61.3,54.15,114.39,138.31,160.85,259.94l107.8,282.24c18.77-7.25,36.31-17.32,52.13-29.93,1.9-1.51,3.78-3.06,5.64-4.66l-91.41-247.65c-60.44-155.24-127.28-243.56-209.33-291.85-6.52-3.84-13.14-7.43-19.86-10.77-12.47-6.21-25.28-11.6-38.47-16.24-8.24-2.9-16.62-5.52-25.15-7.87-48.32-13.29-101.53-18.03-160.91-18.03v4.79c51.36,0,98.67,9.18,142.35,29.53,7.12,3.32,14.14,6.93,21.07,10.84Z"/><path fill="currentColor" d="M828.94,281.78v4.78c62.25,0,70.57,17.64,56.93,57.46l-182.32,532.08-39.4-106.75c-17.91,13.23-37.44,23.94-58.14,31.89-.01,0-.02,0-.04.01l64.95,170.05h4.79l214.94-627.27c16.41-47.92,34.05-57.46,96.3-57.46v-4.78h-158.01Z"/></symbol>
+</svg>
+<div class="wrap">
+
+<header class="top">
+  <div class="eyebrow">Skyway Media · Brand identity</div>
+  <h1>Ciper &amp; Veil <em>— Round 2: Two marks</em></h1>
+  <div class="row">
+    <p class="lede">Round 1 narrowed to two directions. This round shows them side by side at the sizes they will actually live at, with the two typefaces and the two colour directions that made the cut. Numbering and letters carry over from Round 1 so nothing has to be renamed.</p>
+    <p class="meta">October 2026 · Prepared for Aveen Sufi</p>
+  </div>
+</header>
+
+<!-- 01 -->
+<section id="marks">
+  <div class="sechead">
+    <div class="num">01</div>
+    <div class="txt">
+      <h2>Marks</h2>
+      <p>Each mark on white, reversed on ink, and then at avatar, favicon and footer sizes. The two take opposite routes to the same brief: 02 is one confident stroke, 03 is a sequence of fine ones. Judge them at the small sizes first; that is where the difference shows.</p>
+    </div>
+  </div>
+  <div class="marks">
+
+    <div class="mrow">
+      <div class="lab"><div class="n"><b>02</b>The Insider</div><p>One continuous stroke, C into V, signed off with a tail. A person’s hand on the work rather than a firm on the letterhead. Holds its weight at every size; the tail is the only detail that softens below 24px.</p></div>
+      <div class="tile light"><svg role="img" aria-label="Concept 02 on white"><use href="#cv2"/></svg></div>
+      <div class="tile dark"><svg role="img" aria-label="Concept 02 on ink"><use href="#cv2"/></svg></div>
+    </div>
+    <div class="mrow">
+      <div class="lab"></div>
+      <div class="scale">
+        <div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2"/></svg><span>96 · avatar</span></div>
+        <div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48 · header</span></div>
+        <div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32 · footer</span></div>
+        <div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16 · favicon</span></div>
+      </div>
+    </div>
+
+    <div class="mrow">
+      <div class="lab"><div class="n"><b>03</b>The Perspective</div><p>Hairline ribbons laid down in sequence, each overlapping the last. The program being stood up, step by step. The finer drawing of the two: it rewards size and needs a heavier cut for anything under 40px.</p></div>
+      <div class="tile light"><svg role="img" aria-label="Concept 03 on white"><use href="#cv3"/></svg></div>
+      <div class="tile dark"><svg role="img" aria-label="Concept 03 on ink"><use href="#cv3"/></svg></div>
+    </div>
+    <div class="mrow">
+      <div class="lab"></div>
+      <div class="scale">
+        <div class="s"><svg aria-hidden="true" style="height:96px;width:99px"><use href="#cv3"/></svg><span>96 · avatar</span></div>
+        <div class="s"><svg aria-hidden="true" style="height:48px;width:50px"><use href="#cv3"/></svg><span>48 · header</span></div>
+        <div class="s"><svg aria-hidden="true" style="height:32px;width:33px"><use href="#cv3"/></svg><span>32 · footer</span></div>
+        <div class="s"><svg aria-hidden="true" style="height:16px;width:17px"><use href="#cv3"/></svg><span>16 · favicon</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="type">
+  <div class="sechead">
+    <div class="num">02</div>
+    <div class="txt">
+      <h2>Text &amp; Typography</h2>
+      <p>Two serifs remain for the wordmark and headlines, and one pairing for the full system. Each face is shown on its own, without a mark, so the type is judged as type.</p>
+    </div>
+  </div>
+
+  <div class="faces">
+    <div class="face">
+      <div class="who"><div class="fn">Instrument Serif</div><div class="role">Wordmark and headlines. Condensed, elegant, modern; the face used on this page. Roman and italic only, so it needs size to carry authority.</div></div>
+      <div class="spec" style="font-family:'Instrument Serif',Georgia,serif"><div class="wm">Ciper <i>&amp;</i> Veil</div><div class="caps">Ciper &amp; Veil</div><div class="adv">Advisory</div></div>
+    </div>
+    <div class="face">
+      <div class="who"><div class="fn">Fraunces</div><div class="role">Wordmark and headlines at a display optical size. Real presence with a soft warmth that keeps the Ruler from sounding like a firm. The warmer of the two.</div></div>
+      <div class="spec" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144"><div class="wm">Ciper <i>&amp;</i> Veil</div><div class="caps" style="font-weight:400">Ciper &amp; Veil</div><div class="adv">Advisory</div></div>
+    </div>
+  </div>
+
+  <div class="pairs">
+    <div class="pair">
+      <div class="eyebrow">A · Our lean</div>
+      <div class="h" style="font-family:'Instrument Serif',Georgia,serif">Order, from the inside.</div>
+      <div class="t" style="font-family:'Instrument Serif',Georgia,serif;font-style:italic">A different perspective. Earned from the inside.</div>
+      <div class="b" style="font-family:'Instrument Sans',Arial,sans-serif">Here’s the order of operations. Vendor inventory first, policy second, training third. Don’t start with the policy.</div>
+      <dl><dt>Instrument Serif</dt><dd>Wordmark, headlines</dd><dt>Instrument Sans</dt><dd>Body, UI, sequences, 400–600</dd></dl>
+    </div>
+    <div class="pair">
+      <div class="eyebrow">Why this pairing</div>
+      <div class="b">Drawn as one family, so the serif and the sans share proportions and never fight. The serif is the estate; the sans is the person who runs it. Fraunces stays available as the headline face if the warmer voice wins, with Instrument Sans unchanged underneath it.</div>
+      <dl><dt>Wordmark</dt><dd>Title case with an italic ampersand, or tracked capitals at 0.18–0.22em; never both on one surface</dd><dt>Descriptor</dt><dd>“Advisory” in the sans at a third of the wordmark, tracked 0.4–0.45em</dd><dt>Minimums</dt><dd>Wordmark 18px on screen, 7mm in print; body 16px, never below 14px</dd></dl>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="colour">
+  <div class="sechead">
+    <div class="num">03</div>
+    <div class="txt">
+      <h2>Colors</h2>
+      <p>Two directions remain. Both keep Ink #14161F and Sand #DCC7A0 from the brief and add one depth colour, one paper and one muted tone. Nothing blue.</p>
+    </div>
+  </div>
+  <div class="palettes">
+
+    <div class="pal">
+      <div class="info"><h3>B · Oxblood &amp; Parchment</h3><p>The red-into-purple gradient from the assessment read as temperament rather than palette: one deep oxblood in the ground, never rose. The more luxurious of the two; the trade-show direction.</p></div>
+      <div class="swatches">
+        <div class="sw"><div class="c" style="background:#14161F"></div><div class="lab"><b>Ink</b><span>#14161F</span></div></div>
+        <div class="sw"><div class="c" style="background:#DCC7A0"></div><div class="lab"><b>Sand</b><span>#DCC7A0</span></div></div>
+        <div class="sw"><div class="c" style="background:#512A32"></div><div class="lab"><b>Oxblood</b><span>#512A32</span></div></div>
+        <div class="sw"><div class="c" style="background:#F4EEE6;border:1px solid var(--rule)"></div><div class="lab"><b>Parchment</b><span>#F4EEE6</span></div></div>
+        <div class="sw"><div class="c" style="background:#9E8D7B"></div><div class="lab"><b>Taupe</b><span>#9E8D7B</span></div></div>
+      </div>
+    </div>
+
+    <div class="pal">
+      <div class="info"><h3>C · Evergreen &amp; Stone</h3><p>A deep green as the second ground reads as established and quietly expensive without borrowing the legal category’s navy. Stone keeps the operational pages calm. The more “estate” of the two.</p></div>
+      <div class="swatches">
+        <div class="sw"><div class="c" style="background:#14161F"></div><div class="lab"><b>Ink</b><span>#14161F</span></div></div>
+        <div class="sw"><div class="c" style="background:#DCC7A0"></div><div class="lab"><b>Sand</b><span>#DCC7A0</span></div></div>
+        <div class="sw"><div class="c" style="background:#293C34"></div><div class="lab"><b>Evergreen</b><span>#293C34</span></div></div>
+        <div class="sw"><div class="c" style="background:#F3F0E7;border:1px solid var(--rule)"></div><div class="lab"><b>Paper</b><span>#F3F0E7</span></div></div>
+        <div class="sw"><div class="c" style="background:#969B8D"></div><div class="lab"><b>Stone</b><span>#969B8D</span></div></div>
+      </div>
+    </div>
+
+  </div>
+  <div class="rules">
+    <div><b>Text on light grounds</b> uses Ink or the palette’s depth colour, never Sand. Sand on white fails contrast at any text size, so it stays a mark and surface colour.</div>
+    <div><b>Avoided, by the brief:</b> Cobalt #2660B8, Violet #5B4A9E, Rose #D0697F. No foil, no marble, no gold gradient in the system; sand reads as light, not as gold.</div>
+    <div><b>Resemblance check:</b> black is Deloitte’s ground and black-and-cream is old Big Law. Sand used generously and warmly is what separates the brand from both.</div>
+  </div>
+</section>
+
+<footer>
+  <span>Ciper &amp; Veil · Round 2 — logo concepts</span>
+  <span>October 2026 · Prepared by Skyway Media</span>
+</footer>
+
+</div>
+</body></html>
