@@ -144,6 +144,16 @@ footer .in{flex-direction:row;justify-content:space-between;gap:16px;flex-wrap:w
 }
 a{color:inherit}
 a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+/* lightbox */
+.zoomable{cursor:zoom-in}
+.zoomable:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(10,11,16,.9);display:flex;align-items:center;justify-content:center;padding:max(24px,env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb .stage{position:relative;transform-origin:center center;cursor:default}
+.lb .stage > *{margin:0}
+.lb .close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border:1px solid rgba(243,237,224,.4);border-radius:999px;background:transparent;color:#F3EDE0;font:400 22px/1 var(--body);cursor:pointer}
+.lb .close:hover,.lb .close:focus-visible{border-color:#F3EDE0;outline:none}
+.lb .cap{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);color:#A39A86;font:500 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.lb{animation:lbin .18s ease-out}@keyframes lbin{from{opacity:0}to{opacity:1}}}
 </style>
 </head>
 <body>
@@ -415,4 +425,52 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
 </div></footer>
 
 </div>
+<script>
+(function(){
+  var sel='#marks .tile, #marks .scale, #combos .ct, #combos .ht';
+  var tiles=document.querySelectorAll(sel);
+  var open=null, last=null;
+  function label(el){
+    var t=el.querySelector('.tag, span'); var s=t?t.textContent.trim():'';
+    var h=el.closest('.combo'); var hd=h?h.querySelector('h3').textContent.trim():'';
+    var r=el.closest('.mrow'); var rn=r?(r.querySelector('.n')||{textContent:''}).textContent.trim():'';
+    var g=el.classList.contains('dark')?'on ink':el.classList.contains('light')?'on white':'';
+    return [hd||rn, s, g].filter(Boolean).join('  ·  ');
+  }
+  function fit(stage, w, h){
+    var vw=window.innerWidth-96, vh=window.innerHeight-140;
+    var k=Math.min(vw/w, vh/h, 4);
+    stage.style.width=w+'px'; stage.style.height=h+'px';
+    stage.style.transform='scale('+k+')';
+  }
+  function close(){
+    if(!open) return; open.remove(); open=null;
+    document.body.style.overflow='';
+    if(last) last.focus();
+  }
+  function show(el){
+    last=el;
+    var r=el.getBoundingClientRect();
+    var lb=document.createElement('div'); lb.className='lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true'); lb.setAttribute('aria-label','Enlarged lockup');
+    var stage=document.createElement('div'); stage.className='stage';
+    var clone=el.cloneNode(true); clone.classList.remove('zoomable'); clone.removeAttribute('tabindex'); clone.removeAttribute('role');
+    clone.style.width=r.width+'px'; clone.style.height=r.height+'px'; clone.style.minHeight='0'; clone.style.aspectRatio='auto'; clone.style.boxSizing='border-box';
+    stage.appendChild(clone);
+    var btn=document.createElement('button'); btn.className='close'; btn.type='button'; btn.setAttribute('aria-label','Close'); btn.textContent='×';
+    var cap=document.createElement('div'); cap.className='cap'; cap.textContent=label(el);
+    lb.appendChild(stage); lb.appendChild(btn); lb.appendChild(cap);
+    lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+    btn.addEventListener('click', close);
+    document.body.appendChild(lb); document.body.style.overflow='hidden';
+    fit(stage, r.width, r.height); open=lb; btn.focus();
+  }
+  tiles.forEach(function(el){
+    el.classList.add('zoomable'); el.setAttribute('tabindex','0'); el.setAttribute('role','button'); el.setAttribute('aria-label','Enlarge');
+    el.addEventListener('click', function(){ show(el); });
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); show(el); } });
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  window.addEventListener('resize', function(){ if(open&&last){ var r=last.getBoundingClientRect(); fit(open.querySelector('.stage'), r.width||parseFloat(open.querySelector('.stage').style.width), r.height||parseFloat(open.querySelector('.stage').style.height)); } });
+})();
+</script>
 </body></html>
