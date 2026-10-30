@@ -24,7 +24,8 @@
 :root[data-theme="dark"]{ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1180px;margin:0 auto;padding-block:56px 72px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{display:flex;flex-direction:column}
+.in{max-width:1180px;margin:0 auto;width:100%;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:32px;min-width:0}
 svg.sprite{position:absolute;width:0;height:0;overflow:hidden}
 h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
 h1{font-family:var(--display);font-size:clamp(44px,6vw,76px);line-height:1;letter-spacing:-0.01em}
@@ -35,10 +36,14 @@ p{margin:0}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-deep)}
 .meta{font-size:13px;color:var(--muted);letter-spacing:.04em}
 .lede{font-size:18px;line-height:1.5;max-width:62ch}
-header.top{display:flex;flex-direction:column;gap:18px;padding-bottom:40px;border-bottom:1px solid var(--rule)}
+header.top{padding-block:56px 40px;border-bottom:1px solid var(--rule)}
+header.top .in{gap:18px}
 header.top .row{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
-section{padding-block:56px;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:32px}
+section{padding-block:56px;border-bottom:1px solid var(--rule);background:var(--bg);color:var(--fg)}
 section:last-of-type{border-bottom:0}
+section#type{--bg:#F3F0E7;--fg:#14161F;--muted:#555966;--rule:#D9D2C3;--sand-deep:#8A7449}
+section#colour{--bg:#DCC7A0;--fg:#14161F;--muted:#4A4030;--rule:rgba(20,22,31,.22);--sand-deep:#5E4A28}
+section#combos{--bg:#969B8D;--fg:#14161F;--muted:#2A2C35;--rule:rgba(20,22,31,.25);--sand-deep:#1F2A24}
 .sechead{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start}
 .num{font-family:var(--display);font-size:30px;color:var(--sand-deep);line-height:1.1;padding-top:6px}
 .sechead .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -96,6 +101,18 @@ section:last-of-type{border-bottom:0}
 .sw .lab b{font-weight:600}
 .sw .lab span{color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.03em}
 /* 04 combinations */
+.hgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ht{display:flex;align-items:center;justify-content:center;gap:26px;padding:34px 24px;min-height:150px;min-width:0;position:relative}
+.ht .m svg{display:block;height:64px}
+.ht .txt{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.ht .w{font-size:30px;line-height:1;white-space:nowrap}
+.ht .w i{font-style:italic}
+.ht .w.caps{font-size:24px;letter-spacing:.18em;text-transform:uppercase}
+.ht .d{font-family:var(--body);font-size:9.5px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.ht .tag{position:absolute;left:16px;bottom:12px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+.sub{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+@media (max-width:860px){ .hgrid{grid-template-columns:1fr} }
+@media (max-width:520px){ .ht{flex-direction:column;gap:14px} .ht .txt{align-items:center} }
 .combos{display:flex;flex-direction:column;gap:40px}
 .combo{display:flex;flex-direction:column;gap:14px}
 .combo .ch{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
@@ -109,7 +126,8 @@ section:last-of-type{border-bottom:0}
 .ct .d{font-family:var(--body);font-size:9px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
 .ct .tag{margin-top:auto;padding-top:14px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
 @media (max-width:860px){ .cgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
-footer{padding-top:40px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+footer{padding-block:40px 72px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+footer .in{flex-direction:row;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:860px){
   .mrow{grid-template-columns:1fr 1fr}
   .mrow .lab{grid-column:1/-1}
@@ -135,17 +153,17 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
 </svg>
 <div class="wrap">
 
-<header class="top">
+<header class="top"><div class="in">
   <div class="eyebrow">Skyway Media · Brand identity</div>
   <h1>Cipher &amp; Veil <em>— Round 2: Two marks</em></h1>
   <div class="row">
     <p class="lede">Round 1 narrowed to two directions. This round shows them side by side at the sizes they will actually live at, with the two typefaces and the two colour directions that made the cut. Numbering and letters carry over from Round 1 so nothing has to be renamed.</p>
     <p class="meta">October 2026 · Prepared for Aveen Sufi</p>
   </div>
-</header>
+</div></header>
 
 <!-- 01 -->
-<section id="marks">
+<section id="marks"><div class="in">
   <div class="sechead">
     <div class="num">01</div>
     <div class="txt">
@@ -186,10 +204,10 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
     </div>
 
   </div>
-</section>
+</div></section>
 
 <!-- 02 -->
-<section id="type">
+<section id="type"><div class="in">
   <div class="sechead">
     <div class="num">02</div>
     <div class="txt">
@@ -223,10 +241,10 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
       <dl><dt>Wordmark</dt><dd>Title case with an italic ampersand, or tracked capitals at 0.18–0.22em; never both on one surface</dd><dt>Descriptor</dt><dd>“Advisory” in the sans at a third of the wordmark, tracked 0.4–0.45em</dd><dt>Minimums</dt><dd>Wordmark 18px on screen, 7mm in print; body 16px, never below 14px</dd></dl>
     </div>
   </div>
-</section>
+</div></section>
 
 <!-- 03 -->
-<section id="colour">
+<section id="colour"><div class="in">
   <div class="sechead">
     <div class="num">03</div>
     <div class="txt">
@@ -264,19 +282,20 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
     <div><b>Avoided, by the brief:</b> Cobalt #2660B8, Violet #5B4A9E, Rose #D0697F. No foil, no marble, no gold gradient in the system; sand reads as light, not as gold.</div>
     <div><b>Resemblance check:</b> black is Deloitte’s ground and black-and-cream is old Big Law. Sand used generously and warmly is what separates the brand from both.</div>
   </div>
-</section>
+</div></section>
 
 <!-- 04 -->
-<section id="combos">
+<section id="combos"><div class="in">
   <div class="sechead">
     <div class="num">04</div>
     <div class="txt">
       <h2>Combinations</h2>
-      <p>Each mark with each typeface, in title case and in capitals, on both grounds of each colour direction. Sixteen lockups per mark. Ink reversals are in section 01; these show the two depth colours doing the work.</p>
+      <p>Each mark with each typeface, in title case and in capitals, stacked and horizontal, on both grounds of each colour direction. Ink reversals are in section 01; these show the two depth colours doing the work.</p>
     </div>
   </div>
   <div class="combos">
     <div class="combo"><div class="ch"><h3>02 The Insider · B Oxblood & Parchment</h3><p>Instrument Serif and Fraunces · title case and capitals · on parchment and on oxblood</p></div>
+      <div class="sub">Stacked</div>
       <div class="cgrid">
         <div class="ct" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#512A32">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
         <div class="ct" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#512A32">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
@@ -289,8 +308,22 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
         <div class="ct" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F4EEE6">Fraunces · Title</div></div>
         <div class="ct" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F4EEE6">Fraunces · Caps</div></div>
       </div>
+      <div class="sub">Horizontal</div>
+      <div class="hgrid">
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Title</div></div>
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Caps</div></div>
+      </div>
+      <div class="hgrid">
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#F4EEE6">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#F4EEE6">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Fraunces · Title</div></div>
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Fraunces · Caps</div></div>
+      </div>
     </div>
     <div class="combo"><div class="ch"><h3>02 The Insider · C Evergreen & Stone</h3><p>Instrument Serif and Fraunces · title case and capitals · on paper and on evergreen</p></div>
+      <div class="sub">Stacked</div>
       <div class="cgrid">
         <div class="ct" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#293C34">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
         <div class="ct" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#293C34">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
@@ -303,8 +336,22 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
         <div class="ct" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Fraunces · Title</div></div>
         <div class="ct" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:96px"><use href="#cv2"/></svg></div><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Fraunces · Caps</div></div>
       </div>
+      <div class="sub">Horizontal</div>
+      <div class="hgrid">
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Title</div></div>
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Caps</div></div>
+      </div>
+      <div class="hgrid">
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Fraunces · Title</div></div>
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Fraunces · Caps</div></div>
+      </div>
     </div>
     <div class="combo"><div class="ch"><h3>03 The Perspective · B Oxblood & Parchment</h3><p>Instrument Serif and Fraunces · title case and capitals · on parchment and on oxblood</p></div>
+      <div class="sub">Stacked</div>
       <div class="cgrid">
         <div class="ct" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#512A32">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
         <div class="ct" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#512A32">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
@@ -317,8 +364,22 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
         <div class="ct" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F4EEE6">Fraunces · Title</div></div>
         <div class="ct" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F4EEE6">Fraunces · Caps</div></div>
       </div>
+      <div class="sub">Horizontal</div>
+      <div class="hgrid">
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Title</div></div>
+        <div class="ht" style="background:#F4EEE6"><div class="m" style="color:#14161F"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#512A32">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Caps</div></div>
+      </div>
+      <div class="hgrid">
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#F4EEE6">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#F4EEE6">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Fraunces · Title</div></div>
+        <div class="ht" style="background:#512A32"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F4EEE6">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F4EEE6">Fraunces · Caps</div></div>
+      </div>
     </div>
     <div class="combo"><div class="ch"><h3>03 The Perspective · C Evergreen & Stone</h3><p>Instrument Serif and Fraunces · title case and capitals · on paper and on evergreen</p></div>
+      <div class="sub">Stacked</div>
       <div class="cgrid">
         <div class="ct" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#293C34">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
         <div class="ct" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#293C34">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
@@ -331,14 +392,27 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
         <div class="ct" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Fraunces · Title</div></div>
         <div class="ct" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:62px"><use href="#cv3"/></svg></div><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Fraunces · Caps</div></div>
       </div>
+      <div class="sub">Horizontal</div>
+      <div class="hgrid">
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Title</div></div>
+        <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#293C34"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#293C34">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Caps</div></div>
+      </div>
+      <div class="hgrid">
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Title</div></div>
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Caps</div></div>
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Fraunces · Title</div></div>
+        <div class="ht" style="background:#293C34"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:66px"><use href="#cv3"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Fraunces · Caps</div></div>
+      </div>
     </div>
   </div>
-</section>
+</div></section>
 
-<footer>
+<footer><div class="in">
   <span>Cipher &amp; Veil · Round 2 — logo concepts</span>
   <span>October 2026 · Prepared by Skyway Media</span>
-</footer>
+</div></footer>
 
 </div>
 </body></html>
