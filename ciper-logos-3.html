@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Cipher & Veil Logo Round 3</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Archivo:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one quiet scrolling document, 1180px measure, three numbered sections like the C3 round pages. Marks are mono and sit alone; type and colour each get their own section. */
+:root{
+  --bg:#F6F1E7;        /* parchment ground */
+  --fg:#14161F;        /* ink */
+  --muted:#555966;     /* slate text */
+  --rule:#D9D2C3;      /* hairline */
+  --ink:#14161F;       /* ink tile, both themes */
+  --ink-fg:#FFFFFF;
+  --sand-deep:#8A7449; /* sand that passes on light */
+  --display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --body:'Instrument Sans','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{display:flex;flex-direction:column}
+.in{max-width:1180px;margin:0 auto;width:100%;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:32px;min-width:0}
+svg.sprite{position:absolute;width:0;height:0;overflow:hidden}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+h1{font-family:var(--display);font-size:clamp(44px,6vw,76px);line-height:1;letter-spacing:-0.01em}
+h1 em{font-style:italic}
+h2{font-family:var(--display);font-size:clamp(32px,3.6vw,46px);line-height:1.08}
+h3{font-family:var(--display);font-size:26px;line-height:1.15}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-deep)}
+.meta{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.lede{font-size:18px;line-height:1.5;max-width:62ch}
+header.top{padding-block:56px 40px;border-bottom:1px solid var(--rule)}
+header.top .in{gap:18px}
+header.top .row{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+section{padding-block:56px;border-bottom:1px solid var(--rule);background:var(--bg);color:var(--fg)}
+section:last-of-type{border-bottom:0}
+section#lockups{--bg:#F3F0E7;--fg:#14161F;--muted:#555966;--rule:#D9D2C3;--sand-deep:#8A7449}
+section#colour{--bg:#DCC7A0;--fg:#14161F;--muted:#4A4030;--rule:rgba(20,22,31,.22);--sand-deep:#5E4A28}
+section#type{--bg:#969B8D;--fg:#14161F;--muted:#2A2C35;--rule:rgba(20,22,31,.25);--sand-deep:#1F2A24}
+.sechead{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start}
+.num{font-family:var(--display);font-size:30px;color:var(--sand-deep);line-height:1.1;padding-top:6px}
+.sechead .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sechead .txt p{max-width:66ch;color:var(--muted)}
+/* 01 marks: one row per concept */
+.marks{display:flex;flex-direction:column;gap:18px}
+.mrow{display:grid;grid-template-columns:240px 1fr 1fr;gap:18px;align-items:stretch}
+.mrow .lab{display:flex;flex-direction:column;gap:8px;justify-content:center;min-width:0;padding-right:12px}
+.mrow .lab .n{font-family:var(--display);font-size:30px;line-height:1.05}
+.mrow .lab .n b{font-weight:400;color:var(--sand-deep);margin-right:8px}
+.mrow .lab p{font-size:13.5px;line-height:1.5;color:var(--muted)}
+.badge{display:inline-block;width:max-content;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand-deep);border:1px solid var(--sand-deep);padding:3px 8px}
+.tile{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:12% 16%;min-width:0}
+.tile.light{background:#FFFFFF;color:#14161F}
+.tile.dark{background:var(--ink);color:var(--ink-fg)}
+.tile svg{display:block;width:100%;height:100%}
+/* scale strip */
+.scale{display:flex;align-items:flex-end;gap:36px;padding:28px 32px;background:#FFFFFF;color:#14161F;grid-column:2/-1;flex-wrap:wrap}
+.scale .s{display:flex;flex-direction:column;align-items:center;gap:10px}
+.scale .s svg{display:block;width:auto}
+.scale .s span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#555966}
+/* 02 type */
+.faces{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.face{display:grid;grid-template-columns:220px 1fr;gap:24px;padding-block:28px;border-bottom:1px solid var(--rule);align-items:center}
+.face .who{display:flex;flex-direction:column;gap:6px;min-width:0}
+.face .who .fn{font-size:15px;font-weight:600}
+.face .who .role{font-size:13px;color:var(--muted);line-height:1.45}
+.face .spec{display:flex;flex-direction:column;gap:10px;min-width:0}
+.face .spec:has(.caps){flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:14px 56px}
+.face .spec:has(.caps) .adv{flex-basis:100%}
+.face .wm{font-size:clamp(30px,3.8vw,50px);line-height:1;letter-spacing:.01em;white-space:nowrap}
+.face .wm i{font-style:italic}
+.face .caps{font-size:clamp(30px,3.8vw,50px);letter-spacing:.12em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.face .adv{font-size:11px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+.face .sans{font-size:clamp(22px,2.6vw,30px);line-height:1.2}
+.face .body{font-size:16px;line-height:1.55;max-width:60ch}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.pair{display:flex;flex-direction:column;gap:14px;padding:26px;border:1px solid var(--rule);min-width:0}
+.pair .h{font-size:44px;line-height:1.02}
+.pair .t{font-size:19px;line-height:1.3;color:var(--sand-deep)}
+.pair .b{font-size:15px;line-height:1.55}
+.pair dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:auto 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:13px}
+.pair dt{font-weight:600}.pair dd{margin:0;color:var(--muted)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.rules b{color:var(--fg);font-weight:600}
+/* 03 colours */
+.palettes{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.pal{display:grid;grid-template-columns:300px 1fr;gap:28px;padding-block:28px;border-bottom:1px solid var(--rule);align-items:start}
+.pal .info{display:flex;flex-direction:column;gap:10px;min-width:0}
+.pal .info p{color:var(--muted);font-size:14px;line-height:1.5}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;min-width:0}
+.sw{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sw .c{height:96px}
+.sw .lab{display:flex;flex-direction:column;gap:2px;font-size:12px;line-height:1.3}
+.sw .lab b{font-weight:600}
+.sw .lab span{color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.03em}
+/* 04 combinations */
+.hgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ht{display:flex;align-items:center;justify-content:center;gap:26px;padding:34px 24px;min-height:150px;min-width:0;position:relative}
+.ht .m svg{display:block;height:64px}
+.ht .txt{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.ht .w{font-size:30px;line-height:1;white-space:nowrap}
+.ht .w i{font-style:italic}
+.ht .w.caps{font-size:24px;letter-spacing:.18em;text-transform:uppercase}
+.ht .d{font-family:var(--body);font-size:9.5px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.ht .tag{position:absolute;left:16px;bottom:12px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+.sub{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+@media (max-width:860px){ .hgrid{grid-template-columns:1fr} }
+@media (max-width:520px){ .ht{flex-direction:column;gap:14px} .ht .txt{align-items:center} }
+.combos{display:flex;flex-direction:column;gap:40px}
+.combo{display:flex;flex-direction:column;gap:14px}
+.combo .ch{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.combo .ch p{font-size:13.5px;color:var(--muted)}
+.cgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ct{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px 14px 22px;min-height:236px;text-align:center;min-width:0}
+.ct .m svg{display:block;height:60px}
+.ct .w{font-size:26px;line-height:1;white-space:nowrap}
+.ct .w i{font-style:italic}
+.ct .w.caps{font-size:21px;letter-spacing:.18em;text-transform:uppercase}
+.ct .d{font-family:var(--body);font-size:9px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.ct .tag{margin-top:auto;padding-top:14px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+@media (max-width:860px){ .cgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+footer{padding-block:40px 72px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+footer .in{flex-direction:row;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+  .mrow{grid-template-columns:1fr 1fr}
+  .mrow .lab{grid-column:1/-1}
+  .face{grid-template-columns:1fr}
+  .scale{grid-column:1/-1}
+  .pal{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .sechead{grid-template-columns:1fr}
+  .mrow{grid-template-columns:1fr}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+  .sw .lab{font-size:11px}
+  .face .wm,.face .caps{white-space:normal}
+}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+/* lightbox */
+.zoomable{cursor:zoom-in}
+.zoomable:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(10,11,16,.9);display:flex;align-items:center;justify-content:center;padding:max(24px,env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb .stage{position:relative;transform-origin:center center;cursor:default}
+.lb .stage > *{margin:0}
+.lb .close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border:1px solid rgba(243,237,224,.4);border-radius:999px;background:transparent;color:#F3EDE0;font:400 22px/1 var(--body);cursor:pointer}
+.lb .close:hover,.lb .close:focus-visible{border-color:#F3EDE0;outline:none}
+.lb .cap{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);color:#A39A86;font:500 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.lb{animation:lbin .18s ease-out}@keyframes lbin{from{opacity:0}to{opacity:1}}}
+/* round 3 */
+.big{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.big .tile{aspect-ratio:3/2;padding:10% 16%}
+.cuts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cut{display:flex;flex-direction:column;gap:0;min-width:0}
+.cut .lbl{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:0 0 10px}
+.cut .row{display:flex;align-items:flex-end;gap:34px;padding:26px 28px;flex-wrap:wrap}
+.cut .row.l{background:#FFFFFF;color:#1D3A2D}
+.cut .row.d{background:#1D3A2D;color:#DCC7A0}
+.cut .s{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cut .s svg{display:block}
+.cut .s span{font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.favs{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+.fav{display:flex;flex-direction:column;align-items:center;gap:8px}
+.fav .sq{display:flex;align-items:center;justify-content:center;border:1px solid var(--rule)}
+.fav .sq svg{display:block}
+.fav span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.wmgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.wt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:34px 24px;min-height:150px;position:relative;min-width:0}
+.wt .w{font-size:34px;line-height:1;white-space:nowrap}
+.wt .w i{font-style:italic}
+.wt .w.caps{font-size:26px;letter-spacing:.18em;text-transform:uppercase}
+.wt .one{font-size:22px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.wt .d{font-family:var(--body);font-size:9.5px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.wt .tag{position:absolute;left:16px;bottom:12px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+table.ct{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+table.ct th,table.ct td{padding:10px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:middle}
+table.ct th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+table.ct .chip{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:8px;border:1px solid var(--rule)}
+table.ct .ok{color:#1D3A2D;font-weight:600}table.ct .lg{color:#5E4A28;font-weight:600}table.ct .no{color:#7A2E2E;font-weight:600}
+.tblwrap{overflow-x:auto}
+.lic{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.lic .l{display:flex;flex-direction:column;gap:8px;padding:20px;border:1px solid var(--rule);font-size:13.5px;line-height:1.5;color:var(--muted);min-width:0}
+.lic .l b{color:var(--fg);font-weight:600;font-size:15px}
+.check{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;counter-reset:c}
+.check div{padding:18px 20px;border:1px solid var(--rule);font-size:14px;line-height:1.5;color:var(--muted);min-width:0}
+.check div::before{counter-increment:c;content:counter(c,decimal-leading-zero);display:block;font-family:var(--display);font-size:22px;color:var(--sand-deep);margin-bottom:6px}
+.check b{color:var(--fg);font-weight:600}
+@media (max-width:860px){ .big,.cuts,.wmgrid{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="cv2" viewBox="20 200 960 600"><path fill="currentColor" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
+  <symbol id="cv2s" viewBox="20 200 960 600"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="round" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
+  <symbol id="cv2sq" viewBox="-20 60 1040 1040"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="round" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
+</svg>
+<div class="wrap">
+
+<header class="top"><div class="in">
+  <div class="eyebrow">Skyway Media · Brand identity</div>
+  <h1>Cipher &amp; Veil <em>— Round 3: The Insider, in Evergreen</em></h1>
+  <div class="row">
+    <p class="lede">The survey settled it: 02 The Insider in the Evergreen direction. This round answers the refinement notes before we finalise: a dedicated small-size cut, the deeper evergreen, where stone can and cannot carry text, the full wordmark, and a second look at type with a more modern, editorial feel. Horizontal lockups throughout, as preferred.</p>
+    <p class="meta">November 2026 · Prepared for Aveen Sufi</p>
+  </div>
+</div></header>
+
+<!-- 01 -->
+<section id="marks"><div class="in">
+  <div class="sechead">
+    <div class="num">01</div>
+    <div class="txt">
+      <h2>The mark</h2>
+      <p>02 The Insider in the new evergreen, then the small-size cut. The standard drawing keeps its hairlines for anything 48px and up. Below that a second cut takes over: the same drawing with every stroke thickened by one unit, so the thin parts of the C and the tail hold at 32 and 16 instead of filling in or dropping out. It is drawn on a square canvas for favicons, app icons and social avatars, with a light and a reversed version.</p>
+    </div>
+  </div>
+  <div class="big">
+    <div class="tile light" style="background:#F3F0E7;color:#1D3A2D"><svg role="img" aria-label="The Insider in evergreen on paper"><use href="#cv2"/></svg></div>
+    <div class="tile dark" style="background:#1D3A2D;color:#DCC7A0"><svg role="img" aria-label="The Insider in sand on evergreen"><use href="#cv2"/></svg></div>
+  </div>
+  <div class="cuts">
+    <div class="cut"><div class="lbl">Standard cut · 48px and up</div>
+      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16</span></div></div>
+      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16</span></div></div>
+    </div>
+    <div class="cut"><div class="lbl">Small-size cut · below 48px</div>
+      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2s"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2s"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2s"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2s"/></svg><span>16</span></div></div>
+      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2s"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2s"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2s"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2s"/></svg><span>16</span></div></div>
+    </div>
+  </div>
+  <div class="cut"><div class="lbl">Square cut · favicon, app icon, avatar</div>
+    <div class="favs">
+      <div class="fav"><div class="sq" style="width:128px;height:128px;background:#F3F0E7;color:#1D3A2D"><svg aria-hidden="true" style="width:128px;height:128px"><use href="#cv2sq"/></svg></div><span>128 · light</span></div><div class="fav"><div class="sq" style="width:128px;height:128px;background:#1D3A2D;color:#DCC7A0"><svg aria-hidden="true" style="width:128px;height:128px"><use href="#cv2sq"/></svg></div><span>128 · dark</span></div><div class="fav"><div class="sq" style="width:64px;height:64px;background:#F3F0E7;color:#1D3A2D"><svg aria-hidden="true" style="width:64px;height:64px"><use href="#cv2sq"/></svg></div><span>64 · light</span></div><div class="fav"><div class="sq" style="width:64px;height:64px;background:#1D3A2D;color:#DCC7A0"><svg aria-hidden="true" style="width:64px;height:64px"><use href="#cv2sq"/></svg></div><span>64 · dark</span></div><div class="fav"><div class="sq" style="width:32px;height:32px;background:#F3F0E7;color:#1D3A2D"><svg aria-hidden="true" style="width:32px;height:32px"><use href="#cv2sq"/></svg></div><span>32 · light</span></div><div class="fav"><div class="sq" style="width:32px;height:32px;background:#1D3A2D;color:#DCC7A0"><svg aria-hidden="true" style="width:32px;height:32px"><use href="#cv2sq"/></svg></div><span>32 · dark</span></div><div class="fav"><div class="sq" style="width:16px;height:16px;background:#F3F0E7;color:#1D3A2D"><svg aria-hidden="true" style="width:16px;height:16px"><use href="#cv2sq"/></svg></div><span>16 · light</span></div><div class="fav"><div class="sq" style="width:16px;height:16px;background:#1D3A2D;color:#DCC7A0"><svg aria-hidden="true" style="width:16px;height:16px"><use href="#cv2sq"/></svg></div><span>16 · dark</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 02 -->
+<section id="lockups"><div class="in">
+  <div class="sechead">
+    <div class="num">02</div>
+    <div class="txt">
+      <h2>Lockups &amp; the full wordmark</h2>
+      <p>The horizontal lockup is the primary logo: mark on the left, name on the right, “Advisory” tracked underneath. Then the full wordmark with no mark, for the places the mark would be redundant or too small: email signatures, document headers, legal footers, press. Both typefaces from Round 2 are shown, since the type decision is still open.</p>
+    </div>
+  </div>
+  <div class="sub">Horizontal lockup</div>
+  <div class="hgrid"><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Title</div></div><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Fraunces · Caps</div></div></div><div class="hgrid"><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Title</div></div><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Caps</div></div><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Fraunces · Title</div></div><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Fraunces · Caps</div></div></div>
+  <div class="sub">Full wordmark · no mark</div>
+  <div class="wmgrid"><div class="wt" style="background:#FFFFFF"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Title</div></div><div class="wt" style="background:#FFFFFF"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Caps</div></div><div class="wt" style="background:#FFFFFF"><div class="one" style="font-family:'Instrument Serif',Georgia,serif;color:#14161F">Cipher &amp; Veil <span style="color:#1D3A2D">Advisory</span></div><div class="tag" style="color:#14161F">Instrument Serif · One line</div></div><div class="wt" style="background:#FFFFFF"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Fraunces · Title</div></div><div class="wt" style="background:#FFFFFF"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Fraunces · Caps</div></div><div class="wt" style="background:#FFFFFF"><div class="one" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#14161F">Cipher &amp; Veil <span style="color:#1D3A2D">Advisory</span></div><div class="tag" style="color:#14161F">Fraunces · One line</div></div></div><div class="wmgrid"><div class="wt" style="background:#1D3A2D"><div class="w" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Instrument Serif · Title</div></div><div class="wt" style="background:#1D3A2D"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Instrument Serif · Caps</div></div><div class="wt" style="background:#1D3A2D"><div class="one" style="font-family:'Instrument Serif',Georgia,serif;color:#F3F0E7">Cipher &amp; Veil <span style="color:#DCC7A0">Advisory</span></div><div class="tag" style="color:#F3F0E7">Instrument Serif · One line</div></div><div class="wt" style="background:#1D3A2D"><div class="w" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Fraunces · Title</div></div><div class="wt" style="background:#1D3A2D"><div class="w caps" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Fraunces · Caps</div></div><div class="wt" style="background:#1D3A2D"><div class="one" style="font-family:'Fraunces',Georgia,serif;font-weight:300;font-variation-settings:'opsz' 144;color:#F3F0E7">Cipher &amp; Veil <span style="color:#DCC7A0">Advisory</span></div><div class="tag" style="color:#F3F0E7">Fraunces · One line</div></div></div>
+</div></section>
+
+<!-- 03 -->
+<section id="colour"><div class="in">
+  <div class="sechead">
+    <div class="num">03</div>
+    <div class="txt">
+      <h2>Evergreen &amp; Stone, refined</h2>
+      <p>Evergreen moves to #1D3A2D: a touch more saturated, a touch deeper, and it slightly improves every contrast pairing it is part of. Stone is a surface and rule colour, not a text colour on light grounds: it fails against paper and white, passes for large text on evergreen, and passes as a ground under ink. The table shows every pairing in the palette against WCAG AA.</p>
+    </div>
+  </div>
+  <div class="swatches">
+    <div class="sw"><div class="c" style="background:#14161F"></div><div class="lab"><b>Ink</b><span>#14161F · headlines, body text</span></div></div>
+    <div class="sw"><div class="c" style="background:#1D3A2D"></div><div class="lab"><b>Evergreen</b><span>#1D3A2D · the mark, dark ground, headlines</span></div></div>
+    <div class="sw"><div class="c" style="background:#DCC7A0"></div><div class="lab"><b>Sand</b><span>#DCC7A0 · the mark on dark, surfaces, rules</span></div></div>
+    <div class="sw"><div class="c" style="background:#969B8D"></div><div class="lab"><b>Stone</b><span>#969B8D · section grounds, dividers, icons</span></div></div>
+    <div class="sw"><div class="c" style="background:#F3F0E7;border:1px solid var(--rule)"></div><div class="lab"><b>Paper</b><span>#F3F0E7 · light ground</span></div></div>
+  </div>
+  <div class="tblwrap"><table class="ct"><thead><tr><th>Text colour ↓ on ground →</th><th><span class="chip" style="background:#F3F0E7"></span>Paper</th><th><span class="chip" style="background:#FFFFFF"></span>White</th><th><span class="chip" style="background:#DCC7A0"></span>Sand</th><th><span class="chip" style="background:#969B8D"></span>Stone</th><th><span class="chip" style="background:#1D3A2D"></span>Evergreen</th><th><span class="chip" style="background:#14161F"></span>Ink</th></tr></thead><tbody><tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg)"><span class="chip" style="background:#14161F"></span>Ink <span style="color:var(--muted);font-weight:400">#14161F</span></th><td><span class="ok">15.8</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">18.0</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">10.9</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">6.3</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="no">1.5</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td style="color:var(--muted)">—</td></tr><tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg)"><span class="chip" style="background:#1D3A2D"></span>Evergreen <span style="color:var(--muted);font-weight:400">#1D3A2D</span></th><td><span class="ok">10.9</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">12.4</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">7.5</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="lg">4.3</span> <span style="color:var(--muted);font-size:11px">Large only</span></td><td style="color:var(--muted)">—</td><td><span class="no">1.5</span> <span style="color:var(--muted);font-size:11px">Fail</span></td></tr><tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg)"><span class="chip" style="background:#DCC7A0"></span>Sand <span style="color:var(--muted);font-weight:400">#DCC7A0</span></th><td><span class="no">1.4</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="no">1.7</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td style="color:var(--muted)">—</td><td><span class="no">1.7</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="ok">7.5</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">10.9</span> <span style="color:var(--muted);font-size:11px">AA</span></td></tr><tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg)"><span class="chip" style="background:#969B8D"></span>Stone <span style="color:var(--muted);font-weight:400">#969B8D</span></th><td><span class="no">2.5</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="no">2.8</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="no">1.7</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td style="color:var(--muted)">—</td><td><span class="lg">4.3</span> <span style="color:var(--muted);font-size:11px">Large only</span></td><td><span class="ok">6.3</span> <span style="color:var(--muted);font-size:11px">AA</span></td></tr><tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg)"><span class="chip" style="background:#F3F0E7"></span>Paper <span style="color:var(--muted);font-weight:400">#F3F0E7</span></th><td style="color:var(--muted)">—</td><td><span class="no">1.1</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="no">1.4</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="no">2.5</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="ok">10.9</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">15.8</span> <span style="color:var(--muted);font-size:11px">AA</span></td></tr><tr><th scope="row" style="text-transform:none;letter-spacing:0;font-size:13px;color:var(--fg)"><span class="chip" style="background:#FFFFFF"></span>White <span style="color:var(--muted);font-weight:400">#FFFFFF</span></th><td><span class="no">1.1</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td style="color:var(--muted)">—</td><td><span class="no">1.7</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="no">2.8</span> <span style="color:var(--muted);font-size:11px">Fail</span></td><td><span class="ok">12.4</span> <span style="color:var(--muted);font-size:11px">AA</span></td><td><span class="ok">18.0</span> <span style="color:var(--muted);font-size:11px">AA</span></td></tr></tbody></table></div>
+  <div class="rules">
+    <div><b>Where stone goes.</b> Section backgrounds under ink text, hairline dividers, inactive icons and secondary buttons, the “muted” tier of a UI. Never body or label text on paper or white.</div>
+    <div><b>Where sand goes.</b> The mark and wordmark on evergreen or ink, surface tints, rules and highlights. Sand as text passes only on evergreen and ink, and both pass AA comfortably.</div>
+    <div><b>Text on light grounds</b> is ink or evergreen, both well past AA on paper and white. Evergreen on stone passes for large text only, so headlines on a stone band are fine; body copy on stone is ink.</div>
+  </div>
+</div></section>
+
+<!-- 04 -->
+<section id="type"><div class="in">
+  <div class="sechead">
+    <div class="num">04</div>
+    <div class="txt">
+      <h2>Type, round two: modern editorial</h2>
+      <p>Three directions that trade the classical serif for a sharper, more contemporary voice, each with a monospace body as suggested. GT Sectra is a licensed Grilli Type face and is not on this page; its slot is set in Newsreader, the closest open face, as a stand-in until trial files are in hand. Every face here can be self-hosted.</p>
+    </div>
+  </div>
+  <div class="pairs">
+    <div class="pair">
+      <div class="eyebrow">D · Sharp serif + mono</div>
+      <div class="h" style="font-family:'Newsreader',Georgia,serif;font-variation-settings:'opsz' 72;font-weight:500;letter-spacing:-.01em">Order, from the inside.</div>
+      <div class="t" style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-variation-settings:'opsz' 36">A different perspective. Earned from the inside.</div>
+      <div class="b" style="font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:13.5px">Here’s the order of operations. Vendor inventory first, policy second, training third. Don’t start with the policy.</div>
+      <dl><dt>GT Sectra</dt><dd>Wordmark, headlines · Grilli Type, licensed · shown here as Newsreader</dd><dt>IBM Plex Mono</dt><dd>Body, UI, sequences · open licence</dd><dt>Read</dt><dd>Editorial and precise; the mono makes every sequence look like a procedure, which is the point.</dd></dl>
+    </div>
+    <div class="pair">
+      <div class="eyebrow">E · Modern grotesk + mono</div>
+      <div class="h" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:-.025em">Order, from the inside.</div>
+      <div class="t" style="font-family:'Geist',system-ui,sans-serif;font-weight:400;color:var(--sand-deep)">A different perspective. Earned from the inside.</div>
+      <div class="b" style="font-family:'Geist Mono',ui-monospace,monospace;font-size:13.5px">Here’s the order of operations. Vendor inventory first, policy second, training third. Don’t start with the policy.</div>
+      <dl><dt>Geist</dt><dd>Wordmark in caps, headlines · open licence</dd><dt>Geist Mono</dt><dd>Body, UI, sequences · open licence</dd><dt>Read</dt><dd>The sans-serif take. Clean, technical, closest to a software product; the risk the report flagged is reading as Camp Three.</dd></dl>
+    </div>
+    <div class="pair">
+      <div class="eyebrow">F · Sharp serif + grotesk</div>
+      <div class="h" style="font-family:'Newsreader',Georgia,serif;font-variation-settings:'opsz' 72;font-weight:500;letter-spacing:-.01em">Order, from the inside.</div>
+      <div class="t" style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-variation-settings:'opsz' 36">A different perspective. Earned from the inside.</div>
+      <div class="b" style="font-family:'Geist',system-ui,sans-serif">Here’s the order of operations. Vendor inventory first, policy second, training third. Don’t start with the policy.</div>
+      <dl><dt>GT Sectra</dt><dd>Wordmark, headlines · shown here as Newsreader</dd><dt>Geist</dt><dd>Body, UI, sequences · open licence</dd><dt>Read</dt><dd>The middle path: editorial headlines, a plain modern sans for the operational copy. Keeps the serif-is-the-estate, sans-is-the-operator split.</dd></dl>
+    </div>
+  </div>
+  <div class="sub">Wordmark in the new faces · horizontal lockup</div>
+  <div class="hgrid">
+    <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Newsreader',Georgia,serif;font-variation-settings:'opsz' 72;font-weight:500;color:#14161F">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">GT Sectra (stand-in) · Title</div></div>
+    <div class="ht" style="background:#F3F0E7"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:.22em;color:#14161F">Cipher &amp; Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Geist · Caps</div></div>
+    <div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Newsreader',Georgia,serif;font-variation-settings:'opsz' 72;font-weight:500;color:#F3F0E7">Cipher <i>&amp;</i> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">GT Sectra (stand-in) · Title</div></div>
+    <div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:.22em;color:#F3F0E7">Cipher &amp; Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Geist · Caps</div></div>
+  </div>
+  <div class="lic">
+    <div class="l"><b>Open-licence faces</b>Instrument Serif, Instrument Sans, Fraunces, Archivo, Newsreader, Geist, Geist Mono, IBM Plex Mono. All SIL Open Font Licence: free to download, self-host and embed, with no annual fee and no pageview cap. “Google Fonts” describes where they are catalogued, not how they must be served.</div>
+    <div class="l"><b>GT Sectra</b>Grilli Type. A web licence is priced by monthly pageviews and permits self-hosting; trial fonts are available from grillitype.com for comps. If this direction wins, the licence is a line item before launch and the files live on the site’s own server like any other asset.</div>
+    <div class="l"><b>Web-safe faces</b>Arial, Georgia, Times and the system stack need no licence and no download, but none carries the brand. The recommendation is self-hosted licensed or open faces, not web-safe.</div>
+  </div>
+</div></section>
+
+<!-- 05 -->
+<section id="privacy"><div class="in">
+  <div class="sechead">
+    <div class="num">05</div>
+    <div class="txt">
+      <h2>Fonts, hosting &amp; privacy</h2>
+      <p>Confirmed: every font on the production site will be served from the site’s own domain. No request to fonts.googleapis.com, fonts.gstatic.com, Adobe Fonts or any other third-party font service, so no visitor IP leaves the site to load type. The checklist below is what we verify before launch; this review page itself still loads from Google for convenience and is not the production setup.</p>
+    </div>
+  </div>
+  <div class="check">
+    <div><b>Font files on the server.</b> WOFF2 files for every weight and style in use, uploaded to the theme, declared with <code>@font-face</code> and preloaded. Nothing fetched at runtime from a CDN.</div>
+    <div><b>Theme audit.</b> The theme’s own Google Fonts enqueue is disabled or removed in the child theme; the typography settings point at the self-hosted families.</div>
+    <div><b>Builder settings.</b> If a page builder is in play, its “load Google Fonts” option is turned off and custom fonts are registered inside it so every text style resolves locally.</div>
+    <div><b>Plugin sweep.</b> Every active plugin is checked for font, icon-font or embed requests to third-party hosts; offenders are replaced or their remote loading is switched off.</div>
+    <div><b>Network proof.</b> Before launch, a full-site crawl of outgoing requests confirms zero calls to font hosts. The report is kept as evidence of the control.</div>
+    <div><b>Privacy page.</b> The site’s privacy notice states that fonts are self-hosted, which is a small, true thing to be able to say for a governance brand.</div>
+  </div>
+</div></section>
+
+<footer><div class="in">
+  <span>Cipher &amp; Veil · Round 3 — refinement</span>
+  <span>November 2026 · Prepared by Skyway Media</span>
+</div></footer>
+
+</div>
+<script>
+(function(){
+  var sel='#marks .tile, #marks .cut .row, #marks .fav, #lockups .ht, #lockups .wt, #type .ht';
+  var tiles=document.querySelectorAll(sel);
+  var open=null, last=null;
+  function label(el){
+    var t=el.querySelector('.tag, span'); var s=t?t.textContent.trim():'';
+    var h=el.closest('.combo'); var hd=h?h.querySelector('h3').textContent.trim():'';
+    var r=el.closest('.mrow'); var rn=r?(r.querySelector('.n')||{textContent:''}).textContent.trim():'';
+    var g=el.classList.contains('dark')?'on ink':el.classList.contains('light')?'on white':'';
+    return [hd||rn, s, g].filter(Boolean).join('  ·  ');
+  }
+  function fit(stage, w, h){
+    var vw=window.innerWidth-96, vh=window.innerHeight-140;
+    var k=Math.min(vw/w, vh/h, 4);
+    stage.style.width=w+'px'; stage.style.height=h+'px';
+    stage.style.transform='scale('+k+')';
+  }
+  function close(){
+    if(!open) return; open.remove(); open=null;
+    document.body.style.overflow='';
+    if(last) last.focus();
+  }
+  function show(el){
+    last=el;
+    var r=el.getBoundingClientRect();
+    var lb=document.createElement('div'); lb.className='lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true'); lb.setAttribute('aria-label','Enlarged lockup');
+    var stage=document.createElement('div'); stage.className='stage';
+    var clone=el.cloneNode(true); clone.classList.remove('zoomable'); clone.removeAttribute('tabindex'); clone.removeAttribute('role');
+    clone.style.width=r.width+'px'; clone.style.height=r.height+'px'; clone.style.minHeight='0'; clone.style.aspectRatio='auto'; clone.style.boxSizing='border-box';
+    stage.appendChild(clone);
+    var btn=document.createElement('button'); btn.className='close'; btn.type='button'; btn.setAttribute('aria-label','Close'); btn.textContent='×';
+    var cap=document.createElement('div'); cap.className='cap'; cap.textContent=label(el);
+    lb.appendChild(stage); lb.appendChild(btn); lb.appendChild(cap);
+    lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+    btn.addEventListener('click', close);
+    document.body.appendChild(lb); document.body.style.overflow='hidden';
+    fit(stage, r.width, r.height); open=lb; btn.focus();
+  }
+  tiles.forEach(function(el){
+    el.classList.add('zoomable'); el.setAttribute('tabindex','0'); el.setAttribute('role','button'); el.setAttribute('aria-label','Enlarge');
+    el.addEventListener('click', function(){ show(el); });
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); show(el); } });
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  window.addEventListener('resize', function(){ if(open&&last){ var r=last.getBoundingClientRect(); fit(open.querySelector('.stage'), r.width||parseFloat(open.querySelector('.stage').style.width), r.height||parseFloat(open.querySelector('.stage').style.height)); } });
+})();
+</script>
+</body></html>
