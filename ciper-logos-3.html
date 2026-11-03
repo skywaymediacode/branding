@@ -158,10 +158,10 @@ a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
 /* round 3 */
 .big{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .big .tile{aspect-ratio:3/2;padding:10% 16%}
-.cuts{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.cuts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
 .cut{display:flex;flex-direction:column;gap:0;min-width:0}
 .cut .lbl{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:0 0 10px}
-.cut .row{display:flex;align-items:flex-end;gap:34px;padding:26px 28px;flex-wrap:wrap}
+.cut .row{display:flex;align-items:flex-end;gap:28px;padding:26px 24px;flex-wrap:wrap}
 .cut .row.l{background:#FFFFFF;color:#1D3A2D}
 .cut .row.d{background:#1D3A2D;color:#DCC7A0}
 .cut .s{display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -193,13 +193,15 @@ table.ct .ok{color:#1D3A2D;font-weight:600}table.ct .lg{color:#5E4A28;font-weigh
 .check div{padding:18px 20px;border:1px solid var(--rule);font-size:14px;line-height:1.5;color:var(--muted);min-width:0}
 .check div::before{counter-increment:c;content:counter(c,decimal-leading-zero);display:block;font-family:var(--display);font-size:22px;color:var(--sand-deep);margin-bottom:6px}
 .check b{color:var(--fg);font-weight:600}
-@media (max-width:860px){ .big,.cuts,.wmgrid{grid-template-columns:1fr} }
+@media (max-width:1000px){ .cuts{grid-template-columns:1fr} }
+@media (max-width:860px){ .big,.wmgrid{grid-template-columns:1fr} }
 </style>
 </head>
 <body>
 <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
   <symbol id="cv2" viewBox="20 200 960 600"><path fill="currentColor" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
   <symbol id="cv2s" viewBox="-10 170 1020 660"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="round" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
+  <symbol id="cv2m" viewBox="-10 170 1020 660"><path fill="currentColor" stroke="currentColor" stroke-width="18" stroke-linejoin="round" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
   <symbol id="cv2sq" viewBox="-40 40 1080 1080"><path fill="currentColor" stroke="currentColor" stroke-width="36" stroke-linejoin="round" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
 </svg>
 <div class="wrap">
@@ -219,7 +221,7 @@ table.ct .ok{color:#1D3A2D;font-weight:600}table.ct .lg{color:#5E4A28;font-weigh
     <div class="num">01</div>
     <div class="txt">
       <h2>The mark</h2>
-      <p>02 The Insider in the new evergreen, then the small-size cut. The standard drawing keeps its hairlines for anything 48px and up. Below that a second cut takes over: the same drawing with every stroke thickened by one unit, so the thin parts of the C and the tail hold at 32 and 16 instead of filling in or dropping out. It is drawn on a square canvas for favicons, app icons and social avatars, with a light and a reversed version.</p>
+      <p>02 The Insider in the new evergreen, then the small-size cut. The standard drawing keeps its hairlines for anything 48px and up. Below that a heavier cut takes over: the same drawing with every stroke thickened by one unit, so the thin parts of the C and the tail hold at 32 and 16 instead of filling in or dropping out. A medium cut at half that gain sits between them for the 32–48px range, where the standard hairline is starting to thin but the small cut looks heavy. It is drawn on a square canvas for favicons, app icons and social avatars, with a light and a reversed version.</p>
     </div>
   </div>
   <div class="big">
@@ -228,12 +230,16 @@ table.ct .ok{color:#1D3A2D;font-weight:600}table.ct .lg{color:#5E4A28;font-weigh
   </div>
   <div class="cuts">
     <div class="cut"><div class="lbl">Standard cut · 48px and up</div>
-      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16</span></div></div>
-      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:96px;width:154px"><use href="#cv2"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16</span></div></div>
+      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16</span></div></div>
+      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:48px;width:77px"><use href="#cv2"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:51px"><use href="#cv2"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:26px"><use href="#cv2"/></svg><span>16</span></div></div>
+    </div>
+    <div class="cut"><div class="lbl">Medium cut · half the weight gain</div>
+      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:48px;width:74px"><use href="#cv2m"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:49px"><use href="#cv2m"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:25px"><use href="#cv2m"/></svg><span>16</span></div></div>
+      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:48px;width:74px"><use href="#cv2m"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:49px"><use href="#cv2m"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:25px"><use href="#cv2m"/></svg><span>16</span></div></div>
     </div>
     <div class="cut"><div class="lbl">Small-size cut · below 48px</div>
-      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:96px;width:148px"><use href="#cv2s"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:74px"><use href="#cv2s"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:49px"><use href="#cv2s"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:25px"><use href="#cv2s"/></svg><span>16</span></div></div>
-      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:96px;width:148px"><use href="#cv2s"/></svg><span>96</span></div><div class="s"><svg aria-hidden="true" style="height:48px;width:74px"><use href="#cv2s"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:49px"><use href="#cv2s"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:25px"><use href="#cv2s"/></svg><span>16</span></div></div>
+      <div class="row l"><div class="s"><svg aria-hidden="true" style="height:48px;width:74px"><use href="#cv2s"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:49px"><use href="#cv2s"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:25px"><use href="#cv2s"/></svg><span>16</span></div></div>
+      <div class="row d"><div class="s"><svg aria-hidden="true" style="height:48px;width:74px"><use href="#cv2s"/></svg><span>48</span></div><div class="s"><svg aria-hidden="true" style="height:32px;width:49px"><use href="#cv2s"/></svg><span>32</span></div><div class="s"><svg aria-hidden="true" style="height:16px;width:25px"><use href="#cv2s"/></svg><span>16</span></div></div>
     </div>
   </div>
   <div class="cut"><div class="lbl">Square cut · favicon, app icon, avatar</div>
