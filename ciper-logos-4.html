@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Cipher & Veil Logo Round 4</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Archivo:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=IBM+Plex+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=Schibsted+Grotesk:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&family=Manrope:wght@400;500;600&family=Familjen+Grotesk:wght@400;500;600&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&family=Jost:ital,wght@0,400;0,500;1,400&family=Work+Sans:ital,wght@0,400;0,500;1,400&family=Figtree:ital,wght@0,400;0,500;1,400&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;1,6..12,400&family=Outfit:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;1,400&family=Inter+Tight:ital,wght@0,400;0,500;1,400&display=swap">
+<style>
+/* Layout: one quiet scrolling document, 1180px measure, three numbered sections like the C3 round pages. Marks are mono and sit alone; type and colour each get their own section. */
+:root{
+  --bg:#F6F1E7;        /* parchment ground */
+  --fg:#14161F;        /* ink */
+  --muted:#555966;     /* slate text */
+  --rule:#D9D2C3;      /* hairline */
+  --ink:#14161F;       /* ink tile, both themes */
+  --ink-fg:#FFFFFF;
+  --sand-deep:#8A7449; /* sand that passes on light */
+  --display:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --body:'Instrument Sans','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
+}
+:root[data-theme="dark"]{ --bg:#0F1118; --fg:#F3EDE0; --muted:#A39A86; --rule:#2A2C35; --sand-deep:#DCC7A0; color-scheme:dark; }
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+.wrap{display:flex;flex-direction:column}
+.in{max-width:1180px;margin:0 auto;width:100%;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:32px;min-width:0}
+svg.sprite{position:absolute;width:0;height:0;overflow:hidden}
+h1,h2,h3,h4{margin:0;font-weight:400;text-wrap:balance}
+h1{font-family:var(--display);font-size:clamp(44px,6vw,76px);line-height:1;letter-spacing:-0.01em}
+h1 em{font-style:italic}
+h2{font-family:var(--display);font-size:clamp(32px,3.6vw,46px);line-height:1.08}
+h3{font-family:var(--display);font-size:26px;line-height:1.15}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sand-deep)}
+.meta{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.lede{font-size:18px;line-height:1.5;max-width:62ch}
+header.top{padding-block:56px 40px;border-bottom:1px solid var(--rule)}
+header.top .in{gap:18px}
+header.top .row{display:flex;justify-content:space-between;gap:24px;align-items:flex-end;flex-wrap:wrap}
+section{padding-block:56px;border-bottom:1px solid var(--rule);background:var(--bg);color:var(--fg)}
+section:last-of-type{border-bottom:0}
+section#amp{--bg:#F3F0E7;--fg:#14161F;--muted:#555966;--rule:#D9D2C3;--sand-deep:#8A7449}
+section#italics{--bg:#DCC7A0;--fg:#14161F;--muted:#4A4030;--rule:rgba(20,22,31,.22);--sand-deep:#5E4A28}
+section#sans{--bg:#969B8D;--fg:#14161F;--muted:#2A2C35;--rule:rgba(20,22,31,.25);--sand-deep:#1F2A24}
+.sechead{display:grid;grid-template-columns:72px 1fr;gap:16px;align-items:start}
+.num{font-family:var(--display);font-size:30px;color:var(--sand-deep);line-height:1.1;padding-top:6px}
+.sechead .txt{display:flex;flex-direction:column;gap:12px;min-width:0}
+.sechead .txt p{max-width:66ch;color:var(--muted)}
+/* 01 marks: one row per concept */
+.marks{display:flex;flex-direction:column;gap:18px}
+.mrow{display:grid;grid-template-columns:240px 1fr 1fr;gap:18px;align-items:stretch}
+.mrow .lab{display:flex;flex-direction:column;gap:8px;justify-content:center;min-width:0;padding-right:12px}
+.mrow .lab .n{font-family:var(--display);font-size:30px;line-height:1.05}
+.mrow .lab .n b{font-weight:400;color:var(--sand-deep);margin-right:8px}
+.mrow .lab p{font-size:13.5px;line-height:1.5;color:var(--muted)}
+.badge{display:inline-block;width:max-content;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sand-deep);border:1px solid var(--sand-deep);padding:3px 8px}
+.tile{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:12% 16%;min-width:0}
+.tile.light{background:#FFFFFF;color:#14161F}
+.tile.dark{background:var(--ink);color:var(--ink-fg)}
+.tile svg{display:block;width:100%;height:100%}
+/* scale strip */
+.scale{display:flex;align-items:flex-end;gap:36px;padding:28px 32px;background:#FFFFFF;color:#14161F;grid-column:2/-1;flex-wrap:wrap}
+.scale .s{display:flex;flex-direction:column;align-items:center;gap:10px}
+.scale .s svg{display:block;width:auto}
+.scale .s span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#555966}
+/* 02 type */
+.faces{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.face{display:grid;grid-template-columns:220px 1fr;gap:24px;padding-block:28px;border-bottom:1px solid var(--rule);align-items:center}
+.face .who{display:flex;flex-direction:column;gap:6px;min-width:0}
+.face .who .fn{font-size:15px;font-weight:600}
+.face .who .role{font-size:13px;color:var(--muted);line-height:1.45}
+.face .spec{display:flex;flex-direction:column;gap:10px;min-width:0}
+.face .spec:has(.caps){flex-direction:row;flex-wrap:wrap;align-items:baseline;gap:14px 56px}
+.face .spec:has(.caps) .adv{flex-basis:100%}
+.face .wm{font-size:clamp(30px,3.8vw,50px);line-height:1;letter-spacing:.01em;white-space:nowrap}
+.face .wm i{font-style:italic}
+.face .caps{font-size:clamp(30px,3.8vw,50px);letter-spacing:.12em;text-transform:uppercase;line-height:1;white-space:nowrap}
+.face .adv{font-size:11px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;color:var(--muted)}
+#type .face .adv{letter-spacing:.2em;font-size:12px}
+.face .sans{font-size:clamp(22px,2.6vw,30px);line-height:1.2}
+.face .body{font-size:16px;line-height:1.55;max-width:60ch}
+.pairs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.pair{display:flex;flex-direction:column;gap:14px;padding:26px;border:1px solid var(--rule);min-width:0}
+.pair .h{font-size:44px;line-height:1.02}
+.pair .t{font-size:19px;line-height:1.3;color:var(--sand-deep)}
+.pair .b{font-size:15px;line-height:1.55}
+.pair dl{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;margin:auto 0 0;padding-top:14px;border-top:1px solid var(--rule);font-size:13px}
+.pair dt{font-weight:600}.pair dd{margin:0;color:var(--muted)}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;font-size:13.5px;line-height:1.5;color:var(--muted)}
+.rules b{color:var(--fg);font-weight:600}
+/* 03 colours */
+.palettes{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--rule)}
+.pal{display:grid;grid-template-columns:300px 1fr;gap:28px;padding-block:28px;border-bottom:1px solid var(--rule);align-items:start}
+.pal .info{display:flex;flex-direction:column;gap:10px;min-width:0}
+.pal .info p{color:var(--muted);font-size:14px;line-height:1.5}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;min-width:0}
+.sw{display:flex;flex-direction:column;gap:8px;min-width:0}
+.sw .c{height:96px}
+.sw .lab{display:flex;flex-direction:column;gap:2px;font-size:12px;line-height:1.3}
+.sw .lab b{font-weight:600}
+.sw .lab span{color:var(--muted);font-variant-numeric:tabular-nums;letter-spacing:.03em}
+/* 04 combinations */
+.hgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.ht{display:flex;align-items:center;justify-content:center;gap:26px;padding:34px 24px;min-height:150px;min-width:0;position:relative}
+.ht .m svg{display:block;height:64px}
+.ht .txt{display:flex;flex-direction:column;gap:7px;align-items:flex-start}
+.ht .w{font-size:30px;line-height:1;white-space:nowrap}
+.ht .w i{font-style:italic}
+.ht .w.caps{font-size:24px;letter-spacing:.18em;text-transform:uppercase}
+.ht .d{font-family:var(--body);font-size:9.5px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.ht .tag{position:absolute;left:16px;bottom:12px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+.sub{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+@media (max-width:860px){ .hgrid{grid-template-columns:1fr} }
+@media (max-width:520px){ .ht{flex-direction:column;gap:14px} .ht .txt{align-items:center} }
+.combos{display:flex;flex-direction:column;gap:40px}
+.combo{display:flex;flex-direction:column;gap:14px}
+.combo .ch{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap}
+.combo .ch p{font-size:13.5px;color:var(--muted)}
+.cgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ct{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px 14px 22px;min-height:236px;text-align:center;min-width:0}
+.ct .m svg{display:block;height:60px}
+.ct .w{font-size:26px;line-height:1;white-space:nowrap}
+.ct .w i{font-style:italic}
+.ct .w.caps{font-size:21px;letter-spacing:.18em;text-transform:uppercase}
+.ct .d{font-family:var(--body);font-size:9px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.ct .tag{margin-top:auto;padding-top:14px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+@media (max-width:860px){ .cgrid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+footer{padding-block:40px 72px;border-top:1px solid var(--rule);font-size:13px;color:var(--muted)}
+footer .in{flex-direction:row;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (max-width:860px){
+  .mrow{grid-template-columns:1fr 1fr}
+  .mrow .lab{grid-column:1/-1}
+  .face{grid-template-columns:1fr}
+  .scale{grid-column:1/-1}
+  .pal{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .sechead{grid-template-columns:1fr}
+  .mrow{grid-template-columns:1fr}
+  .swatches{grid-template-columns:repeat(3,1fr)}
+  .sw .lab{font-size:11px}
+  .face .wm,.face .caps{white-space:normal}
+}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+/* lightbox */
+.zoomable{cursor:zoom-in}
+.zoomable:focus-visible{outline:2px solid var(--sand-deep);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(10,11,16,.9);display:flex;align-items:center;justify-content:center;padding:max(24px,env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb .stage{position:relative;transform-origin:center center;cursor:default}
+.lb .stage > *{margin:0}
+.lb .close{position:absolute;top:max(16px,env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border:1px solid rgba(243,237,224,.4);border-radius:999px;background:transparent;color:#F3EDE0;font:400 22px/1 var(--body);cursor:pointer}
+.lb .close:hover,.lb .close:focus-visible{border-color:#F3EDE0;outline:none}
+.lb .cap{position:absolute;left:50%;bottom:max(18px,env(safe-area-inset-bottom,0px));transform:translateX(-50%);color:#A39A86;font:500 11px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;white-space:nowrap}
+@media (prefers-reduced-motion:no-preference){.lb{animation:lbin .18s ease-out}@keyframes lbin{from{opacity:0}to{opacity:1}}}
+/* round 3 */
+.big{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.big .tile{aspect-ratio:3/2;padding:10% 16%}
+.cuts{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+.cut{display:flex;flex-direction:column;gap:0;min-width:0}
+.cut .lbl{font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding:0 0 10px}
+.cut .row{display:flex;align-items:flex-end;gap:28px;padding:26px 24px;flex-wrap:wrap}
+.cut .row.l{background:#FFFFFF;color:#1D3A2D}
+.cut .row.d{background:#1D3A2D;color:#DCC7A0}
+.cut .s{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cut .s svg{display:block}
+.cut .s span{font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.favs{display:flex;gap:18px;flex-wrap:wrap;align-items:flex-end}
+.fav{display:flex;flex-direction:column;align-items:center;gap:8px}
+.fav .sq{display:flex;align-items:center;justify-content:center;border:1px solid var(--rule)}
+.fav .sq svg{display:block}
+.fav span{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.wmgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.wt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:34px 24px;min-height:150px;position:relative;min-width:0}
+.wt .w{font-size:34px;line-height:1;white-space:nowrap}
+.wt .w i{font-style:italic}
+.wt .w.caps{font-size:26px;letter-spacing:.18em;text-transform:uppercase}
+.wt .one{font-size:22px;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.wt .d{font-family:var(--body);font-size:9.5px;font-weight:600;letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.wt .tag{position:absolute;left:16px;bottom:12px;font-family:var(--body);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+table.ct{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+table.ct th,table.ct td{padding:10px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:middle}
+table.ct th{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
+table.ct .chip{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:8px;border:1px solid var(--rule)}
+table.ct .ok{color:#1D3A2D;font-weight:600}table.ct .lg{color:#5E4A28;font-weight:600}table.ct .no{color:#7A2E2E;font-weight:600}
+.tblwrap{overflow-x:auto}
+.lic{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.lic .l{display:flex;flex-direction:column;gap:8px;padding:20px;border:1px solid var(--rule);font-size:13.5px;line-height:1.5;color:var(--muted);min-width:0}
+.lic .l b{color:var(--fg);font-weight:600;font-size:15px}
+.check{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;counter-reset:c}
+.check div{padding:18px 20px;border:1px solid var(--rule);font-size:14px;line-height:1.5;color:var(--muted);min-width:0}
+.check div::before{counter-increment:c;content:counter(c,decimal-leading-zero);display:block;font-family:var(--display);font-size:22px;color:var(--sand-deep);margin-bottom:6px}
+.check b{color:var(--fg);font-weight:600}
+@media (max-width:1000px){ .cuts{grid-template-columns:1fr} }
+@media (max-width:860px){ .big,.wmgrid{grid-template-columns:1fr} }
+/* round 4 */
+.amp{font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:400;font-variation-settings:'opsz' 144;font-size:1.12em;line-height:0;position:relative;top:.02em}
+.ital{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.ital .box{display:flex;flex-direction:column;gap:12px;padding:24px 26px;background:#FFFFFF;color:#14161F;min-width:0}
+.ital .box .k{font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#5E4A28}
+.ital .box .hl{font-size:30px;line-height:1.15}
+.ital .box .body{font-size:16px;line-height:1.55;max-width:60ch}
+.ital .box .note{font-family:var(--body);font-size:13px;line-height:1.5;color:#555966}
+.srow{display:grid;grid-template-columns:230px 1fr 170px;gap:24px;padding-block:22px;border-bottom:1px solid var(--rule);align-items:center}
+.srow .who{display:flex;flex-direction:column;gap:4px;min-width:0}
+.srow .who .fn{font-size:15px;font-weight:600}
+.srow .who .role{font-size:12.5px;color:var(--muted);line-height:1.45}
+.srow .spec{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 44px;min-width:0}
+.srow .spec .t{font-size:clamp(28px,3.4vw,44px);line-height:1;white-space:nowrap;letter-spacing:-.01em}
+.srow .spec .c{font-size:clamp(28px,3.4vw,44px);line-height:1;white-space:nowrap;letter-spacing:.14em;text-transform:uppercase}
+.srow .spec .i{flex-basis:100%;font-size:16px;line-height:1.5}
+.srow .meta2{display:flex;flex-direction:column;gap:4px;font-size:12px;line-height:1.4;color:var(--muted)}
+.srow .meta2 b{color:var(--fg);font-weight:600}
+.srows{border-top:1px solid var(--rule)}
+@media (max-width:860px){ .ital{grid-template-columns:1fr} .srow{grid-template-columns:1fr} .srow .spec .t,.srow .spec .c{white-space:normal} }
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+  <symbol id="cv2" viewBox="20 200 960 600"><path fill="currentColor" d="M287.59,776.68c-151.22,0-256.83-114.78-256.83-279.13,0-77,26.8-147.9,75.46-199.66,48.18-51.25,113.56-79.47,184.09-79.47,151.97,0,252.9,77.33,337.48,258.56l91.17,195.62,172.18-387.11c6.29-14.21,6.6-26.34.92-35.07-5.49-8.43-16.09-13.02-30.7-13.32v-9.99h107.88v9.99c-28.84.61-48.43,18.5-67.31,61.28l-212.36,477.68-131.85-293.84c-78.72-175.64-158.68-250.57-267.39-250.57-56.07,0-103.95,25.97-138.47,75.11-33.9,48.26-51.82,114.23-51.82,190.79,0,159.04,79.53,265.89,197.9,265.89,36.63,0,127.14-11.07,178.62-113.28l9.67,3.78c-37.92,80.3-106.56,122.73-198.62,122.73Z"/></symbol>
+</svg>
+<div class="wrap">
+
+<header class="top"><div class="in">
+  <div class="eyebrow">Skyway Media · Brand identity</div>
+  <h1>Cipher &amp; Veil <em>— Round 4: Type</em></h1>
+  <div class="row">
+    <p class="lede">Three type questions from Round 3. The Fraunces ampersand carried into the sans and caps wordmarks; what to do about italics with Bricolage; and a look at GT America alongside the ten most-used sans serifs on the web, with their licensing and an open stand-in for each. Mark, colour and lockup format are settled and unchanged.</p>
+    <p class="meta">November 2026 · Prepared for Aveen Sufi</p>
+  </div>
+</div></header>
+
+<!-- 01 -->
+<section id="amp"><div class="in">
+  <div class="sechead">
+    <div class="num">01</div>
+    <div class="txt">
+      <h2>The Fraunces ampersand</h2>
+      <p>Bricolage in title case and capitals, Instrument Serif in capitals and Geist in capitals, each with the italic Fraunces ampersand in place of its own. The ampersand is set in the depth colour so it reads as a deliberate flourish rather than a mismatched glyph; in sand on evergreen it becomes the one warm note in the lockup. Horizontal lockup first, then the wordmark alone.</p>
+    </div>
+  </div>
+  <div class="sub">Horizontal lockup</div>
+  <div class="hgrid"><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:-.01em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Bricolage Grotesque · Title · Fraunces &amp;</div></div><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:.16em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Bricolage Grotesque · Caps · Fraunces &amp;</div></div><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;letter-spacing:.18em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Instrument Serif · Caps · Fraunces &amp;</div></div><div class="ht" style="background:#FFFFFF"><div class="m" style="color:#1D3A2D"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:.22em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div></div><div class="tag" style="color:#14161F">Geist · Caps · Fraunces &amp;</div></div></div><div class="hgrid"><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:-.01em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Bricolage Grotesque · Title · Fraunces &amp;</div></div><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:.16em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Bricolage Grotesque · Caps · Fraunces &amp;</div></div><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;letter-spacing:.18em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Instrument Serif · Caps · Fraunces &amp;</div></div><div class="ht" style="background:#1D3A2D"><div class="m" style="color:#DCC7A0"><svg aria-hidden="true" style="width:102px"><use href="#cv2"/></svg></div><div class="txt"><div class="w caps" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:.22em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div></div><div class="tag" style="color:#F3F0E7">Geist · Caps · Fraunces &amp;</div></div></div>
+  <div class="sub">Full wordmark · no mark</div>
+  <div class="wmgrid"><div class="wt" style="background:#FFFFFF"><div class="w" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:-.01em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Bricolage Grotesque · Title · Fraunces &amp;</div></div><div class="wt" style="background:#FFFFFF"><div class="w caps" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:.16em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Bricolage Grotesque · Caps · Fraunces &amp;</div></div><div class="wt" style="background:#FFFFFF"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;letter-spacing:.18em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Instrument Serif · Caps · Fraunces &amp;</div></div><div class="wt" style="background:#FFFFFF"><div class="w caps" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:.22em;color:#14161F">Cipher <span class="amp" style="color:#1D3A2D">&amp;</span> Veil</div><div class="d" style="color:#1D3A2D">Advisory</div><div class="tag" style="color:#14161F">Geist · Caps · Fraunces &amp;</div></div></div><div class="wmgrid"><div class="wt" style="background:#1D3A2D"><div class="w" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:-.01em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Bricolage Grotesque · Title · Fraunces &amp;</div></div><div class="wt" style="background:#1D3A2D"><div class="w caps" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500;letter-spacing:.16em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Bricolage Grotesque · Caps · Fraunces &amp;</div></div><div class="wt" style="background:#1D3A2D"><div class="w caps" style="font-family:'Instrument Serif',Georgia,serif;letter-spacing:.18em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Instrument Serif · Caps · Fraunces &amp;</div></div><div class="wt" style="background:#1D3A2D"><div class="w caps" style="font-family:'Geist',system-ui,sans-serif;font-weight:500;letter-spacing:.22em;color:#F3F0E7">Cipher <span class="amp" style="color:#DCC7A0">&amp;</span> Veil</div><div class="d" style="color:#DCC7A0">Advisory</div><div class="tag" style="color:#F3F0E7">Geist · Caps · Fraunces &amp;</div></div></div>
+</div></section>
+
+<!-- 02 -->
+<section id="italics"><div class="in">
+  <div class="sechead">
+    <div class="num">02</div>
+    <div class="txt">
+      <h2>Bricolage and the italic question</h2>
+      <p>Correct: Bricolage Grotesque ships upright only. A browser will fake a slant if asked, and the result is the first box below: it is what you get by accident, and it is not good enough for a brand that cares about craft. The other three boxes are the real options. Our recommendation is the second: Bricolage for everything upright, and the serif italic for emphasis. It is a long-standing editorial convention, it uses a face already in the system, and it keeps the Ruler-and-Everyman split visible even inside a paragraph.</p>
+    </div>
+  </div>
+  <div class="ital">
+    <div class="box">
+      <div class="k">Not this · browser-synthesised slant</div>
+      <div class="hl" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500">Order, <span style="font-style:italic">from the inside.</span></div>
+      <div class="body" style="font-family:'Bricolage Grotesque',system-ui,sans-serif">Here’s the order of operations. <span style="font-style:italic">Vendor inventory first,</span> policy second, training third.</div>
+      <div class="note">The upright letters sheared sideways. Spacing drifts, round letters lean unevenly, and it looks like a mistake at display sizes.</div>
+    </div>
+    <div class="box">
+      <div class="k">Recommended · serif italic for emphasis</div>
+      <div class="hl" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:500">Order, <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;font-size:1.08em">from the inside.</span></div>
+      <div class="body" style="font-family:'Bricolage Grotesque',system-ui,sans-serif">Here’s the order of operations. <span style="font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:1.1em">Vendor inventory first,</span> policy second, training third.</div>
+      <div class="note">Emphasis, pull quotes, titles of works and foreign terms switch to Instrument Serif italic. Reads as intentional and keeps the serif in play on sans-led pages.</div>
+    </div>
+    <div class="box">
+      <div class="k">Alternative · a sans with a true italic</div>
+      <div class="hl" style="font-family:'Schibsted Grotesk',system-ui,sans-serif;font-weight:500">Order, <span style="font-style:italic">from the inside.</span></div>
+      <div class="body" style="font-family:'Schibsted Grotesk',system-ui,sans-serif">Here’s the order of operations. <span style="font-style:italic">Vendor inventory first,</span> policy second, training third.</div>
+      <div class="note">Schibsted Grotesk and Hanken Grotesk both ship real italics. Trade: a quieter face than Bricolage; less editorial personality in the headlines.</div>
+    </div>
+    <div class="box">
+      <div class="k">Alternative · emphasis by weight, no italic</div>
+      <div class="hl" style="font-family:'Bricolage Grotesque',system-ui,sans-serif;font-variation-settings:'opsz' 96;font-weight:400">Order, <span style="font-weight:600">from the inside.</span></div>
+      <div class="body" style="font-family:'Bricolage Grotesque',system-ui,sans-serif">Here’s the order of operations. <span style="font-weight:600;color:#1D3A2D">Vendor inventory first,</span> policy second, training third.</div>
+      <div class="note">Semibold, or semibold in evergreen, wherever italic would normally go. Clean and modern, but it cannot mark a book title or a foreign phrase the way italic does.</div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 03 -->
+<section id="sans"><div class="in">
+  <div class="sechead">
+    <div class="num">03</div>
+    <div class="txt">
+      <h2>GT America and the Typewolf ten</h2>
+      <p>Typewolf’s list of the ten most-used sans serifs on the web, with GT America at number three. Every one of them is a licensed commercial face, so none can be shown on this page as itself; each row is set in the closest open face as a stand-in, named on the right, with the foundry and whether the licensed original has italics. If any of these wins, the same rule as GT Sectra applies: trial files for a true comp, then a web licence, self-hosted. The three faces we would shortlist from this list for Cipher &amp; Veil are GT America, Founders Grotesk and Neue Haas Grotesk; the geometric and rounded ones read as consumer brands.</p>
+    </div>
+  </div>
+  <div class="srows">
+    <div class="srow">
+      <div class="who"><div class="fn">GT America</div><div class="role">Swiss grotesk meets American gothic; the face the client asked for. Shown as Archivo, which comes from the same American-gothic lineage.</div></div>
+      <div class="spec" style="font-family:'Archivo',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Grilli Type</b><span>licensed · italics: yes</span><span>Shown as <b>Archivo</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Apercu</div><div class="role">A geometric-grotesk hybrid with a little quirk. DM Sans is the usual open stand-in.</div></div>
+      <div class="spec" style="font-family:'DM Sans',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Colophon</b><span>licensed · italics: yes</span><span>Shown as <b>DM Sans</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Futura</div><div class="role">The 1927 geometric. Jost is a close open revival. Too much Bauhaus for this brand; here for completeness.</div></div>
+      <div class="spec" style="font-family:'Jost',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Various</b><span>licensed · italics: yes</span><span>Shown as <b>Jost</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Founders Grotesk</div><div class="role">A warm grotesk revived from 19th-century British types. Work Sans shares the proportions and the slight friendliness.</div></div>
+      <div class="spec" style="font-family:'Work Sans',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Klim</b><span>licensed · italics: yes</span><span>Shown as <b>Work Sans</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Neue Haas Grotesk</div><div class="role">The original Helvetica, properly digitised. Hanken Grotesk, already in Round 3, is the open face closest to it.</div></div>
+      <div class="spec" style="font-family:'Hanken Grotesk',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Monotype</b><span>licensed · italics: yes</span><span>Shown as <b>Hanken Grotesk</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Graphik</div><div class="role">Plain, even, slightly geometric. Geist, also in Round 3, is the nearest open match.</div></div>
+      <div class="spec" style="font-family:'Geist',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Commercial Type</b><span>licensed · italics: yes</span><span>Shown as <b>Geist</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Proxima Nova</div><div class="role">The web’s default friendly geometric for a decade. Figtree is the open equivalent.</div></div>
+      <div class="spec" style="font-family:'Figtree',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Mark Simonson</b><span>licensed · italics: yes</span><span>Shown as <b>Figtree</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Avenir</div><div class="role">Softer geometric with humanist warmth. Nunito Sans is the standard stand-in.</div></div>
+      <div class="spec" style="font-family:'Nunito Sans',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Linotype</b><span>licensed · italics: yes</span><span>Shown as <b>Nunito Sans</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">GT Walsheim</div><div class="role">Geometric with character in the a, e and g. Outfit is the closest open face, though it has no italic.</div></div>
+      <div class="spec" style="font-family:'Outfit',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="color:var(--muted)">No italic in the stand-in; the licensed face has one.</span></div>
+      <div class="meta2"><b>Grilli Type</b><span>licensed · italics: yes</span><span>Shown as <b>Outfit</b></span></div>
+    </div>
+    <div class="srow">
+      <div class="who"><div class="fn">Circular</div><div class="role">The rounded geometric behind many consumer brands. Plus Jakarta Sans is the open stand-in.</div></div>
+      <div class="spec" style="font-family:'Plus Jakarta Sans',system-ui,sans-serif"><span class="t" style="font-weight:500">Cipher &amp; Veil</span><span class="c" style="font-weight:500">Cipher &amp; Veil</span><span class="i" style="font-style:italic">A different perspective. Earned from the inside.</span></div>
+      <div class="meta2"><b>Lineto</b><span>licensed · italics: yes</span><span>Shown as <b>Plus Jakarta Sans</b></span></div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="in">
+  <span>Cipher &amp; Veil · Round 4 — type</span>
+  <span>November 2026 · Prepared by Skyway Media</span>
+</div></footer>
+
+</div>
+<script>
+(function(){
+  var sel='#amp .ht, #amp .wt, #italics .box';
+  var tiles=document.querySelectorAll(sel);
+  var open=null, last=null;
+  function label(el){
+    var t=el.querySelector('.tag, span'); var s=t?t.textContent.trim():'';
+    var h=el.closest('.combo'); var hd=h?h.querySelector('h3').textContent.trim():'';
+    var r=el.closest('.mrow'); var rn=r?(r.querySelector('.n')||{textContent:''}).textContent.trim():'';
+    var g=el.classList.contains('dark')?'on ink':el.classList.contains('light')?'on white':'';
+    return [hd||rn, s, g].filter(Boolean).join('  ·  ');
+  }
+  function fit(stage, w, h){
+    var vw=window.innerWidth-96, vh=window.innerHeight-140;
+    var k=Math.min(vw/w, vh/h, 4);
+    stage.style.width=w+'px'; stage.style.height=h+'px';
+    stage.style.transform='scale('+k+')';
+  }
+  function close(){
+    if(!open) return; open.remove(); open=null;
+    document.body.style.overflow='';
+    if(last) last.focus();
+  }
+  function show(el){
+    last=el;
+    var r=el.getBoundingClientRect();
+    var lb=document.createElement('div'); lb.className='lb'; lb.setAttribute('role','dialog'); lb.setAttribute('aria-modal','true'); lb.setAttribute('aria-label','Enlarged lockup');
+    var stage=document.createElement('div'); stage.className='stage';
+    var clone=el.cloneNode(true); clone.classList.remove('zoomable'); clone.removeAttribute('tabindex'); clone.removeAttribute('role');
+    clone.style.width=r.width+'px'; clone.style.height=r.height+'px'; clone.style.minHeight='0'; clone.style.aspectRatio='auto'; clone.style.boxSizing='border-box';
+    stage.appendChild(clone);
+    var btn=document.createElement('button'); btn.className='close'; btn.type='button'; btn.setAttribute('aria-label','Close'); btn.textContent='×';
+    var cap=document.createElement('div'); cap.className='cap'; cap.textContent=label(el);
+    lb.appendChild(stage); lb.appendChild(btn); lb.appendChild(cap);
+    lb.addEventListener('click', function(e){ if(e.target===lb) close(); });
+    btn.addEventListener('click', close);
+    document.body.appendChild(lb); document.body.style.overflow='hidden';
+    fit(stage, r.width, r.height); open=lb; btn.focus();
+  }
+  tiles.forEach(function(el){
+    el.classList.add('zoomable'); el.setAttribute('tabindex','0'); el.setAttribute('role','button'); el.setAttribute('aria-label','Enlarge');
+    el.addEventListener('click', function(){ show(el); });
+    el.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); show(el); } });
+  });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') close(); });
+  window.addEventListener('resize', function(){ if(open&&last){ var r=last.getBoundingClientRect(); fit(open.querySelector('.stage'), r.width||parseFloat(open.querySelector('.stage').style.width), r.height||parseFloat(open.querySelector('.stage').style.height)); } });
+})();
+</script>
+</body></html>
